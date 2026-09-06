@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="先体验 Jelly-Baby 原版，再与三维果冻伙伴青团互动，探索角色表情、应用场景与扩展方向。">
+  <meta name="theme-color" content="#f5f5ee">
+  <title>Jelly-Baby · 原版体验、扩展原型与场景价值 | Research Lab 002</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="jelly-page">
+<a class="j-skip" href="#original">跳转到原版能力演示</a>
+<header class="j-header">
+  <a class="j-brand" href="../../index.html"><span class="j-logo">r.</span> RESEARCH LAB <span class="j-header-divider">/</span> <span class="j-project-no">002</span></a>
+  <nav aria-label="主导航"><a href="#original">原版</a><a href="#extensions">扩展</a><a href="#scenarios">场景</a><a class="j-upstream" href="https://github.com/scottstts/Jelly-Baby">GitHub ↗</a></nav>
+</header>
+<main>
+  <section class="j-intro-v2" aria-labelledby="j-title">
+    <div><p class="j-kicker"><span></span> RESEARCH 002 / JELLY-BABY</p><h1 id="j-title">先玩原版，再看扩展。</h1><p>从真实的软体交互出发，看到我们做了什么，再理解它能用在哪里。</p></div>
+    <nav class="j-reading-order" aria-label="阅读顺序"><a href="#original"><b>01</b> 原有能力 <span>↘</span></a><a href="#extensions"><b>02</b> 我们的扩展 <span>↘</span></a><a href="#scenarios"><b>03</b> 场景与价值 <span>↘</span></a></nav>
+  </section>
+  <section id="original" class="j-original" aria-labelledby="original-heading">
+    <div class="j-section-head"><div><p class="j-kicker">01 / THE ORIGINAL</p><h2 id="original-heading">原库的能力，直接体验。</h2></div><p>固定研究版本的本地构建。<br>下方画面与交互来自 Jelly-Baby 原版。</p></div>
+    <div class="j-original-shell">
+      <div class="j-original-toolbar"><span><i></i> 原版复现 / df52c92</span><div><button type="button" id="j-original-toggle" aria-pressed="true">关闭原版</button><a href="original/" target="_blank" rel="noopener noreferrer">独立打开原版 ↗</a></div></div>
+      <div class="j-original-viewport">
+        <div id="j-original-poster" hidden><img src="../../assets/projects/002-jelly-baby/upstream-online.png" alt="作者在线应用的实际截图：半透明果冻角色位于木纹桌面，表面可见高光与折射"><div><strong>原版已关闭</strong><span>点击「重新加载原版」可恢复体验。</span></div></div>
+        <iframe id="j-original-frame" src="original/" title="Jelly-Baby 固定版本原版三维演示" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="j-original-guide"><p><kbd>W A S D</kbd> / 方向键移动 <kbd>Space</kbd> 跳跃 <kbd>R</kbd> 重置</p><p>拖角色：拉伸、抛掷 · 拖桌面：旋转 · 滚轮：缩放</p></div>
+    </div>
+    <p class="j-original-note">先点击画面再使用键盘。原版需要 WebGPU，首次加载约 33 MB 模型、纹理和程序；若无画面，请尝试独立打开。按 df52c92 构建，未修改原库运行源码。</p>
+  </section>
+  <section id="capabilities" class="j-section" aria-labelledby="cap-heading">
+    <div class="j-section-head"><div><p class="j-kicker">01.1 / ORIGINAL CAPABILITIES</p><h2 id="cap-heading">原版中，可以体验什么？</h2></div><p>点击能力，查看体验、实现和可借鉴之处。<br><span class="j-dot-label">源码已有实现 · 可在上方原版体验</span></p></div>
+    <div class="j-cap-grid" id="j-cap-grid" aria-label="能力选择"></div>
+    <article class="j-cap-detail" id="j-cap-detail" aria-live="polite" aria-atomic="true"></article>
+    <noscript><p>启用 JavaScript 可浏览交互卡片。核心能力包括软体形变、抓取抛掷、行走跳跃、半透明材质、动态焦散和表情声音。完整分析可通过页尾研究文档查看。</p></noscript>
+  </section>
+
+  <section id="extensions" class="j-section" aria-labelledby="companion-heading">
+    <div class="j-section-head"><div><p class="j-kicker">02 / OUR 3D COMPANION</p><h2 id="companion-heading">你好，我是青团。</h2></div><p>一只有目光、有情绪的果冻伙伴。<br>基于原库三维软体的真实扩展。</p></div>
+    <div class="j-companion-shell">
+      <div class="j-original-toolbar"><span><i></i> 我们的三维扩展 / 青团 02</span><div><button type="button" id="j-companion-stop" hidden>关闭伙伴</button><a href="companion/" target="_blank" rel="noopener">独立体验 ↗</a></div></div>
+      <div class="j-companion-welcome" id="j-companion-welcome"><span class="j-kicker">A LITTLE PERSONALITY</span><h3>它会看向你，<br>也会因你而开心。</h3><p>试试轻碰、拉伸，然后松手。<br>或者陪它安静待一会儿。</p><button type="button" id="j-companion-launch">唤醒青团 ↗</button><small>启动伙伴会关闭上方原版，可随时切换体验。</small></div>
+      <iframe id="j-companion-frame" title="青团：会回应的三维果冻伙伴" hidden allow="autoplay; fullscreen"></iframe>
+    </div>
+    <div class="j-brand-trial"><div><span class="j-kicker">BRAND EXPERIENCE / 场景体验</span><h3>把页面的进展，变成它的回应。</h3><p><a href="lesson/">跟青团做一次弹性实验：体验完整场景 ↗</a></p><p><a href="../../index.html#lab-guide">体验已接入真实项目的首页导览 ↗</a></p><p id="j-brand-status" role="status">先唤醒青团，再试试欢迎、等待与完成反馈。</p></div><div class="j-brand-buttons"><button type="button" data-brand-event="welcome">访客进入 · 打招呼</button><button type="button" data-brand-event="waiting">处理中 · 安静陪伴</button><button type="button" data-brand-event="complete">任务完成 · 庆祝</button></div></div>
+    <div class="j-companion-features"><article><span>01 / 形象</span><h3>更容易读懂的脸</h3><p>大眼睛、独立瞳孔、头顶叶芽、收窄躯干与更挺拔的站姿；柔和材质突出表情。</p></article><article><span>02 / 回应</span><h3>你动，它会注意</h3><p>指针注视、自然眨眼；摸头会眯眼歪头，戳肚子会缩身，拉伸松手后晃动恢复。</p></article><article><span>03 / 情绪</span><h3>四种状态，直接体验</h3><p>好奇、开心、惊讶、困倦。打招呼会挥手，完成任务会先蓄力再跳跃庆祝。</p></article></div>
+    <p class="j-original-note">已实现：同步更新物理与表皮的轮廓调整、全身姿态驱动、摸头/戳肚子/拉伸恢复、打招呼与完成庆祝。保留原始拓扑与求解器；独立重建的小手脚、长期性格与语音仍是后续方向。表情由规则控制，不调用 AI 服务。</p>
+    <div class="j-companion-road"><p class="j-kicker">FROM CHARACTER TO SCENARIO</p><h3>同一个伙伴，可以走向哪里？</h3><div class="j-companion-features"><article><span>优先 / 品牌伙伴</span><h4>把页面事件变成回应</h4><p>迎接访客、完成操作后庆祝。已接入本页欢迎、等待与完成事件；品牌装扮与真实业务流程仍待开发。</p></article><article><span>下一步 / 专注陪伴</span><h4>和你一起工作、休息</h4><p>接入计时器，专注时安静、休息时提醒；需要节奏与通知控制。</p></article><article><span>进阶 / 养成与游戏</span><h4>让互动留下记忆</h4><p>喂食、心情与存档，或拉伸闯关。需要养成规则或障碍碰撞与关卡。</p></article></div><p>对我们的意义：沉淀可复用的角色状态、表情和互动接口；让同一套三维表现服务于不同产品场景。品牌事件联动已在本页演示；计时器、养成和游戏场景尚未实现。</p></div>
+  </section>
+  <section id="prototypes" class="j-section" aria-labelledby="extension-heading">
+    <div class="j-section-head"><div><p class="j-kicker">02.1 / EARLIER 2D STUDIES</p><h2 id="extension-heading">早期探索：三个二维原型。</h2></div><p>材质定制、拉伸挑战、触碰发声。<br>自研二维效果，尚未接入原库三维求解器。</p></div>
+    <div class="j-extension-tabs" role="group" aria-label="切换扩展效果"><button type="button" data-prototype="material" aria-pressed="true">01 材质定制</button><button type="button" data-prototype="challenge" aria-pressed="false">02 拉伸挑战</button><button type="button" data-prototype="sound" aria-pressed="false">03 触碰发声</button></div>
+    <div class="j-extension-layout">
+    <div class="j-playground">
+      <div class="j-stage-top"><span><i></i> OUR PROTOTYPE / 二维交互</span><span>我们的扩展原型</span></div>
+      <div class="j-stage" id="j-stage">
+        <svg class="j-specimen" viewBox="0 0 520 410" role="img" aria-labelledby="specimen-title specimen-desc">
+          <title id="specimen-title">可拉伸的果冻角色概念图</title><desc id="specimen-desc">原创二维示意，用于观察形变、表皮和透明观感，不运行上游三维物理求解器。</desc>
+          <defs>
+            <pattern id="j-floor-grid" width="42" height="24" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .22 -1 .22 230 270)"><path d="M 42 0 L 0 0 0 24" fill="none" stroke="#64764b" stroke-opacity=".19"/></pattern>
+            <radialGradient id="j-gel" cx=".32" cy=".19" r=".91"><stop stop-color="#f4ffc9"/><stop offset=".25" stop-color="#cdeb75"/><stop offset=".57" stop-color="#a5cb40"/><stop offset=".8" stop-color="#5e8528"/><stop offset="1" stop-color="#d7ed8d"/></radialGradient>
+            <linearGradient id="j-shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="white" stop-opacity=".85"/><stop offset=".6" stop-color="#f0ffd0" stop-opacity="0"/></linearGradient>
+            <radialGradient id="j-pool"><stop stop-color="#c2ed60" stop-opacity=".8"/><stop offset="1" stop-color="#bad479" stop-opacity="0"/></radialGradient>
+            <filter id="j-blur"><feGaussianBlur stdDeviation="8"/></filter>
+            <path id="j-body-path" d="M 213 156 C 191 143 188 112 206 90 C 224 66 269 58 299 80 C 329 101 330 133 312 155 C 328 170 344 185 358 198 C 384 225 359 252 337 235 L 316 216 C 314 248 313 266 323 294 C 332 322 318 340 296 339 C 276 338 269 319 261 294 C 254 316 246 337 225 337 C 199 337 193 318 201 293 C 209 267 206 243 204 220 L 186 239 C 165 256 141 232 159 208 C 175 186 196 165 213 156 Z"/>
+            <clipPath id="j-body-clip"><use href="#j-body-path"/></clipPath>
+            <pattern id="j-mesh" width="28" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H28L14 24ZM0 0L-14 24H14L28 0L42 24" fill="none" stroke="#345b28" stroke-width="1" stroke-opacity=".65"/></pattern>
+          </defs>
+          <path d="M0 278L520 262V410H0Z" fill="url(#j-floor-grid)"/>
+          <ellipse cx="265" cy="344" rx="96" ry="17" fill="#34491d" opacity=".2" filter="url(#j-blur)"/>
+          <ellipse cx="312" cy="347" rx="134" ry="41" fill="url(#j-pool)"/>
+          <g id="j-gel-body">
+            <use href="#j-body-path" fill="url(#j-gel)" stroke="#789d34" stroke-width="1.2"/>
+            <path d="M210 126 C199 97 249 65 285 92 C253 83 225 103 220 136Z" fill="url(#j-shine)"/>
+            <path d="M179 217L205 190M222 270L214 303M300 206Q294 239 304 278" fill="none" stroke="#eeffbf" stroke-opacity=".65" stroke-width="7" stroke-linecap="round"/>
+            <ellipse cx="237" cy="131" rx="6" ry="9" fill="#283c1e"/><ellipse cx="282" cy="129" rx="6" ry="9" fill="#283c1e"/>
+            <circle cx="235" cy="128" r="2" fill="white"/><circle cx="280" cy="126" r="2" fill="white"/>
+            <path d="M249 150Q260 164 273 148" fill="none" stroke="#30451f" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse cx="222" cy="150" rx="10" ry="5" fill="#e8a864" opacity=".48"/><ellipse cx="296" cy="148" rx="10" ry="5" fill="#e8a864" opacity=".48"/>
+            <g id="j-wire" visibility="hidden" clip-path="url(#j-body-clip)"><rect x="135" y="65" width="260" height="280" fill="url(#j-mesh)"/></g>
+          </g>
+          <g class="j-callout" fill="#4a5940" font-family="monospace" font-size="10"><path d="M315 107H380L398 91" stroke="#8a9879" fill="none"/><circle cx="315" cy="107" r="3" fill="#789b39"/><text x="382" y="78">SOFT / 柔软</text><path d="M198 262H130L112 276" stroke="#8a9879" fill="none"/><text x="49" y="294">ELASTIC / 回弹</text></g>
+        </svg>
+        <span class="j-stage-caption" id="j-stage-caption" aria-live="polite">拖动角色，感受形变示意</span>
+      </div>
+      <div class="j-stage-controls"><button id="j-bounce" type="button">轻弹一下 ↥</button><button id="j-wire-toggle" type="button" aria-pressed="false">显示网格</button><label>通透度 <input id="j-opacity" type="range" min="45" max="100" value="90" aria-label="概念图通透度"></label><button id="j-reset" type="button" aria-label="重置概念示意">↺</button></div>
+      <p class="j-stage-note">自研二维原型 · 尚未移植到上游三维物理求解器</p>
+    </div>
+      <div class="j-extension-panel">
+        <span class="j-small-label">已实现的扩展原型 / 独立于原版</span><h3 id="j-prototype-title">为角色换一种材质观感。</h3><p id="j-prototype-description">选择颜色、调整通透度，立即比较视觉差异。这里调节的是二维示意外观，不是上游折射参数。</p>
+        <div id="j-material-panel"><label class="j-small-label" for="j-color">角色配色</label><select id="j-color"><option value="0">青柠果冻</option><option value="125">蓝莓果冻</option><option value="235">蜜桃果冻</option></select><p>与左侧通透度、网格开关配合，观察外观如何变化。</p></div>
+        <div id="j-challenge-panel" hidden><span class="j-small-label">目标：拉长到 1.20× 后释放，完成三次</span><div class="j-challenge-meter"><span id="j-stretch-fill"></span></div><div class="j-challenge-readout"><output id="j-stretch-value">1.00×</output><output id="j-challenge-count" aria-live="polite">0 / 3 次</output></div><p>向上拖动身体；也可用下方按钮完成同样的挑战。</p><button type="button" id="j-challenge-key">拉长并释放一次</button><button type="button" id="j-challenge-reset">重新挑战</button></div>
+        <div id="j-sound-panel" hidden><p>先开启声音，再拖动角色或轻弹。拉伸程度决定音高，释放和轻弹触发短音。</p><button type="button" id="j-sound-enable" aria-pressed="false">开启原型声音</button><label for="j-volume">原型音量</label><input type="range" id="j-volume" min="0" max="30" value="12"><output id="j-sound-note" aria-live="polite">声音未开启</output></div>
+        <div class="j-extension-value"><h4>从原型到真正扩展，还差什么？</h4><p id="j-prototype-next">将颜色和通透度映射为上游材质参数，建立可靠的重建与更新接口，再验证焦散与主体外观是否一致。</p></div>
+      </div>
+    </div>
+    <p class="j-extension-footnote">上方原版和这里的原型各自运行。这里的配色、计分与音效不会改变作者的应用。</p>
+  </section>
+
+  <section id="scenarios" class="j-section" aria-labelledby="scenario-heading">
+    <div class="j-section-head"><div><p class="j-kicker">03 / SCENARIOS & VALUE</p><h2 id="scenario-heading">这些能力，为什么值得用？</h2></div><p>适合度是我们的分析判断。<br>应用场景需要在现有能力上继续开发。</p></div>
+    <div class="j-filter" role="group" aria-label="筛选使用场景"><button type="button" data-filter="all" aria-pressed="true">全部场景 <span>06</span></button><button type="button" data-filter="learn" aria-pressed="false">学习与研究</button><button type="button" data-filter="brand" aria-pressed="false">品牌与展示</button><button type="button" data-filter="play" aria-pressed="false">娱乐与互动</button></div>
+    <p class="j-result" id="j-scenario-count" aria-live="polite">展示全部 6 个场景</p>
+    <div class="j-scenarios" id="j-scenario-grid"></div>
+  </section>
+
+  <section id="ideas" class="j-section j-ideas" aria-labelledby="idea-heading">
+    <div class="j-section-head"><div><p class="j-kicker">03.2 / EXPANSION DIRECTIONS</p><h2 id="idea-heading">沿着场景，选择扩展方向。</h2></div><p>以下均为扩展设想，<br>不是上游已经提供的功能。</p></div>
+    <div class="j-idea-layout">
+      <div class="j-idea-menu"><p class="j-small-label">选择一条创意路线</p><div id="j-idea-buttons"></div><p class="j-menu-note">从体验出发，再看需要补齐什么。</p></div>
+      <article id="j-idea-detail" class="j-idea-detail" aria-live="polite" aria-atomic="true"></article>
+    </div>
+    <div class="j-mixer">
+      <div><p class="j-kicker">IDEA MIXER / 创意组合器</p><h3>你的下一只“果冻”，是什么？</h3><p>选择用途和交互，得到一张可复制的实验提案。</p></div>
+      <div class="j-mixer-controls"><label for="j-purpose">我想做</label><select id="j-purpose"><option value="learn">教学工具</option><option value="brand">品牌体验</option><option value="play">解压玩具</option></select><label for="j-interaction">核心交互</label><select id="j-interaction"><option value="stretch">拉伸与回弹</option><option value="light">光影与材质</option><option value="motion">运动与声音</option></select></div>
+      <div class="j-proposal" id="j-proposal" aria-live="polite"></div><div class="j-copy-row"><button type="button" id="j-copy">复制实验提案 ↗</button><span id="j-copy-status" role="status"></span></div>
+    </div>
+  </section>
+
+  <section id="principles" class="j-section j-principles" aria-labelledby="principle-heading">
+    <div class="j-section-head"><div><p class="j-kicker">03.3 / WHY IT WORKS</p><h2 id="principle-heading">精细的外观，分层的计算。</h2></div><p>同一角色使用不同精度的表示，<br>将计算花在需要的地方。</p></div>
+    <div class="j-layer-grid">
+      <article><span class="j-layer-no">A / PHYSICS</span><div class="j-layer-visual j-tetra" aria-hidden="true">△<span>△</span>△</div><h3>内部骨架，负责变形</h3><p>980 个节点组成 4,026 个四面体。弹性、接触与抓取约束共同决定身体如何运动。</p><small>CPU · WebAssembly / JavaScript</small></article>
+      <article><span class="j-layer-no">B / SURFACE</span><div class="j-layer-visual j-surface" aria-hidden="true"></div><h3>精细表皮，负责细节</h3><p>72,234 个顶点通过权重跟随内部节点。身体、面部附件与选点共享变形后的几何。</p><small>CPU 更新 · GPU 渲染</small></article>
+      <article><span class="j-layer-no">C / LIGHT</span><div class="j-layer-visual j-rays" aria-hidden="true"><i></i><i></i><i></i></div><h3>光学代理，负责光影</h3><p>20,176 个三角形用于较轻的光学计算。Worker 更新厚度与阴影，GPU 生成焦散。</p><small>Worker + GPU · 分工更新</small></article>
+    </div>
+    <details class="j-technical"><summary>深入一点：为什么它能像果冻？ <span>＋</span></summary><div><p><strong>弹性：</strong>neo-Hookean 型能量描述拉伸和体积变化，耦合 XPBD 迭代修正节点位置；阻尼让回弹逐渐消散。</p><p><strong>运动：</strong>程序向节点施加姿态与步态驱动力，抓取时释放，松手后逐步恢复。它没有使用学习式运动控制。</p><p><strong>材质：</strong>透射与厚度相关吸收产生通透观感。当前 GPU 焦散采用深度图、有限采样和模糊，属于实时近似。</p><p class="j-technical-note">源码核对：README 的 Worker 焦散与六步补算描述已滞后；本页依据 df52c92 的 GPU 焦散和最多十二步补算实现。</p><a href="https://github.com/scottstts/Jelly-Baby/blob/df52c92a8459286bb287f0849764929e73b4f8ce/src/graphics/refractive-light.js">核对焦散源码 ↗</a></div></details>
+  </section>
+
+
+  <section class="j-section" aria-labelledby="next-heading">
+    <div class="j-section-head"><div><p class="j-kicker">03.4 / WHAT IT MEANS FOR US</p><h2 id="next-heading">从会回应的伙伴，走向可复用的角色。</h2></div><p>先验证角色的辨识度与互动反馈，<br>再接入页面场景、养成和更多动作。</p></div>
+    <div class="j-our-value"><p><strong>交互价值</strong><span>把“柔软”变成用户可以直接操作的反馈，适合教学、角色与轻量游戏。</span></p><p><strong>技术价值</strong><span>借鉴粗网格驱动精细外观，以及 CPU、Worker、GPU 分工的实现方法。</span></p><p><strong>对我们的意义</strong><span>用小原型验证场景，再把有效的方案沉淀为可复用组件和研究实验。</span></p></div>
+    <div class="j-roadmap"><article><span>01 · 复现</span><h3>让原始交互跑起来</h3><p>固定版本，验证拉伸、投掷、恢复、声音与真实浏览器表现。</p></article><article><span>02 · 观察</span><h3>让参数和代价可见</h3><p>增加软硬、阻尼、网格、体积比与帧时间的对照视图。</p></article><article><span>03 · 实验</span><h3>验证一个小场景</h3><p>挑选教学或解压方向，用可用性观察决定下一步投入。</p></article><article><span>04 · 沉淀</span><h3>抽出可复用组件</h3><p>整理挂载、配置、事件和释放接口，再探索多角色与新模型。</p></article></div>
+    <div class="j-boundaries"><h3>投入前，需要知道的边界</h3><p><strong>运行：</strong>上游要求 WebGPU 与 HTTPS / localhost，没有 WebGL 后备。我们的二维原型不要求 WebGPU；嵌入的原版需要。</p><p><strong>物理：</strong>没有自碰撞或撕裂；站立靠额外驱动力。展示效果不等于工程材料预测能力。</p><p><strong>复用：</strong>当前快照未确认明确许可证，代码及纹理、模型的授权需核实；本地研究构建保留原版运行资源，未对外发布；来源与文件校验见研究记录。</p></div>
+  </section>
+  <section class="j-source-section" aria-label="研究来源"><div><p class="j-kicker">TRACEABLE RESEARCH</p><h2>每个判断，都留一个出处。</h2><p>研究快照 <code>df52c92</code> · 2026.09.06<br>固定版本已构建并接入；物理回归、帧率与真机兼容性仍待系统验证。</p></div><div class="j-source-links"><a href="https://github.com/scottstts/Jelly-Baby/tree/df52c92a8459286bb287f0849764929e73b4f8ce">上游固定版本 ↗</a><a href="https://github.com/yydshly/0906_codex_project/tree/main/projects/002-jelly-baby">完整研究文档 ↗</a><a href="https://github.com/yydshly/0906_codex_project/blob/main/projects/002-jelly-baby/sources.md">源码证据索引 ↗</a></div></section>
+</main>
+<footer class="j-footer"><a class="j-brand" href="../../index.html"><span class="j-logo">r.</span> RESEARCH LAB</a><span>002 / JELLY-BABY · 从发现，到实践。</span><a href="#j-title">回到顶部 ↑</a></footer>
+</body>
+</html>

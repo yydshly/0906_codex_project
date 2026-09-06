@@ -18,6 +18,24 @@
     "demo": "demos/001-nihaixia/"
   },
   {
+    "id": "002",
+    "slug": "jelly-baby",
+    "order": 20,
+    "name": "Jelly-Baby · 浏览器软体交互研究",
+    "summary": "整理软体物理与实时光学能力，复现原版，完成三维伙伴青团、首页导览及真实拉伸驱动的弹性课堂。",
+    "repository": "https://github.com/scottstts/Jelly-Baby",
+    "status": "研究中",
+    "tags": [
+      "WebGPU",
+      "Three.js",
+      "软体物理",
+      "交互图形"
+    ],
+    "cover": "docs/assets/projects/002-jelly-baby/cover.png",
+    "coverAlt": "Jelly-Baby 新版首屏真实截图：按原有能力、扩展原型、场景价值排列，首屏显示固定版本本地构建的原版三维果冻场景",
+    "demo": "demos/002-jelly-baby/"
+  },
+  {
     "id": "003",
     "slug": "freepep",
     "order": 30,

@@ -1,0 +1,17 @@
+/* Companion presentation; physical geometry remains the upstream cage. */
+.masthead h1{font:600 clamp(28px,4vw,42px)/1.15 ui-sans-serif,system-ui,sans-serif;letter-spacing:-1px}
+.masthead{top:25px;left:28px}.eyebrow{font-size:8px;letter-spacing:.16em}
+.actions{top:25px;right:24px}.desktop-hints,.specimen{display:none}
+.companion-ui{position:fixed;left:20px;right:20px;bottom:22px;text-align:center;pointer-events:none}
+#companion-state{font-size:16px;font-weight:650;margin:0 0 8px;color:#30442e}
+.companion-hint{font-size:11px;margin:0 0 15px;color:#53654e}
+.mood-buttons{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;pointer-events:auto}
+.mood-buttons button{border:1px solid #ffffffaa;border-radius:22px;padding:9px 14px;background:#f8fbedbd;font-size:12px;backdrop-filter:blur(12px);touch-action:manipulation}
+.mood-buttons button[aria-pressed=true]{background:#365438;color:#fff;border-color:#365438}
+.touch-controls{bottom:154px;left:18px;right:18px}.dpad{grid-template-columns:30px 30px 30px;grid-template-rows:30px 30px;gap:3px}.dpad button{font-size:16px;border-radius:9px}.jump{width:48px;height:48px}.jump svg{width:19px;height:19px}
+@media(max-width:480px){.masthead{left:20px}.eyebrow{font-size:7px}.actions{right:16px}.companion-ui{left:12px;right:12px;bottom:16px}.mood-buttons{gap:5px}.mood-buttons button{padding:8px 10px;font-size:11px}#companion-state{font-size:14px}.companion-hint{font-size:10px}.touch-controls{bottom:174px}}
+
+.action-buttons{margin-bottom:8px}.action-buttons button{background:#e1edc9;border-color:#b2c797}.touch-controls{bottom:206px}@media(max-width:480px){.touch-controls{bottom:216px}.companion-hint{margin-bottom:9px}}
+
+html[data-guide] .mood-buttons,html[data-guide] .touch-controls,html[data-guide] .actions,html[data-guide] .companion-hint,html[data-guide] .eyebrow{display:none}
+html[data-guide] .masthead{top:16px;left:20px}html[data-guide] .masthead h1{font-size:22px;margin:0}html[data-guide] .companion-ui{bottom:12px}html[data-guide] #companion-state{font-size:12px;background:#f7faecc9;border-radius:16px;display:inline-block;padding:6px 12px;margin:0}

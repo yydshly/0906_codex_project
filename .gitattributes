@@ -9,3 +9,6 @@
 *.png binary
 *.jpg binary
 *.webp binary
+# Preserve research build bytes for the recorded SHA-256 manifests.
+docs/demos/002-jelly-baby/original/** -text
+docs/demos/002-jelly-baby/companion/** -text

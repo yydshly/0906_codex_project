@@ -1,0 +1,78 @@
+{
+  "repository": "https://github.com/scottstts/Jelly-Baby",
+  "commit": "df52c92a8459286bb287f0849764929e73b4f8ce",
+  "buildDate": "2026-09-06",
+  "command": "npm ci && npm run build -- --base ./",
+  "node": "22.15.0",
+  "npm": "10.9.2",
+  "sourceChanges": "none",
+  "scope": "Compiled runtime and required assets only; no upstream history, reference experiments, or node_modules copied.",
+  "upstreamLicense": "Not specified in inspected repository; publication and redistribution authorization pending.",
+  "files": [
+    {
+      "path": "assets/bg_room-CxfCC304.exr",
+      "bytes": 6092952,
+      "sha256": "0866dbbb9a48cd058f89c1583c30fc79cf66f4db7f22c01307a83f2f3b8d6538"
+    },
+    {
+      "path": "assets/index-BbXz_cog.js",
+      "bytes": 5463,
+      "sha256": "f6679748d3ec86e7af9ccfbdbe0e2f35a32fcbc2291595ac9ff90c57281de86b"
+    },
+    {
+      "path": "assets/index-BXa6cAxo.css",
+      "bytes": 5384,
+      "sha256": "4398d926df12127e5f9523fed5d21bb113277ca221711e604ec370f990669180"
+    },
+    {
+      "path": "assets/jelly-baby-D3aoVKxe.bin",
+      "bytes": 10054256,
+      "sha256": "390fc080f5f57de2684640040c4e0ca2af84fa839e16646dcfd8447eaba21b87"
+    },
+    {
+      "path": "assets/runtime-660PExOL.js",
+      "bytes": 1020821,
+      "sha256": "ae6bd95832b78f54ac29705f179602a45d46135356de9954b6d4224e32397f98"
+    },
+    {
+      "path": "assets/transport.worker-BWQVwIa1.js",
+      "bytes": 113257,
+      "sha256": "204ab78a9802a9f6ea9b6c72650120e8ee5449073724dd0cbfde6324fd5ec885"
+    },
+    {
+      "path": "assets/wood_base-BnLq3mVl.jpg",
+      "bytes": 14112253,
+      "sha256": "5923733d68da0dccb21ae64f4624bcaa6223395a91921a4f5df3af017d1f259b"
+    },
+    {
+      "path": "assets/wood_normal-pCUsk1GY.png",
+      "bytes": 1707189,
+      "sha256": "6fba42a5ec62d2b91fe7b546f3ab821c05babb9ed3e06b57cae7d82065cb8a5c"
+    },
+    {
+      "path": "assets/wood_roughness-a0mBSnc7.jpg",
+      "bytes": 148599,
+      "sha256": "8fbd981c8fcb8cf9a75c7fed604044c51687752e52bbeb758e8ef86913f815fa"
+    },
+    {
+      "path": "delaunator-LICENSE.txt",
+      "bytes": 738,
+      "sha256": "0b348fff56384b43dbb37593906904e56d0f9deb51eae590d4dc6d427fbf1808"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 611,
+      "sha256": "448541453002839a31b7283c2fd4ec43402c01f448d05e340a9683cb319f15cf"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1495,
+      "sha256": "b74faa297c82a373e3fd9778bdf0f12d6391c2a6979e8242e7ac3d75f52ed962"
+    },
+    {
+      "path": "three-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "upstreamCommit": "df52c92a8459286bb287f0849764929e73b4f8ce",
+  "date": "2026-09-06",
+  "version": "青团 02 + 首页导览 + 弹性实验",
+  "sharedAssets": "../original/assets/ (model and EXR environment)",
+  "files": [
+    {
+      "path": "docs/demos/002-jelly-baby/companion/index.html",
+      "bytes": 414,
+      "sha256": "0963a257a70d61b602d8194478ee637a0f80129589b2326e90403f23c955742c"
+    },
+    {
+      "path": "docs/demos/002-jelly-baby/companion/assets/index-BjcKzxlT.js",
+      "bytes": 6319,
+      "sha256": "3c20207ab025bd21561bb5e210713271b234e9348e79330dc950bc3248cb9301"
+    },
+    {
+      "path": "docs/demos/002-jelly-baby/companion/assets/index-kPjd7nJE.css",
+      "bytes": 7411,
+      "sha256": "9a4d73f4c617537d3ae654d5b6a05fc929376e8bc9fe6d671ae8bb8b17c4851b"
+    },
+    {
+      "path": "docs/demos/002-jelly-baby/companion/assets/runtime-CcYuvAch.js",
+      "bytes": 1031200,
+      "sha256": "a25c4386c2b3e42927dbc92b377a96b5e125db9a0fb8011f14f610149304990c"
+    },
+    {
+      "path": "docs/demos/002-jelly-baby/companion/assets/transport.worker-BWQVwIa1.js",
+      "bytes": 113257,
+      "sha256": "204ab78a9802a9f6ea9b6c72650120e8ee5449073724dd0cbfde6324fd5ec885"
+    }
+  ]
+}

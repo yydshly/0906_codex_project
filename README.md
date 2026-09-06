@@ -14,6 +14,7 @@
 | 编号 | 项目 | 研究摘要 | 状态 | 原仓库 | Web |
 | --- | --- | --- | --- | --- | --- |
 | 001 | [倪海厦 Skill · 专家知识组织研究](projects/001-nihaixia/README.md) | 从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。 | 研究中 | [源码](https://github.com/jangviktor-web/nihaixia) | [演示](https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/) |
+| 002 | [Jelly-Baby · 浏览器软体交互研究](projects/002-jelly-baby/README.md) | 整理软体物理与实时光学能力，复现原版，完成三维伙伴青团、首页导览及真实拉伸驱动的弹性课堂。 | 研究中 | [源码](https://github.com/scottstts/Jelly-Baby) | [演示](https://yydshly.github.io/0906_codex_project/demos/002-jelly-baby/) |
 | 003 | [FreePEP 教材下载器](projects/003-freepep/README.md) | 一图查看 780 条人教社教材目录的类别、学科与年级覆盖，支持筛选与批量下载为 PDF。 | 已归档 | [源码](https://github.com/siknet/FreePEP) | — |
 | 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
 <!-- PROJECT_INDEX:END -->
@@ -26,6 +27,12 @@
 [![原创整体架构图：资料提取与整理形成知识文件，分别供宿主模型检索和 App 本地规则使用；底部标明待建设的数据生产流程](docs/assets/projects/001-nihaixia/architecture.svg)](projects/001-nihaixia/README.md)
 
 从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。
+
+### 002 · Jelly-Baby · 浏览器软体交互研究
+
+[![Jelly-Baby 新版首屏真实截图：按原有能力、扩展原型、场景价值排列，首屏显示固定版本本地构建的原版三维果冻场景](docs/assets/projects/002-jelly-baby/cover.png)](projects/002-jelly-baby/README.md)
+
+整理软体物理与实时光学能力，复现原版，完成三维伙伴青团、首页导览及真实拉伸驱动的弹性课堂。
 
 ### 003 · FreePEP 教材下载器
 
