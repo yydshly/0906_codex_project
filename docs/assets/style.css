@@ -3,6 +3,7 @@
 @media(max-width:640px){header,main,footer{padding-left:20px;padding-right:20px}header{min-height:80px;font-size:13px}.hero{padding:44px 0}.grid,.about{grid-template-columns:1fr}.empty{grid-template-columns:1fr;gap:16px;padding:28px}.about{gap:12px}.section-heading{align-items:flex-start;flex-direction:column;gap:8px}.stats{gap:18px}footer{flex-direction:column}.card-body{padding:22px}}
 
 /* MULTICA_RESEARCH:START — project 004 styles, isolated from the catalog. */
+.card img[src*="/004-multica/"]{object-fit:contain;background:#f5f7fa}
 .multica-page{--mc-ink:#172f32;--mc-muted:#53696b;--mc-teal:#086d64;--mc-line:#d7e1dd;background:#f7f8f4;color:var(--mc-ink);font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif}
 .multica-page a{color:var(--mc-teal)}
 .multica-page :is(button,select){font:inherit}

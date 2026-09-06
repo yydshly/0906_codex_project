@@ -41,4 +41,3 @@ GitHub API GET /repos/multica-ai/multica 于 2026-09-06 返回 49,014 Stars、6,
 ## 图形与教学逻辑
 
 架构图、研究站和调度教学逻辑为本仓库原创整理。未复制整个上游代码或官方 UI。SVG 是可编辑图形，PNG 用于 README 和通用预览。没有虚构产品截图和真实模型执行结果。
-

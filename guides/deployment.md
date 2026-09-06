@@ -12,7 +12,7 @@ docs/
   demos/002-name/index.html      第二个演示
 ```
 
-同一个仓库使用一个 GitHub Pages 站点，不同演示通过子路径访问。预计地址（启用 Pages 后才生效）：
+同一个仓库使用一个 GitHub Pages 站点，不同演示通过子路径访问。2026-09-06 已配置 Pages 从 main 分支的 /docs 发布：
 
 - 首页：`https://yydshly.github.io/0906_codex_project/`
 - 项目演示：`https://yydshly.github.io/0906_codex_project/demos/001-name/`
@@ -21,7 +21,7 @@ docs/
 
 ## 启用 GitHub Pages
 
-初始化仅准备站点文件。需要发布时，在仓库 **Settings → Pages → Build and deployment** 中选择：
+当前发布源已启用；需要重新配置时，在仓库 **Settings → Pages → Build and deployment** 中选择：
 
 1. Source：**Deploy from a branch**。
 2. Branch：**main**；目录：**/docs**。

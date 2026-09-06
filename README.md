@@ -6,7 +6,7 @@
 
 这里是研究总入口。每个子项目拥有固定编号、独立研究文档和图片；首页只保留摘要、索引和展示入口。
 
-[研究约定与新增指南](CONTRIBUTING.md) · [Web 展示与部署](guides/deployment.md) · [项目登记表](projects.json)
+[在线研究站](https://yydshly.github.io/0906_codex_project/) · [研究约定与新增指南](CONTRIBUTING.md) · [Web 展示与部署](guides/deployment.md) · [项目登记表](projects.json)
 
 ## 有序项目索引
 

@@ -98,4 +98,3 @@
 仓库根目录运行 `python -m http.server 8000 --directory docs`，访问 /demos/004-multica/。完整验证、教学约束及官方运行入口见 [running.md](running.md)。
 
 更新研究先固定上游提交，再核对 sources.md、更新文档 / SVG / 网页；元数据修改后执行 `npm run sync` 和 `npm run check`。
-

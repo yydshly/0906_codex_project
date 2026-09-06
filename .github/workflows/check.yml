@@ -19,3 +19,5 @@ jobs:
           node-version: '22'
       - name: Validate catalog and generated pages
         run: npm run check
+      - name: Validate Multica teaching simulation
+        run: node projects/004-multica/tests/simulation.test.mjs

@@ -58,4 +58,11 @@ Direct 教学模式把所有 Run 视为同一个工作目录，串行运行；wo
 
 浏览器检查脚本为 tests/browser.test.cjs，需要已安装 Playwright 与 Chromium；设置 NODE_PATH 指向依赖目录后运行。SITE_URL 可覆盖站点根 URL；SCREENSHOT_DIR 可选择保存真实截图的目录。
 
-远端发布状态以 GitHub Pages 构建和线上访问结果为准。
+2026-09-06 远端验证：
+
+- GitHub Pages 已从 main /docs 成功发布；[首次部署记录](https://github.com/yydshly/0906_codex_project/actions/runs/34020455617)。
+- 研究页与索引返回 HTTP 200；线上 Playwright 重跑架构切换、派工、人工验收、Direct 模式和四种宽度检查，全部通过。
+- 本地 44 个文档 / 网页相对链接及锚点检查通过。
+- 目录校验与教学状态机检查纳入 GitHub Actions；浏览器检查使用独立脚本。
+
+后续发布仍需检查对应提交的 Pages 构建和线上资源；本记录只描述上述核对时点。
