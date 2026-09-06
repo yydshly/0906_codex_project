@@ -1,81 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
-  <title id="title">FreePEP 内容与能力导览：从教材目录到本地 PDF</title>
-  <desc id="desc">人教社网站提供教材目录和阅读器页面。FreePEP 支持按学段、学科、年级查找教材，通过浏览器获取逐页图片，再合成 PDF 分类保存。提供 Web 和命令行入口、批量处理和缓存复用。搜索仅针对目录元数据，不含 OCR、正文搜索或 AI 问答。原创源码分析图，未实测下载。</desc>
-  <defs>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M1 1 L8 4.5 L1 8" fill="none" stroke="#658778" stroke-width="2"/></marker>
-  </defs>
-  <rect width="1440" height="960" rx="24" fill="#f5f5ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1210" viewBox="0 0 1200 1210" role="img" aria-labelledby="title desc">
+  <title id="title">FreePEP 收录哪些教材？</title>
+  <desc id="desc">FreePEP 收录人教社教材目录780条。普通教育包括六三学制214条、五四学制53条、高中107条；特殊教育包括聋校109条、盲校低视力版132条、盲校盲文版105条、培智学校60条。支持按学段、学科、年级筛选，批量下载为PDF。数量基于查阅版本的目录缓存。</desc>
+  <rect width="1200" height="1210" rx="24" fill="#f5f5ef"/>
   <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#20382f">
-    <text x="48" y="49" font-size="16" letter-spacing="2" fill="#61766b">003 / FREEPEP · 内容与能力导览</text>
-    <text x="48" y="103" font-size="38" font-weight="700">把在线教材，整理成可保存的 PDF</text>
-    <text x="48" y="143" font-size="21" fill="#61766b">定位：面向人教社网站的教材采集与下载工具，适合按需获取和本地归档。</text>
+    <text x="48" y="49" font-size="16" letter-spacing="2" fill="#65776c">003 / FREEPEP</text>
+    <text x="48" y="109" font-size="40" font-weight="700">这里能找到哪些教材？</text>
+    <text x="48" y="153" font-size="23" fill="#65776c">人教社教材目录与下载工具</text>
+    <text x="1146" y="107" text-anchor="end" font-size="66" font-weight="700">780</text>
+    <text x="1146" y="148" text-anchor="end" font-size="20" fill="#65776c">条教材目录</text>
 
-    <rect x="48" y="176" width="1344" height="56" rx="12" fill="#203f34"/>
-    <text x="70" y="212" font-size="22" fill="#ffffff">操作入口</text>
-    <text x="229" y="212" font-size="21" fill="#e2ede4">本地 Web 界面</text>
-    <text x="473" y="212" font-size="21" fill="#e2ede4">交互式命令行</text>
-    <text x="729" y="212" font-size="21" fill="#e2ede4">命令行参数 / 批量脚本</text>
-    <text x="1110" y="212" font-size="19" fill="#c5d7c9">选择教材后开始处理</text>
+    <rect x="48" y="194" width="536" height="408" rx="18" fill="#fffef9" stroke="#d6ded1"/>
+    <text x="76" y="245" font-size="27" font-weight="700">普通教育教材</text>
+    <path d="M76 269 H556" stroke="#dce3d6"/>
+    <text x="76" y="322" font-size="23">义务教育 · 六三学制</text>
+    <text x="554" y="324" text-anchor="end" font-size="30" font-weight="700">214</text>
+    <path d="M76 350 H556" stroke="#edf0e7"/>
+    <text x="76" y="402" font-size="23">义务教育 · 五四学制</text>
+    <text x="554" y="404" text-anchor="end" font-size="30" font-weight="700">53</text>
+    <path d="M76 430 H556" stroke="#edf0e7"/>
+    <text x="76" y="482" font-size="23">高中</text>
+    <text x="554" y="484" text-anchor="end" font-size="30" font-weight="700">107</text>
 
-    <rect x="48" y="264" width="312" height="236" rx="16" fill="#fffef9" stroke="#d6ded1"/>
-    <text x="70" y="301" font-size="17" fill="#7e7152">01 / 目录来源</text>
-    <text x="70" y="342" font-size="28" font-weight="700">获取教材清单</text>
-    <text x="70" y="381" font-size="20">官网目录 + 本地缓存</text>
-    <text x="70" y="414" font-size="20">书名、学段、学科、年级</text>
-    <path d="M70 437 H338" stroke="#e2e6dc"/>
-    <text x="70" y="473" font-size="18" fill="#61766b">前端数据解析与 AES 解密</text>
+    <rect x="616" y="194" width="536" height="408" rx="18" fill="#eaf0e3" stroke="#c9d5be"/>
+    <text x="644" y="245" font-size="27" font-weight="700">特殊教育教材</text>
+    <path d="M644 269 H1124" stroke="#cdd9c3"/>
+    <text x="644" y="322" font-size="23">聋校</text>
+    <text x="1122" y="324" text-anchor="end" font-size="30" font-weight="700">109</text>
+    <path d="M644 350 H1124" stroke="#dce5d3"/>
+    <text x="644" y="402" font-size="23">盲校 · 低视力版</text>
+    <text x="1122" y="404" text-anchor="end" font-size="30" font-weight="700">132</text>
+    <path d="M644 430 H1124" stroke="#dce5d3"/>
+    <text x="644" y="482" font-size="23">盲校 · 盲文版</text>
+    <text x="1122" y="484" text-anchor="end" font-size="30" font-weight="700">105</text>
+    <path d="M644 510 H1124" stroke="#dce5d3"/>
+    <text x="644" y="562" font-size="23">培智学校</text>
+    <text x="1122" y="564" text-anchor="end" font-size="30" font-weight="700">60</text>
 
-    <rect x="392" y="264" width="312" height="236" rx="16" fill="#fffef9" stroke="#d6ded1"/>
-    <text x="414" y="301" font-size="17" fill="#7e7152">02 / 按需选择</text>
-    <text x="414" y="342" font-size="28" font-weight="700">找到需要的教材</text>
-    <text x="414" y="381" font-size="20">分类筛选 / 关键词查找</text>
-    <text x="414" y="414" font-size="20">单本选择 / 批量选择</text>
-    <path d="M414 437 H682" stroke="#e2e6dc"/>
-    <text x="414" y="473" font-size="18" fill="#61766b">匹配目录元数据与教材 ID</text>
+    <rect x="48" y="631" width="1104" height="380" rx="18" fill="#fffef9" stroke="#d6ded1"/>
+    <text x="76" y="680" font-size="27" font-weight="700">覆盖学科与栏目 · 28 项</text>
+    <text x="76" y="727" font-size="22">语文、数学、英语、日语、俄语、科学、物理、化学、生物学、地理</text>
+    <text x="76" y="765" font-size="22">历史、道德与法治、思想政治、信息技术、通用技术、体育与健康</text>
+    <text x="76" y="803" font-size="22">音乐、美术、艺术、舞蹈、戏剧、影视、律动</text>
+    <text x="76" y="841" font-size="22">生活语文、生活数学、生活适应、沟通与交往</text>
+    <text x="76" y="879" font-size="22">习近平新时代中国特色社会主义思想学生读本</text>
+    <path d="M76 903 H1124" stroke="#dce3d6"/>
+    <text x="76" y="944" font-size="23" font-weight="700">年级与册次</text>
+    <text x="252" y="944" font-size="22">一至九年级、高中必修与选择性必修，另有跨年级及专项教材。</text>
+    <text x="76" y="983" font-size="17" fill="#65776c">以上为整个目录的覆盖范围，各学段与教材类别所含学科不同。</text>
 
-    <rect x="736" y="264" width="312" height="236" rx="16" fill="#fffef9" stroke="#d6ded1"/>
-    <text x="758" y="301" font-size="17" fill="#7e7152">03 / 页面采集</text>
-    <text x="758" y="342" font-size="28" font-weight="700">下载逐页图片</text>
-    <text x="758" y="381" font-size="20">加载阅读器 / 读取总页数</text>
-    <text x="758" y="414" font-size="20">按页获取 JPG 图片</text>
-    <path d="M758 437 H1026" stroke="#e2e6dc"/>
-    <text x="758" y="473" font-size="18" fill="#61766b">Playwright 浏览器自动化</text>
-
-    <rect x="1080" y="264" width="312" height="236" rx="16" fill="#e6eddf" stroke="#9eaf8e"/>
-    <text x="1102" y="301" font-size="17" fill="#587248">04 / 文件输出</text>
-    <text x="1102" y="342" font-size="28" font-weight="700">合成与分类保存</text>
-    <text x="1102" y="381" font-size="20">页面图片 → 图片型 PDF</text>
-    <text x="1102" y="414" font-size="20">按学段 / 年级存到本地</text>
-    <path d="M1102 437 H1370" stroke="#c5d2b9"/>
-    <text x="1102" y="473" font-size="18" fill="#587248">Pillow 合成 / 本地目录归档</text>
-    <g stroke="#658778" stroke-width="2" marker-end="url(#arrow)">
-      <path d="M363 366 H387"/>
-      <path d="M707 366 H731"/>
-      <path d="M1051 366 H1075"/>
-    </g>
-
-    <rect x="48" y="529" width="1344" height="77" rx="12" fill="#ecefe6"/>
-    <text x="70" y="576" font-size="22" font-weight="700">辅助能力</text>
-    <text x="240" y="576" font-size="20">多本并发（批量脚本）</text>
-    <text x="566" y="576" font-size="20">进度显示</text>
-    <text x="764" y="576" font-size="20">图片缓存复用</text>
-    <text x="1009" y="576" font-size="20">已有文件跳过 / 缓存清理</text>
-
-    <rect x="48" y="638" width="652" height="204" rx="16" fill="#fffef9" stroke="#d6ded1"/>
-    <text x="72" y="680" font-size="25" font-weight="700">适用场景与记录价值</text>
-    <text x="72" y="725" font-size="21">在相应授权范围内，按需获取教材、离线查阅。</text>
-    <text x="72" y="762" font-size="21">参考目录处理、浏览器采集与文件归档流程。</text>
-    <text x="72" y="808" font-size="20" fill="#587248">我们的安排：简要记录；有实际需求时再评估。</text>
-
-    <rect x="724" y="638" width="668" height="204" rx="16" fill="#f3eadb" stroke="#dfd0b5"/>
-    <text x="748" y="680" font-size="25" font-weight="700" fill="#705735">能力边界</text>
-    <text x="748" y="725" font-size="21">搜索书名与分类，不搜索教材正文。</text>
-    <text x="748" y="762" font-size="21">OCR、知识点整理、AI 问答尚未实现。</text>
-    <text x="748" y="808" font-size="20" fill="#705735">运行与完整性待验证：生成 PDF 可能仍有缺页。</text>
-
-    <path d="M48 870 H1392" stroke="#d6ded1"/>
-    <text x="48" y="902" font-size="17" fill="#61766b">来源：siknet/FreePEP · v1.1 / f517150 · 2026-09-06</text>
-    <text x="48" y="932" font-size="16" fill="#61766b">依据 pep_core.py、webui.py、download_all.py 绘制；查阅版本的目录缓存含 780 条不同教材 ID。</text>
-    <text x="1392" y="902" text-anchor="end" font-size="17" fill="#61766b">原创源码分析图 · 非产品截图 · 未实测下载</text>
+    <rect x="48" y="1040" width="1104" height="77" rx="14" fill="#203f34"/>
+    <text x="600" y="1088" text-anchor="middle" font-size="25" fill="#ffffff">按学段、学科、年级筛选　→　批量下载并保存为 PDF</text>
+    <text x="48" y="1156" font-size="16" fill="#65776c">数量为 v1.1（f517150）目录缓存统计；教材内容下载时从官网获取，当前可下载性未验证。</text>
+    <text x="48" y="1186" font-size="15" fill="#65776c">来源：siknet/FreePEP · pep_catalog.json　｜　记录日期：2026-09-06</text>
   </g>
 </svg>
