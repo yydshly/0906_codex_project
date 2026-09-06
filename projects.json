@@ -18,6 +18,23 @@
     "demo": "demos/001-nihaixia/"
   },
   {
+    "id": "003",
+    "slug": "freepep",
+    "order": 30,
+    "name": "FreePEP 教材下载器",
+    "summary": "一图了解教材目录检索、逐页采集与 PDF 分类保存；记录工具用途及能力边界。",
+    "repository": "https://github.com/siknet/FreePEP",
+    "status": "已归档",
+    "tags": [
+      "教材下载",
+      "浏览器自动化",
+      "资料归档"
+    ],
+    "cover": "docs/assets/projects/003-freepep/architecture.png",
+    "coverAlt": "FreePEP 内容与能力导览：从教材目录、筛选到页面采集和 PDF 归档，标明适用场景及功能边界；原创说明图，非产品截图",
+    "demo": ""
+  },
+  {
     "id": "004",
     "slug": "multica",
     "order": 40,

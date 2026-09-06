@@ -14,6 +14,7 @@
 | 编号 | 项目 | 研究摘要 | 状态 | 原仓库 | Web |
 | --- | --- | --- | --- | --- | --- |
 | 001 | [倪海厦 Skill · 专家知识组织研究](projects/001-nihaixia/README.md) | 从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。 | 研究中 | [源码](https://github.com/jangviktor-web/nihaixia) | [演示](https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/) |
+| 003 | [FreePEP 教材下载器](projects/003-freepep/README.md) | 一图了解教材目录检索、逐页采集与 PDF 分类保存；记录工具用途及能力边界。 | 已归档 | [源码](https://github.com/siknet/FreePEP) | — |
 | 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
 <!-- PROJECT_INDEX:END -->
 
@@ -25,6 +26,12 @@
 [![原创整体架构图：资料提取与整理形成知识文件，分别供宿主模型检索和 App 本地规则使用；底部标明待建设的数据生产流程](docs/assets/projects/001-nihaixia/architecture.svg)](projects/001-nihaixia/README.md)
 
 从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。
+
+### 003 · FreePEP 教材下载器
+
+[![FreePEP 内容与能力导览：从教材目录、筛选到页面采集和 PDF 归档，标明适用场景及功能边界；原创说明图，非产品截图](docs/assets/projects/003-freepep/architecture.png)](projects/003-freepep/README.md)
+
+一图了解教材目录检索、逐页采集与 PDF 分类保存；记录工具用途及能力边界。
 
 ### 004 · Multica · 多 Agent 协作与执行控制研究
 
