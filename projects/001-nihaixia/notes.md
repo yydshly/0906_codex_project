@@ -8,6 +8,10 @@
 
 GitHub Pages 已启用 `main` 分支 `/docs` 发布源。本次只提交 001 的文档、页面、图片及对应共享样式和生成索引，不包含其他项目未提交内容。发布前运行目录同步、目录校验、JavaScript 语法和变更格式检查。
 
+发布核验：内容提交 [`99f2e19`](https://github.com/yydshly/0906_codex_project/commit/99f2e194f4d5196499339ab794dda0b606098fe2) 已推送到 `main`；[目录与模拟检查](https://github.com/yydshly/0906_codex_project/actions/runs/34021217782) 和 [Pages 部署](https://github.com/yydshly/0906_codex_project/actions/runs/34021217308) 均成功。公网页面、架构 SVG、PNG 预览和页面脚本均返回 HTTP 200。公网浏览器检查确认导览跳转与原图加载正常，自然语言问答方案可切换，医案搜索显示 1 / 6 项。
+
+线上入口：[完整展示](https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/) · [整体架构导览](https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/#overview)。
+
 ## 2026-09-06 · 三个问题的展示重组
 
 新增 [strategy.md](strategy.md)，按“当前方案、参考架构、对我们的价值”组织说明。页面区分本仓库静态展示、上游 Skill 的文件检索与宿主模型、关联 App 的本地数据与程序规则。资料处理链路标明外部文本提取和脚本边界。
