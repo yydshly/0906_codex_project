@@ -1,0 +1,13 @@
+{
+  "name": "github-research-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "有序的 GitHub 项目研究索引与 Web 展示入口",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "project:new": "node scripts/catalog.mjs new",
+    "sync": "node scripts/catalog.mjs sync",
+    "check": "node scripts/catalog.mjs check"
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Research Lab</title>
+  <desc id="desc">发现优秀开源项目，记录研究，连接实践。</desc>
+  <rect width="1280" height="300" rx="24" fill="#142d29"/>
+  <g fill="none" stroke="#36534b"><path d="M860 0v300M960 0v300M1060 0v300M1160 0v300M760 50h520M760 150h520M760 250h520"/></g>
+  <circle cx="1060" cy="150" r="85" fill="#203d35" stroke="#bce6a0" stroke-width="2"/>
+  <text x="1060" y="171" text-anchor="middle" fill="#c7efad" font-family="monospace" font-size="60">&lt;/&gt;</text>
+  <text x="64" y="75" fill="#c7efad" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">OPEN SOURCE / FIELD NOTES</text>
+  <text x="60" y="157" fill="#f4f4e9" font-family="Arial,sans-serif" font-size="58" font-weight="700">GitHub Research Lab</text>
+  <text x="64" y="224" fill="#cad5c9" font-family="Arial,Microsoft YaHei,sans-serif" font-size="23">发现 · 拆解 · 实践 · 沉淀</text>
+</svg>
