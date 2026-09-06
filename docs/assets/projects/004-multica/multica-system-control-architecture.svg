@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="2500" viewBox="0 0 2480 2500">
+<rect width="2480" height="2500" fill="#F5F7FA"/>
+<text x="64" y="39" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">MULTICA  /  SYSTEM + CONTROL LOOPS</text>
+<text x="64" y="82" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="49" font-weight="700" fill="#142D40">整体架构补全：控制并发，也控制任务如何走向完成</text>
+<text x="66" y="150" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#526576">执行控制回答“谁现在可以运行”；任务控制回答“下一步做什么、何时提交验收”。两者通过 Run 队列与工作反馈连接。</text>
+<rect x="64" y="213" width="538" height="258" rx="13" fill="#E5EDF6"/>
+<text x="86" y="228" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#2D63BB">用户与接入层</text>
+<text x="86" y="269" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">Web / 桌面 / 移动端 · Multica CLI</text>
+<text x="86" y="301" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">外部聊天渠道 / Webhook</text>
+<text x="86" y="333" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">创建目标、配置 Agent、小队与资源</text>
+<text x="86" y="365" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">查看日志、反馈、成果并审阅</text>
+<line x1="608" y1="323" x2="674" y2="323" stroke="#087E83" stroke-width="3"/>
+<polygon points="674,323 663,316 663,330" fill="#087E83"/>
+<text x="610" y="286" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#087E83">API</text>
+<line x1="674" y1="389" x2="608" y2="389" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="608,389 619,382 619,396" fill="#2D63BB"/>
+<text x="610" y="407" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#2D63BB">实时</text>
+<rect x="684" y="213" width="1074" height="258" rx="18" fill="#E3F1EB" stroke="#B8D3C7" stroke-width="2"/>
+<text x="708" y="231" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#087E83">平台服务｜Go API / HTTP / WebSocket</text>
+<text x="708" y="279" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#142D40">业务模块：任务 · Agent · Squad · Skills · 自动化 · 成果审阅</text>
+<rect x="708" y="326" width="496" height="119" rx="13" fill="#FFFFFF"/>
+<text x="730" y="341" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">① 运行调度与执行状态</text>
+<text x="730" y="382" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">队列、领取、运行事件与故障处理</text>
+<text x="730" y="414" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">与 Daemon 共同控制并发</text>
+<rect x="1228" y="326" width="506" height="119" rx="13" fill="#FFFFFF"/>
+<text x="1250" y="341" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#2D63BB">② 小队触发与任务推进</text>
+<text x="1250" y="382" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">派工、反馈、负责人唤醒与审阅状态</text>
+<text x="1250" y="414" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">负责人决策在工具进程中执行</text>
+<line x1="1764" y1="328" x2="1825" y2="328" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1825,328 1814,321 1814,335" fill="#2D63BB"/>
+<rect x="1835" y="213" width="581" height="258" rx="13" fill="#E5EDF6"/>
+<text x="1857" y="228" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#2D63BB">平台数据与资源</text>
+<text x="1857" y="269" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">PostgreSQL：配置、Issue、Run、消息</text>
+<text x="1857" y="301" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">文件存储：附件 / 媒体（Local / S3）</text>
+<text x="1857" y="333" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">Redis：调度缓存提示；数据库为准</text>
+<text x="1857" y="365" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">工作空间权限与任务凭证贯穿调用</text>
+<line x1="947" y1="480" x2="947" y2="538" stroke="#087E83" stroke-width="3"/>
+<polygon points="947,538 940,528 954,528" fill="#087E83"/>
+<text x="989" y="491" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#087E83">任务通知 / 批量领取 / 心跳：WebSocket 优先，HTTP 回退与轮询补偿</text>
+<rect x="64" y="550" width="1694" height="264" rx="18" fill="#E7EEF7" stroke="#BCD0E3" stroke-width="2"/>
+<text x="88" y="568" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#2D63BB">多台执行机器｜每台运行一个 Daemon；名额与目录锁由各机器管理</text>
+<text x="89" y="615" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#142D40">Runtime = 机器 + 工具 / 兼容配置；Agent 绑定 Runtime，按 Run 启动独立工具进程</text>
+<rect x="88" y="665" width="805" height="124" rx="13" fill="#FFFFFF"/>
+<text x="110" y="680" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">Codex 适配器 → Codex 进程 × N</text>
+<text x="110" y="721" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">codex app-server · stdin / stdout JSON-RPC</text>
+<text x="110" y="753" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">传入 Prompt / model；解析执行事件并回传</text>
+<rect x="917" y="665" width="817" height="124" rx="13" fill="#FFFFFF"/>
+<text x="939" y="680" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">Claude Code 适配器 → claude 进程 × N</text>
+<text x="939" y="721" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">stream-json 输入 / 输出；--model 等配置</text>
+<text x="939" y="753" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">本机保存工具原有凭据、代码 / worktree 与会话</text>
+<line x1="1764" y1="648" x2="1825" y2="648" stroke="#79579B" stroke-width="3"/>
+<polygon points="1825,648 1814,641 1814,655" fill="#79579B"/>
+<line x1="1825" y1="727" x2="1764" y2="727" stroke="#79579B" stroke-width="3"/>
+<polygon points="1764,727 1775,720 1775,734" fill="#79579B"/>
+<rect x="1835" y="550" width="581" height="264" rx="13" fill="#EEE8F5"/>
+<text x="1857" y="565" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#79579B">模型与外部执行能力</text>
+<text x="1857" y="606" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">各 CLI 使用自己的凭据与服务配置</text>
+<text x="1857" y="638" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">调用 OpenAI / Anthropic 等模型后端</text>
+<text x="1857" y="670" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">执行文件、命令、Git、MCP 等操作</text>
+<text x="1857" y="702" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">新工具扩展适配器；新机器接入 Daemon</text>
+<text x="90" y="833" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#2D63BB">回流：日志 / 状态 → 服务端记录 → 界面；派工评论 / 成员反馈 → API → 小队触发规则 → 后续 Run</text>
+<rect x="64" y="895" width="1140" height="1194" rx="20" fill="#E5F2EC" stroke="#AED0BE" stroke-width="2"/>
+<text x="89" y="915" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#087E83">① 并发执行闭环｜程序控制</text>
+<text x="90" y="961" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#526576">名额池 + 事务领取 + 目录隔离 + 独立进程 + 退出清理</text>
+<rect x="144" y="1017" width="718" height="93" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1032" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">1  待执行 Run 队列｜服务端</text>
+<text x="166" y="1073" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">保存目标 Agent、Runtime、触发内容与状态</text>
+<rect x="144" y="1147" width="718" height="93" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1162" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">2  先取空闲名额｜Daemon</text>
+<text x="166" y="1203" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">从机器共享名额池取得 K 个槽位；无空位就等待</text>
+<rect x="144" y="1277" width="718" height="108" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1292" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">3  再领取至多 K 个任务｜服务端事务</text>
+<text x="166" y="1333" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">检查 Runtime、Agent 并发上限与当前执行占用</text>
+<rect x="144" y="1422" width="718" height="104" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1437" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">4  准备目录与上下文｜Daemon</text>
+<text x="166" y="1478" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">独立 worktree 可并行；同一 Direct 目录等待锁</text>
+<line x1="503" y1="1116" x2="503" y2="1140" stroke="#087E83" stroke-width="3"/>
+<polygon points="503,1140 496,1130 510,1130" fill="#087E83"/>
+<line x1="503" y1="1246" x2="503" y2="1270" stroke="#087E83" stroke-width="3"/>
+<polygon points="503,1270 496,1260 510,1260" fill="#087E83"/>
+<line x1="503" y1="1391" x2="503" y2="1415" stroke="#087E83" stroke-width="3"/>
+<polygon points="503,1415 496,1405 510,1405" fill="#087E83"/>
+<line x1="503" y1="1532" x2="503" y2="1560" stroke="#087E83" stroke-width="3"/>
+<polygon points="503,1560 496,1550 510,1550" fill="#087E83"/>
+<rect x="895" y="1017" width="281" height="188" rx="13" fill="#D3E8DD"/>
+<text x="917" y="1032" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">共享额度</text>
+<text x="917" y="1073" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">机器默认 20</text>
+<text x="917" y="1105" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">每 Agent 默认 6</text>
+<text x="917" y="1137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">所有 Runtime 共用</text>
+<text x="917" y="1169" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">机器的总额度</text>
+<rect x="895" y="1235" width="281" height="177" rx="13" fill="#D3E8DD"/>
+<text x="917" y="1250" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">领取保护</text>
+<text x="917" y="1291" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">事务内锁定与检查</text>
+<text x="917" y="1323" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">防止竞态超发</text>
+<text x="917" y="1355" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">未领到任务的名额</text>
+<text x="917" y="1387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">立即归还</text>
+<rect x="895" y="1442" width="281" height="212" rx="13" fill="#D3E8DD"/>
+<text x="917" y="1457" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">故障处理</text>
+<text x="917" y="1498" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">心跳、断线与超时</text>
+<text x="917" y="1530" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">符合条件才重试</text>
+<text x="917" y="1562" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">人工取消 → 停进程</text>
+<text x="917" y="1594" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">进程树退出并清理</text>
+<text x="917" y="1626" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">守护进程重启要恢复</text>
+<line x1="325" y1="1565" x2="681" y2="1565" stroke="#087E83" stroke-width="3"/>
+<line x1="325" y1="1565" x2="325" y2="1582" stroke="#087E83" stroke-width="3"/>
+<polygon points="325,1582 318,1572 332,1572" fill="#087E83"/>
+<line x1="681" y1="1565" x2="681" y2="1582" stroke="#087E83" stroke-width="3"/>
+<polygon points="681,1582 674,1572 688,1572" fill="#087E83"/>
+<rect x="144" y="1590" width="343" height="111" rx="13" fill="#CDE6DA"/>
+<text x="166" y="1605" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">5a  Codex 进程</text>
+<text x="166" y="1646" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">Run A / 独立目录 A</text>
+<rect x="519" y="1590" width="343" height="111" rx="13" fill="#CDE6DA"/>
+<text x="541" y="1605" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">5b  Claude 进程</text>
+<text x="541" y="1646" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">Run B / 独立目录 B</text>
+<text x="269" y="1672" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#087E83">同时运行</text>
+<text x="644" y="1672" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#087E83">同时运行</text>
+<line x1="325" y1="1707" x2="325" y2="1753" stroke="#087E83" stroke-width="3"/>
+<polygon points="325,1753 318,1743 332,1743" fill="#087E83"/>
+<line x1="681" y1="1707" x2="681" y2="1753" stroke="#087E83" stroke-width="3"/>
+<polygon points="681,1753 674,1743 688,1743" fill="#087E83"/>
+<rect x="144" y="1761" width="718" height="92" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1776" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">6  每个 Run 独立结束回调与清理</text>
+<text x="166" y="1817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">记录终态、处理子进程、释放目录；不等另一项结束</text>
+<line x1="503" y1="1859" x2="503" y2="1882" stroke="#087E83" stroke-width="3"/>
+<polygon points="503,1882 496,1872 510,1872" fill="#087E83"/>
+<rect x="144" y="1890" width="718" height="94" rx="13" fill="#FFFFFF"/>
+<text x="166" y="1905" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#087E83">7  归还机器名额，并唤醒领取循环</text>
+<text x="166" y="1946" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">正常结束 / 可控终止后，待执行 Run 获得机会</text>
+<line x1="138" y1="1937" x2="112" y2="1937" stroke="#087E83" stroke-width="3"/>
+<line x1="112" y1="1937" x2="112" y2="1193" stroke="#087E83" stroke-width="3"/>
+<line x1="112" y1="1193" x2="138" y2="1193" stroke="#087E83" stroke-width="3"/>
+<polygon points="138,1193 127,1186 127,1200" fill="#087E83"/>
+<text x="145" y="2014" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#087E83">示例：只有 2 个名额，A / B 同时运行；A 结束释放后，C 才能开始。</text>
+<text x="145" y="2050" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#526576">目录等待也属于已领取执行；名额存在不等于所有进程都在做有效工作。</text>
+<rect x="1240" y="895" width="1176" height="1194" rx="20" fill="#E8EEF7" stroke="#B5C8E1" stroke-width="2"/>
+<text x="1265" y="915" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#2D63BB">② 任务推进闭环｜规则触发 + 模型判断 + 人验收</text>
+<text x="1266" y="961" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#526576">围绕一个 Issue 可以反复运行多个 Run；负责人无需一直占着进程</text>
+<rect x="1280" y="1017" width="1028" height="93" rx="13" fill="#FFFFFF"/>
+<text x="1302" y="1032" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">1  Issue 明确目标与验收要求</text>
+<text x="1302" y="1073" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">指派给小队 → 创建负责人的首次 Run</text>
+<rect x="1280" y="1147" width="1028" height="107" rx="13" fill="#FFFFFF"/>
+<text x="1302" y="1162" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">2  负责人进程读取上下文，调用模型判断</text>
+<text x="1302" y="1203" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">注入成员名册和协作规则，选择成员与下一项工作</text>
+<rect x="1280" y="1291" width="1028" height="99" rx="13" fill="#FFFFFF"/>
+<text x="1302" y="1306" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">3  发布结构化派工评论 / 分派子任务</text>
+<text x="1302" y="1347" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">服务端解析目标，为成员创建 Run → 进入左侧执行闭环</text>
+<rect x="1280" y="1427" width="1028" height="93" rx="13" fill="#FFFFFF"/>
+<text x="1302" y="1442" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">4  负责人派工后结束本轮</text>
+<text x="1302" y="1483" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">父任务保持 in_progress；成员按可用名额工作</text>
+<rect x="1280" y="1557" width="1028" height="106" rx="13" fill="#FFFFFF"/>
+<text x="1302" y="1572" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">5  收到成员反馈或子任务 / 阶段事件</text>
+<text x="1302" y="1613" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">按规则触发负责人后续 Run；读取结果，再判断下一步</text>
+<line x1="1794" y1="1116" x2="1794" y2="1140" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1794,1140 1787,1130 1801,1130" fill="#2D63BB"/>
+<line x1="1794" y1="1260" x2="1794" y2="1284" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1794,1284 1787,1274 1801,1274" fill="#2D63BB"/>
+<line x1="1794" y1="1396" x2="1794" y2="1420" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1794,1420 1787,1410 1801,1410" fill="#2D63BB"/>
+<line x1="1794" y1="1526" x2="1794" y2="1550" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1794,1550 1787,1540 1801,1540" fill="#2D63BB"/>
+<line x1="1794" y1="1669" x2="1794" y2="1692" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1794,1692 1787,1682 1801,1682" fill="#2D63BB"/>
+<line x1="1232" y1="1344" x2="1210" y2="1344" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1210,1344 1221,1337 1221,1351" fill="#2D63BB"/>
+<text x="1258" y="1699" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#2D63BB">6  根据当前证据分支；系统不会把“进程结束”自动当作“目标完成”</text>
+<rect x="1280" y="1755" width="310" height="131" rx="13" fill="#D4E1F2"/>
+<text x="1302" y="1770" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#2D63BB">还缺工作</text>
+<text x="1302" y="1811" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">补充派工或返工</text>
+<text x="1302" y="1843" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">回到第 3 步</text>
+<rect x="1617" y="1755" width="310" height="131" rx="13" fill="#D4E1F2"/>
+<text x="1639" y="1770" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#2D63BB">信息或结果未齐</text>
+<text x="1639" y="1811" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">等待后续反馈</text>
+<text x="1639" y="1843" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">回到第 5 步</text>
+<rect x="1954" y="1755" width="354" height="131" rx="13" fill="#D4E1F2"/>
+<text x="1976" y="1770" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#2D63BB">整体目标已满足</text>
+<text x="1976" y="1811" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">提交 in_review</text>
+<text x="1976" y="1843" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">进入人工审阅</text>
+<line x1="1435" y1="1889" x2="1435" y2="1911" stroke="#2D63BB" stroke-width="3"/>
+<line x1="1435" y1="1911" x2="1258" y2="1911" stroke="#2D63BB" stroke-width="3"/>
+<line x1="1258" y1="1911" x2="1258" y2="1340" stroke="#2D63BB" stroke-width="3"/>
+<line x1="1258" y1="1340" x2="1275" y2="1340" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="1275,1340 1264,1333 1264,1347" fill="#2D63BB"/>
+<line x1="1772" y1="1890" x2="1772" y2="1917" stroke="#2D63BB" stroke-width="3"/>
+<line x1="1772" y1="1917" x2="2336" y2="1917" stroke="#2D63BB" stroke-width="3"/>
+<line x1="2336" y1="1917" x2="2336" y2="1608" stroke="#2D63BB" stroke-width="3"/>
+<line x1="2336" y1="1608" x2="2314" y2="1608" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="2314,1608 2325,1601 2325,1615" fill="#2D63BB"/>
+<line x1="2131" y1="1891" x2="2131" y2="1943" stroke="#2D63BB" stroke-width="3"/>
+<polygon points="2131,1943 2124,1933 2138,1933" fill="#2D63BB"/>
+<rect x="1617" y="1951" width="691" height="91" rx="13" fill="#FFFFFF"/>
+<text x="1639" y="1966" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D63BB">7  人工验收或已有集成确认完成</text>
+<text x="1639" y="2007" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">通过 → done；需要修改 → 补充要求，再触发执行</text>
+<text x="1280" y="2053" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">阶段事件用于唤醒负责人；它不等同于自动验收或自动合并代码。</text>
+<rect x="64" y="2124" width="2352" height="120" rx="16" fill="#173B4B"/>
+<text x="88" y="2144" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">两套状态必须分开</text>
+<text x="432" y="2148" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#DCEBF3">Run：queued → dispatched → running → completed / failed / cancelled</text>
+<text x="432" y="2191" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#A5E0D9">Issue：todo → in_progress → in_review → done     |     单次 Run 完成，只代表这一次执行结束</text>
+<rect x="64" y="2274" width="2352" height="153" rx="17" fill="#FFF1DD" stroke="#E2C896" stroke-width="2"/>
+<text x="88" y="2290" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#936120">建议补强｜开发同类产品时新增；不表示上游已经完整实现</text>
+<text x="89" y="2339" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#936120">硬性停止控制</text>
+<text x="290" y="2340" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526576">任务预算 / 最多派工次数 / 总时限</text>
+<text x="877" y="2339" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#936120">可验证的交付</text>
+<text x="1072" y="2340" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526576">验收检查 / 成果版本 / 汇总与冲突处理</text>
+<text x="1799" y="2339" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#936120">明确的依赖约束</text>
+<text x="1799" y="2380" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">何时允许后续任务开始与结束</text>
+<text x="89" y="2381" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526576">这些约束应由程序执行，并将失败或超限转为需要人工处理的状态；仅写进负责人提示词不足以形成硬约束。</text>
+<text x="66" y="2457" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#526576">依据：Multica daemon.go / service/task.go 与官方 Squads、Runs、Project resources 文档  ·  核对日期 2026-09-06  ·  总览与控制细化共用同一套组件</text>
+</svg>

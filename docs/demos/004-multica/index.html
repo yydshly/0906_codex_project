@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Multica 多 Agent 协作研究：理解 Codex 与 Claude Code 接入、队列与并发、负责人反馈循环，以及整体开发架构。">
+  <title>Multica · 从工具到协作系统 | Research 004</title>
+  <link rel="icon" href="data:,"><link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body class="multica-page">
+  <header class="mc-nav"><a class="mc-brand" href="../../">RESEARCH LAB <span>/ 004</span></a><nav aria-label="页面导航"><a href="#architecture">架构</a><a href="#mechanism">原理</a><a href="#simulation">调度体验</a><a href="#evidence">证据</a></nav><a class="mc-repo" href="https://github.com/yydshly/0906_codex_project/tree/main/projects/004-multica">研究文档 ↗</a></header>
+  <main class="mc-main">
+    <section class="mc-hero">
+      <div><p class="mc-kicker">MULTICA / ARCHITECTURE FIELD NOTES</p><h1>工具会做事，<br>团队如何<span>一起做完？</span></h1><p class="mc-lead">从 Codex、Claude Code 的接入，到任务领取、并行执行和负责人反馈。看清 Multica 如何把分散的 AI 工具组织成可追踪的工作系统。</p><div class="mc-actions"><a class="mc-button" href="#architecture">从架构开始 <span>↓</span></a><a class="mc-text-link" href="#simulation">亲手走一次调度 →</a></div><p class="mc-version">源码研究 · 2026.09.06 · 固定提交 <a href="https://github.com/multica-ai/multica/tree/7a438bd5b8bf39afd54259a7eb0971390e50a8ef">7a438bd</a></p></div>
+      <aside class="mc-hero-map" aria-label="核心关系示意"><div class="mc-map-label">ONE GOAL. MULTIPLE RUNS.</div><div class="mc-map-goal">一个工作目标 <small>Issue</small></div><div class="mc-map-arrow">↓</div><div class="mc-map-control"><span>负责人决定分工</span><span>程序管理执行</span></div><div class="mc-map-arrow">↓</div><div class="mc-map-workers"><span>Codex<small>独立 Run</small></span><span>Claude Code<small>独立 Run</small></span></div><div class="mc-map-return">结果反馈 ↗ 再次判断 ↗ 提交审阅</div><p>一次执行结束，<br><strong>不等于整体任务完成。</strong></p></aside>
+    </section>
+    <div class="mc-scope"><span>研究边界</span><p>本页是源码研究与独立教学展示，未运行 Multica 后端或真实模型任务。架构图为原创整理，建议增强项与已有机制分开标注。</p></div>
+
+    <section id="overview" class="mc-section">
+      <div class="mc-section-title"><p class="mc-kicker">01 / WHAT IT ADDS</p><h2>整合已有能力，管理它们如何工作。</h2><p>主要价值是任务组织与运行管理。模型提供推理，Agent 工具负责操作，Multica 把分派、反馈和成果连接起来。</p></div>
+      <div class="mc-capabilities"><article><b>01</b><h3>组织工作</h3><p>任务与项目、Agent 身份、小队角色、Skills 与执行资源。</p></article><article><b>02</b><h3>驱动执行</h3><p>触发 Run、路由到 Runtime、领取名额、启动工具进程。</p></article><article><b>03</b><h3>持续协作</h3><p>成员反馈触发后续执行，负责人决定下一步或提交审阅。</p></article><article><b>04</b><h3>看见成果</h3><p>任务讨论、运行状态、工具调用、用量与成果关联。</p></article></div>
+      <div class="mc-attention"><div><span>49,014</span><p>Stars · 2026-09-06 快照</p></div><p>关注度说明有人对这个方向感兴趣。多 Agent 管理需求、直观的派工体验与复用工具生态，是本研究认为的吸引力；尚无可靠的增长归因或使用效果数据。</p></div>
+    </section>
+
+    <section id="architecture" class="mc-section">
+      <div class="mc-section-title"><p class="mc-kicker">02 / SYSTEM ATLAS</p><h2>一张引导图，四个深入视角。</h2><p>先定位组件与边界，再展开工具协议、并发控制和任务推进。图中的模块是职责划分，不要求全部拆成微服务。</p></div>
+      <div class="mc-atlas-tabs" role="group" aria-label="选择架构视角"><button type="button" data-atlas="guide" aria-pressed="true">架构引导</button><button type="button" data-atlas="system" aria-pressed="false">整体开发架构</button><button type="button" data-atlas="execution" aria-pressed="false">工具与模型接入</button><button type="button" data-atlas="control" aria-pressed="false">并发与完成控制</button><button type="button" data-atlas="capability" aria-pressed="false">功能模块</button></div>
+      <figure class="mc-atlas"><a id="atlas-open" href="../../assets/projects/004-multica/architecture-guide.svg" target="_blank" rel="noopener"><img id="atlas-image" src="../../assets/projects/004-multica/architecture-guide.svg" alt="Multica 架构引导：入口、平台、多机执行与两条控制循环" width="1800" height="1120"></a><figcaption><p id="atlas-caption">先看入口、平台与执行机，再分别理解并发控制和任务推进。点击图片可打开矢量原图。</p><a id="atlas-download" href="../../assets/projects/004-multica/architecture-guide.png" download>下载 PNG ↗</a></figcaption></figure>
+      <noscript><p>其他架构图：<a href="../../assets/projects/004-multica/multica-system-architecture.svg">整体架构</a> · <a href="../../assets/projects/004-multica/multica-execution-architecture.svg">工具接入</a> · <a href="../../assets/projects/004-multica/multica-system-control-architecture.svg">并发与完成控制</a>。</p></noscript>
+    </section>
+
+    <section id="mechanism" class="mc-section">
+      <div class="mc-section-title"><p class="mc-kicker">03 / UNDER THE HOOD</p><h2>关键不是“有几个模型”，<br>而是每一步由谁控制。</h2></div>
+      <div class="mc-mechanisms"><article><span class="mc-pill">工具接入</span><h3>进程协议连接工具</h3><p>Daemon 在执行机发现工具并注册 Runtime。Codex 适配器启动 app-server，以 JSON-RPC 通信；Claude Code 使用 stream-json。模型选项交给工具，工具使用自身配置和认证。</p><a href="https://github.com/multica-ai/multica/blob/7a438bd5b8bf39afd54259a7eb0971390e50a8ef/server/pkg/agent/codex.go">查看 Codex 适配源码 ↗</a></article><article><span class="mc-pill">并发执行</span><h3>先取名额，再领任务</h3><p>机器名额池限制总体并发，服务端事务检查 Agent 容量；不同 Run 对应独立进程。worktree 支持目录隔离，同一 Direct 目录则等待锁。结束并清理后，名额立即可供后续任务使用。</p><a href="https://github.com/multica-ai/multica/blob/7a438bd5b8bf39afd54259a7eb0971390e50a8ef/server/internal/daemon/daemon.go">查看 Daemon 源码 ↗</a></article><article><span class="mc-pill">任务推进</span><h3>反馈触发下一轮判断</h3><p>负责人通过结构化提及派工，通常结束本轮。成员反馈触发后续 Run，负责人再决定继续、等待或提交审阅。模型负责决策，系统负责执行事实与事件连接。</p><a href="https://multica.ai/docs/squads">阅读小队机制 ↗</a></article></div>
+      <div class="mc-definitions"><p><strong>Agent</strong><span>长期身份与执行配置</span></p><p><strong>Runtime</strong><span>机器 + 工具 / 兼容配置</span></p><p><strong>Run</strong><span>一次实际执行</span></p><p><strong>Issue</strong><span>整体目标与交付状态</span></p></div>
+    </section>
+
+    <section id="simulation" class="mc-section mc-lab">
+      <div class="mc-section-title"><p class="mc-kicker">04 / A SMALL SCHEDULING LAB</p><h2>把并发名额调成 1，<br>再调成 2，看看发生什么。</h2><p>负责人先派工，A / B / C 各自工作；完成反馈会触发负责人检查。观察名额释放、目录串行和最终审阅之间的区别。</p></div>
+      <div class="mc-sim-note">教学模拟 · 不调用模型，不启动真实进程；时长为设定的“步”，不代表产品性能。</div>
+      <div class="mc-sim-controls"><label>机器并发名额<select id="capacity"><option value="1">1 个名额</option><option value="2" selected>2 个名额</option><option value="3">3 个名额</option></select></label><label>工作目录<select id="directory-mode"><option value="worktree">独立 worktree，可并行</option><option value="direct">同一个 Direct 目录，串行</option></select></label><button id="advance" class="mc-button" type="button">下一步 →</button><button id="reset" class="mc-button mc-secondary" type="button">重新开始</button><button id="approve" class="mc-button" type="button" hidden>人工验收通过</button></div>
+      <div id="sim-status" class="mc-sim-status" aria-live="polite"></div>
+      <div class="mc-sim-grid"><div><h3>运行记录 <span>每个条目是一次 Run</span></h3><div id="sim-jobs" class="mc-jobs"></div></div><div><h3>反馈与控制事件 <span>最新事件在前</span></h3><ol id="sim-events" class="mc-events"></ol></div></div>
+      <p class="mc-fine">这是独立教学状态机，省略网络恢复、权限与全部上游路由细节。切换配置会重置演示。真实 Multica 的默认机器 / Agent 上限为 20 / 6；目录等待也可能占用已领取名额。</p>
+    </section>
+
+    <section id="adoption" class="mc-section">
+      <div class="mc-section-title"><p class="mc-kicker">05 / WHAT WE CAN REUSE</p><h2>值得学习的是组织方式，<br>采用价值需要用实际工作检验。</h2></div>
+      <div class="mc-two-col"><article><h3>什么时候更有意义</h3><p>多个独立任务、多个工具、多人协作和多台机器，往往需要统一派工与可追踪反馈。前后端分工、并行审查、跨仓库维护、定时报告，是值得验证的场景。</p><p>单人只做一项简单任务时，管理层可能增加额外成本。应测量人工跟进时间、返工率、成果质量与运行费用。</p></article><article class="mc-proposal"><span class="mc-pill">建议增强 · 非上游能力声明</span><h3>让协作可靠地结束</h3><p>任务预算、派工次数与总时限需要硬性控制；验收检查、成果版本、依赖与集成冲突处理，需要可执行规则。</p><p>提示词中的“直到完成”不能代替这些约束。一次 Run 正常结束，也不能代替最终交付验收。</p></article></div>
+      <details class="mc-comparison"><summary>与 Agent 框架、Skills 集合和模型代理有什么不同？</summary><p>Agent 框架侧重编程构建 Agent；Skills 集合侧重操作方法；模型代理侧重接口与认证。Multica 的研究重点是已有工具的任务管理和运行协作。它们处于不同能力层，不适合只按功能数量比较。</p></details>
+    </section>
+
+    <section id="evidence" class="mc-section mc-evidence">
+      <div class="mc-section-title"><p class="mc-kicker">06 / EVIDENCE & BOUNDARIES</p><h2>每个结论，都有对应的证据边界。</h2></div>
+      <div class="mc-evidence-grid"><article><h3>已核对</h3><p>固定版本源码、官方文档、进程协议、名额与领取、负责人反馈循环。</p><a href="https://github.com/yydshly/0906_codex_project/blob/main/projects/004-multica/sources.md">证据与源码索引 ↗</a></article><article><h3>未实测</h3><p>没有运行 Multica 服务端 / Daemon，没有真实模型任务、生产性能或采用效果测试。</p><a href="https://github.com/yydshly/0906_codex_project/blob/main/projects/004-multica/running.md">运行与验证记录 ↗</a></article><article><h3>许可边界</h3><p>上游采用 Multica License，包含 Apache 2.0 和额外条件。本页是原创研究站，不是 Multica 托管服务。</p><a href="https://github.com/multica-ai/multica/blob/7a438bd5b8bf39afd54259a7eb0971390e50a8ef/LICENSE">阅读完整上游许可 ↗</a></article></div>
+    </section>
+  </main>
+  <footer class="mc-footer"><a href="../../">← 返回研究索引</a><span>004 · Multica / 研究版本 7a438bd / 2026-09-06</span><a href="https://github.com/multica-ai/multica">上游仓库 ↗</a></footer>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -11,13 +11,19 @@
 ## 有序项目索引
 
 <!-- PROJECT_INDEX:START -->
-尚未登记研究项目。第一个真实项目将从 **001** 开始，后续按展示顺序排列。
+| 编号 | 项目 | 研究摘要 | 状态 | 原仓库 | Web |
+| --- | --- | --- | --- | --- | --- |
+| 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
 
 <!-- PROJECT_GALLERY:START -->
-项目封面和截图将在完成实际研究后展示；每张图片链接至对应研究文档。
+### 004 · Multica · 多 Agent 协作与执行控制研究
+
+[![Multica 整体架构引导图：平台、执行机、工具与模型，以及并发和任务推进控制；原创研究图示，非产品截图](docs/assets/projects/004-multica/architecture-guide.png)](projects/004-multica/README.md)
+
+从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。
 <!-- PROJECT_GALLERY:END -->
 
 ## 目录导航
@@ -33,7 +39,7 @@ guides/                      维护与部署说明
 scripts/catalog.mjs          新建项目、同步索引和校验
 ```
 
-## 开始第一项研究
+## 新增研究项目
 
 需要 Node.js 22 或更新版本，无需安装第三方依赖。
 

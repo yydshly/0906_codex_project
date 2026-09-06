@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "004",
+    "slug": "multica",
+    "order": 40,
+    "name": "Multica · 多 Agent 协作与执行控制研究",
+    "summary": "从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。",
+    "repository": "https://github.com/multica-ai/multica",
+    "status": "已完成",
+    "tags": [
+      "多 Agent",
+      "任务调度",
+      "系统架构",
+      "源码研究"
+    ],
+    "cover": "docs/assets/projects/004-multica/architecture-guide.png",
+    "coverAlt": "Multica 整体架构引导图：平台、执行机、工具与模型，以及并发和任务推进控制；原创研究图示，非产品截图",
+    "demo": "demos/004-multica/"
+  }
+]

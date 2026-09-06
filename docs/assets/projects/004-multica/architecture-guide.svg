@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<rect width="1800" height="1120" fill="#F5F7FA"/>
+<text x="64" y="42" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#087E83">004 / MULTICA FIELD NOTES</text>
+<text x="64" y="88" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="46" font-weight="700" fill="#142D40">把多个 AI 工具组织成可追踪的工作团队</text>
+<text x="66" y="154" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#526576">整体架构引导：先看谁负责什么，再看并发与任务完成如何控制。</text>
+<rect x="64" y="215" width="1672" height="89" rx="16" fill="#E1EAF4"/>
+<text x="89" y="232" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#2D63BB">任务入口</text>
+<text x="300" y="236" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#142D40">Web / 桌面 / 移动端 · CLI / API · 聊天渠道 · 定时与外部事件</text>
+<line x1="900" y1="312" x2="900" y2="347" stroke="#087E83" stroke-width="3"/>
+<polygon points="900,347 893,337 907,337" fill="#087E83"/>
+<rect x="64" y="359" width="1672" height="167" rx="18" fill="#DFEEE8"/>
+<text x="89" y="379" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#087E83">平台服务｜组织与记录</text>
+<text x="90" y="438" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="400" fill="#142D40">任务 / 项目 · Agent / 小队 · Skills · 协作触发 · Run 队列 · 日志与审阅</text>
+<text x="90" y="484" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#526576">Go 服务端与实时通信；PostgreSQL 保存事实记录；文件存储保存附件。负责人也是配置出来的 Agent。</text>
+<line x1="900" y1="534" x2="900" y2="569" stroke="#087E83" stroke-width="3"/>
+<polygon points="900,569 893,559 907,559" fill="#087E83"/>
+<rect x="64" y="581" width="1672" height="164" rx="18" fill="#E5EDF6"/>
+<text x="89" y="602" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#2D63BB">执行机器｜Daemon → 工具适配器 → 独立进程</text>
+<text x="90" y="657" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#142D40">Codex：app-server / JSON-RPC        Claude Code：stream-json        其他工具：对应适配器</text>
+<text x="90" y="703" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526576">各工具使用自己的服务配置调用模型，操作本机代码、worktree 与扩展工具；状态和结果回传平台。</text>
+<line x1="900" y1="753" x2="900" y2="785" stroke="#087E83" stroke-width="3"/>
+<polygon points="900,785 893,775 907,775" fill="#087E83"/>
+<rect x="64" y="797" width="816" height="171" rx="16" fill="#163F40"/>
+<rect x="920" y="797" width="816" height="171" rx="16" fill="#193C60"/>
+<text x="89" y="817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">并发执行控制｜程序决定谁能运行</text>
+<text x="89" y="867" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#DDEDE8">取得名额 → 事务领取 → 目录准备 → 并行进程</text>
+<text x="89" y="912" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#DDEDE8">各自结束与清理 → 归还名额 → 下一项获得机会</text>
+<text x="945" y="817" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">任务推进控制｜负责人决策 + 人验收</text>
+<text x="945" y="867" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#E3EDF7">派工 → 成员反馈 → 负责人再次判断 → 继续 / 等待</text>
+<text x="945" y="912" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#E3EDF7">目标满足 → 提交审阅 → 人工或已有集成确认完成</text>
+<text x="64" y="1008" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#087E83">Run 完成 ≠ Issue 完成。多进程提供并行，事件连接多轮工作，验收决定整体交付。</text>
+<text x="66" y="1072" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#526576">原创研究引导图 · 非产品截图  |  研究版本 7a438bd · 2026-09-06  |  深入阅读：整体架构 / 工具接入 / 双控制循环</text>
+</svg>
