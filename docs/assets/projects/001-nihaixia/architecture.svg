@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">倪海厦知识工程：从资料整理到两条产品路径</title>
+<desc id="desc">原始资料经外部文本提取、人工与 Agent 辅助整理，成为 Markdown 模块、案例与索引。路径 A 由宿主搜索读取并让大模型回答。路径 B 部分资料经脚本与人工转换，成为 App 内置数据与规则。底部为尚未实现的资料生产建议。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#56755c" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="820" rx="20" fill="#f6f5ef"/>
+<g font-family="Segoe UI,Microsoft YaHei,sans-serif" fill="#192e29">
+<text x="40" y="45" font-size="13" letter-spacing="2" fill="#5e7068">001 / NIHAIXIA · 整体架构导览</text>
+<text x="40" y="90" font-size="30" font-weight="700">先把资料组织好，再交给模型或程序使用</text>
+<text x="40" y="120" font-size="15" fill="#5e7068">源码分析示意 · 三个关联仓库分别检查，未验证一键重建或端到端运行</text>
+<rect x="40" y="150" width="320" height="172" rx="12" fill="#fffef9" stroke="#d8dfd3"/>
+<text x="62" y="180" font-size="13" fill="#79643d">01 / 外部准备</text>
+<text x="62" y="213" font-size="22" font-weight="650">讲义、书籍、医案、音视频</text>
+<text x="62" y="245" font-size="16">文本提取 / OCR / 转写 / 校对</text>
+<text x="62" y="275" font-size="15" fill="#5e7068">需要先得到可读、可信的文本</text>
+<text x="62" y="301" font-size="14" fill="#79643d">本库没有完整 OCR / ASR 服务</text>
+<rect x="400" y="150" width="340" height="172" rx="12" fill="#fffef9" stroke="#d8dfd3"/>
+<text x="422" y="180" font-size="13" fill="#5e7068">02 / 人工 + AGENT + 辅助脚本</text>
+<text x="422" y="213" font-size="22" font-weight="650">清理、分篇、提炼与索引</text>
+<text x="422" y="245" font-size="16">tcm-distiller 提供整理规程</text>
+<text x="422" y="275" font-size="15" fill="#5e7068">保留知识、条件、案例与分析方法</text>
+<text x="422" y="301" font-size="14" fill="#79643d">部分脚本含固定路径，仍需人工参与</text>
+<rect x="780" y="150" width="380" height="172" rx="12" fill="#e9efdf" stroke="#8ba078"/>
+<text x="802" y="180" font-size="13" fill="#506642">03 / NIHAIXIA · 知识与技能产物</text>
+<text x="802" y="213" font-size="22" font-weight="650">Markdown 知识库 + 使用规程</text>
+<text x="802" y="245" font-size="16">modules / cases / 速查 / 文件索引</text>
+<text x="802" y="275" font-size="15" fill="#5e7068">SKILL：如何查找、分析和表达</text>
+<text x="802" y="301" font-size="14" fill="#506642">没有自带向量库、模型权重或训练流程</text>
+<g fill="none" stroke="#56755c" stroke-width="2" marker-end="url(#arrow)"><path d="M360 235H395"/><path d="M740 235H775"/><path d="M970 322V350H300V385"/><path d="M970 350V385" stroke-dasharray="6 5"/></g>
+<text x="370" y="373" font-size="13" fill="#5e7068">知识被两种运行方式消费</text>
+<rect x="40" y="395" width="540" height="205" rx="12" fill="#214d3b"/>
+<text x="64" y="426" font-size="13" fill="#c8edae">路径 A / 宿主 AGENT · 已检查技能指引</text>
+<text x="64" y="462" font-size="23" font-weight="650" fill="#fffef9">用户问题 → 文件检索 → 大模型回答</text>
+<text x="64" y="497" font-size="16" fill="#e5efdf">主题路由 → 关键词搜索 → 读取相关原文</text>
+<text x="64" y="526" font-size="16" fill="#e5efdf">模型遵循分析步骤与表达规则，输出到聊天界面</text>
+<text x="64" y="567" font-size="14" fill="#c8edae">检索工具和模型由宿主提供；回答质量尚未实测</text>
+<rect x="620" y="395" width="540" height="205" rx="12" fill="#fffef9" stroke="#8ba078"/>
+<text x="644" y="426" font-size="13" fill="#506642">路径 B / NIHAIXIA-APP · 部分资料复用</text>
+<text x="644" y="462" font-size="23" font-weight="650">转换与整理 → 本地数据 → 程序处理</text>
+<text x="644" y="497" font-size="16">JSON / Markdown → Repository → Dart 规则</text>
+<text x="644" y="526" font-size="16">Flutter 查询与问卷界面；SQLite 保存用户状态</text>
+<text x="644" y="567" font-size="14" fill="#5e7068">已追踪的核心问卷链路不经过远程大模型</text>
+<rect x="40" y="635" width="1120" height="128" rx="12" fill="#edf1f3" stroke="#7d959e" stroke-dasharray="7 5"/>
+<text x="64" y="666" font-size="13" fill="#456572">我们的建设建议 / 尚未实施</text>
+<text x="64" y="700" font-size="22" font-weight="650">原件与出处 → 标准文本 / 字段 / 关系 → 校验 → 检索与查询接口 → 上层产品</text>
+<text x="64" y="734" font-size="16" fill="#456572">先做来源映射和数据质量检查，再按任务增加混合 RAG、结构化查询或关系索引。</text>
+<text x="40" y="796" font-size="13" fill="#5e7068">研究快照：nihaixia 68ce4bf · tcm-distiller a3c105f · nihaixia-app 9b8dff9 ｜ 原创架构示意，非产品运行截图</text>
+</g></svg>

@@ -1,5 +1,23 @@
 [
   {
+    "id": "001",
+    "slug": "nihaixia",
+    "order": 10,
+    "name": "倪海厦 Skill · 专家知识组织研究",
+    "summary": "从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。",
+    "repository": "https://github.com/jangviktor-web/nihaixia",
+    "status": "研究中",
+    "tags": [
+      "Agent Skill",
+      "知识检索",
+      "专家知识",
+      "交互展示"
+    ],
+    "cover": "docs/assets/projects/001-nihaixia/architecture.svg",
+    "coverAlt": "原创整体架构图：资料提取与整理形成知识文件，分别供宿主模型检索和 App 本地规则使用；底部标明待建设的数据生产流程",
+    "demo": "demos/001-nihaixia/"
+  },
+  {
     "id": "004",
     "slug": "multica",
     "order": 40,

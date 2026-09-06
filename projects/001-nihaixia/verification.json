@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/jangviktor-web/nihaixia",
+  "commit": "68ce4bf21351a35911d173224c1bc66db3e4e754",
+  "checkedAt": "2026-09-06T05:33:48.115Z",
+  "method": "固定 commit 的目录及文本结构检查；未安装技能，未验证医学内容或模型回答质量。",
+  "observations": {
+    "moduleFiles": 14,
+    "skillBytes": 132476,
+    "numberedCaseRows": 1257,
+    "placeholderCaseRows": 1,
+    "rootLicenseFiles": [],
+    "executableFilePaths": [],
+    "keywordRetrievalPresent": true,
+    "landingPageTitle": "倪海厦skill · 经方中医AI"
+  },
+  "limitations": [
+    "编号行不等于独立患者或有效病例。",
+    "未发现某种扩展名不代表已完成安全审计。",
+    "未发现根许可证文件不等于已作出法律授权判断。"
+  ]
+}

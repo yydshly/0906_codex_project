@@ -13,12 +13,19 @@
 <!-- PROJECT_INDEX:START -->
 | 编号 | 项目 | 研究摘要 | 状态 | 原仓库 | Web |
 | --- | --- | --- | --- | --- | --- |
+| 001 | [倪海厦 Skill · 专家知识组织研究](projects/001-nihaixia/README.md) | 从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。 | 研究中 | [源码](https://github.com/jangviktor-web/nihaixia) | [演示](https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/) |
 | 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
 
 <!-- PROJECT_GALLERY:START -->
+### 001 · 倪海厦 Skill · 专家知识组织研究
+
+[![原创整体架构图：资料提取与整理形成知识文件，分别供宿主模型检索和 App 本地规则使用；底部标明待建设的数据生产流程](docs/assets/projects/001-nihaixia/architecture.svg)](projects/001-nihaixia/README.md)
+
+从整体架构看资料如何成为可用知识，对照文件检索、RAG 与 App 路径，展示六类能力及复用价值。
+
 ### 004 · Multica · 多 Agent 协作与执行控制研究
 
 [![Multica 整体架构引导图：平台、执行机、工具与模型，以及并发和任务推进控制；原创研究图示，非产品截图](docs/assets/projects/004-multica/architecture-guide.png)](projects/004-multica/README.md)

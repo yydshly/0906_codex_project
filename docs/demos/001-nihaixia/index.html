@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="倪海厦 Skill：当前采用什么方案、有哪些 RAG 与资料处理架构可参考、对我们有什么价值；支持按场景比较方案及浏览六类能力。">
+  <title>001 · 倪海厦 Skill 能力档案 | Research Lab</title>
+  <link rel="canonical" href="https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="倪海厦 Skill：从资料到知识与产品的架构研究">
+  <meta property="og:description" content="从整体架构入门，理解资料整理、文件检索、宿主模型与 App 两条路径，再查看六类能力和可参考方案。">
+  <meta property="og:url" content="https://yydshly.github.io/0906_codex_project/demos/001-nihaixia/">
+  <meta property="og:image" content="https://yydshly.github.io/0906_codex_project/assets/projects/001-nihaixia/architecture-guide.png">
+  <meta property="og:image:alt" content="从资料整理到宿主模型问答和 App 本地规则的整体架构示意">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="research-page">
+<a class="skip-link" href="#overview">跳转到整体架构</a>
+<header><a class="brand" href="../../index.html"><span></span>RESEARCH LAB</a><a href="https://github.com/jangviktor-web/nihaixia">上游仓库 ↗</a></header>
+<main>
+  <section class="research-hero" aria-labelledby="page-title">
+    <div>
+      <div class="eyebrow">FIELD NOTES / 001 · 专家知识组织</div>
+      <h1 id="page-title">从资料到知识，<br>再到 <span>可用的能力。</span></h1>
+      <p class="research-lead">以倪海厦 Skill 为样本，看清当前方案、<br class="desktop-break">可参考架构，以及我们值得复用的方法。</p>
+      <div class="research-actions"><a class="primary-link" href="#overview">从整体架构开始 ↓</a><a href="#capabilities">探索六类能力 →</a></div>
+      <p class="research-version">研究快照 <a href="https://github.com/jangviktor-web/nihaixia/tree/68ce4bf21351a35911d173224c1bc66db3e4e754">68ce4bf · 2026.08.19 ↗</a></p>
+    </div>
+    <aside class="knowledge-stack" aria-label="三个研究问题">
+      <div class="stack-top"><span>NIHAIXIA / 研究导览</span><span class="status-dot">源码追踪</span></div>
+      <a class="stack-layer" href="#current"><span class="layer-index">01</span><div><strong>现在用的是什么？</strong><small>文件知识库 + 检索指引 + 宿主模型</small></div><span class="layer-symbol">知</span></a>
+      <a class="stack-layer" href="#alternatives"><span class="layer-index">02</span><div><strong>还能参考什么？</strong><small>资料解析 / 混合 RAG / 结构化查询</small></div><span class="layer-symbol">比</span></a>
+      <a class="stack-layer" href="#value"><span class="layer-index">03</span><div><strong>对我们有什么用？</strong><small>知识组织 / 方法提炼 / 产品复用</small></div><span class="layer-symbol">用</span></a>
+      <p>已有实现、参考方案与研究建议分别标注</p>
+    </aside>
+  </section>
+  <div class="research-boundary"><span>阅读边界</span><p>这是能力与架构展示，未接入诊疗问答。资料学习价值、人物模仿效果与医学有效性需要分别评估。</p></div>
+  <nav class="research-nav" aria-label="页面目录"><a href="#overview">整体架构</a><a href="#data-pipeline">资料如何变数据</a><a href="#current">01 当前方案</a><a href="#alternatives">02 参考架构</a><a href="#value">03 项目价值</a><a href="#capabilities">04 能力展示</a><a href="#findings">检查证据</a></nav>
+
+  <section id="overview" class="research-section" aria-labelledby="overview-title">
+    <div class="research-section-head"><div><div class="eyebrow">START HERE / 首次访问导览</div><h2 id="overview-title">一张图，看懂资料如何走到产品</h2></div><p>这是对上游的独立研究展示。首次访问可按下面三个入口阅读。</p></div>
+    <p class="nhx-intro">倪海厦 Skill 把专家讲义、案例和分析方法组织为可检索文件，交给宿主大模型使用。关联的整理工具与 App 属于另外两个仓库。它们共同提供了研究“知识怎样变成可用能力”的样本。</p>
+    <div class="nhx-reader-guide"><a href="#current"><b>01 · 理解已有实现</b><span>分清知识文件、宿主模型与独立 App。</span></a><a href="#data-pipeline"><b>02 · 找到关键缺口</b><span>看原始资料怎样加工成可用的数据。</span></a><a href="#capabilities"><b>03 · 评估复用价值</b><span>逐项查看六类能力、依据与使用边界。</span></a></div>
+    <figure class="nhx-overview-figure"><a href="../../assets/projects/001-nihaixia/architecture.svg" aria-label="打开整体架构原图"><img src="../../assets/projects/001-nihaixia/architecture.svg" width="1200" height="820" alt="整体架构：外部资料提取与辅助整理，生成 nihaixia 知识文件；分为宿主检索和模型回答、App 数据转换与本地规则两条路径。底部为尚未实施的数据生产建议。"></a><figcaption>实线表示源码追踪的主要使用路径，虚线分支表示部分资料复用；底部虚线框是建设建议。<a href="../../assets/projects/001-nihaixia/architecture.svg">打开大图 ↗</a> · <a href="https://github.com/yydshly/0906_codex_project/blob/main/projects/001-nihaixia/architecture.md">逐层查看源码依据 ↗</a></figcaption></figure>
+  </section>
+
+  <section id="data-pipeline" class="research-section" aria-labelledby="data-title">
+    <div class="research-section-head"><div><div class="eyebrow">KEY QUESTION / 资料怎样成为可用数据</div><h2 id="data-title">保存为 Markdown 之后，还需要什么？</h2></div><p>下面是我们建议补建的数据生产流程，尚未在本项目实现。</p></div>
+    <div class="nhx-pipeline"><ol><li><span>01 · 解析与整理</span><strong>取得准确的内容</strong><p>保留原件、阅读顺序、章节和表格；按结构分段。</p></li><li><span>02 · 抽取与统一</span><strong>形成标准记录</strong><p>提取对象、字段、条件与例外，统一名称、单位与版本。</p></li><li><span>03 · 校验与追溯</span><strong>每条数据有依据</strong><p>检查重复、缺失和冲突，关联原文位置及核验状态。</p></li><li><span>04 · 按任务提供</span><strong>让上层能查能算</strong><p>文本检索用于解释，结构化查询用于统计，关系索引用于关联。</p></li></ol></div>
+    <div class="nhx-data-example"><div><span class="evidence-label">教学示例 · 非上游记录</span><h3>一句资料，可以产生几种用途</h3><blockquote>“项目 A 的本地搜索不需要联网，但首次下载模型需要联网。”</blockquote><p>保留原句供检索；抽取条件供筛选；关联出处供核验。这样回答“能否离线使用”时，才不会丢掉前置条件。</p></div><dl><dt>对象 / 功能</dt><dd>项目 A / 本地搜索</dd><dt>运行时联网</dt><dd>不需要</dd><dt>前置条件</dt><dd>模型已下载；首次下载需要联网</dd><dt>来源与版本</dt><dd>实际入库时关联文件、原文位置和版本</dd><dt>核验状态</dt><dd>示例，未入库</dd></dl></div>
+    <p class="nhx-footnote">格式固定的内容可以用程序解析，表达多样的内容可以让模型辅助抽取；抽取结果仍需对照原件。上游已经提供不少整理成果，但尚未验证可从原始资料自动重建全库。<a href="https://github.com/yydshly/0906_codex_project/blob/main/projects/001-nihaixia/strategy.md">阅读完整方案说明 ↗</a></p>
+  </section>
+
+  <section id="current" class="research-section" aria-labelledby="current-title">
+    <div class="research-section-head"><div><div class="eyebrow">01 / CURRENT APPROACH</div><h2 id="current-title">当前采用什么方案？先分清三个对象</h2></div><p>当前展示页的搜索，不等于已接入知识库问答。</p></div>
+    <div class="nhx-current-grid">
+      <article><span class="evidence-label">我们已实现</span><h3>研究档案与静态展示</h3><p>研究文档 + 能力搜索 + 架构说明。搜索的是本页整理的说明，尚未建立资料导入、向量索引或模型回答服务。</p><strong>HTML / CSS / JavaScript</strong></article>
+      <article class="nhx-featured"><span class="evidence-label">上游 Skill · 已检查文件</span><h3>文件检索 + 宿主大模型</h3><p>Markdown 保存知识；入口指引宿主按主题、关键词查找，再由模型按方法与表达规程回答。</p><strong>轻量文件检索增强 · 无自带向量库</strong><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/SKILL.md">检索规则来源 ↗</a></article>
+      <article><span class="evidence-label">关联 App · 已检查源码</span><h3>本地数据 + 程序规则</h3><p>JSON / Markdown 随应用打包，Dart 规则处理问卷并关联资料。已追踪的核心问卷链路不经过远程大模型。</p><strong>Flutter / Repository / 规则引擎</strong><a href="https://github.com/jangviktor-web/nihaixia-app/blob/9b8dff9281f3b4a643dac8015885c3a4eacec47a/lib/engine/diagnostic_engine.dart">主调用链来源 ↗</a></article>
+    </div>
+    <div class="nhx-pipeline">
+      <div class="nhx-panel-heading"><h3>真正需要研究的是：资料怎样进入这条链路</h3><span>上游构建过程概览</span></div>
+      <ol><li><span>01 · 外部准备</span><strong>取得可读文本</strong><p>讲义、扫描件、转写；本库没有完整 OCR / ASR 服务。</p></li><li><span>02 · 规程与脚本</span><strong>清理与知识整理</strong><p>去噪、分篇、提炼；关联蒸馏器提供方法及辅助脚本。</p></li><li><span>03 · 文件产物</span><strong>知识、案例与索引</strong><p>modules、cases、速查表与 SKILL 导航。</p></li><li><span>04 · 两种消费方式</span><strong>模型或程序执行</strong><p>宿主检索生成；或进一步转为 App 数据与规则。</p></li></ol>
+      <p class="nhx-footnote">已确认部分资料复用与增量优化关系，未验证一键重建全库。部分转换脚本仍使用本机路径和预先整理的数据。<a href="https://github.com/jangviktor-web/tcm-distiller/blob/a3c105f7b8e72cf996c229d970b6be8512e5a40f/references/20-original-text-digitalization.md">整理方法 ↗</a> · <a href="https://github.com/jangviktor-web/nihaixia-app/blob/9b8dff9281f3b4a643dac8015885c3a4eacec47a/scripts/extract_acupoints.py">资料转 App 的代码 ↗</a></p>
+    </div>
+  </section>
+
+  <section id="alternatives" class="research-section" aria-labelledby="alternatives-title">
+    <div class="research-section-head"><div><div class="eyebrow">02 / REFERENCE ARCHITECTURES</div><h2 id="alternatives-title">按问题选方案，不把所有工作都交给 RAG</h2></div><p>参考方案尚未接入。下面是我们的选型分析，不是性能实测。</p></div>
+    <div class="nhx-rag-definition"><strong>RAG = 检索相关资料，再让模型基于资料生成回答。</strong><p>资料解析解决“内容能否正确取出”；检索解决“能否找到依据”；生成解决“如何组织回答”。这三层需要分别验证。</p></div>
+    <div class="nhx-scenario-picker"><div class="nhx-panel-heading"><h3>目前最需要解决哪类问题？</h3><span>选择场景，查看可参考的组合</span></div><div id="architecture-options" role="group" aria-label="选择资料处理场景"></div><article id="architecture-detail" aria-label="场景对应的参考方案"></article></div>
+    <div class="nhx-table-wrap" role="region" aria-label="架构比较表，可横向滚动" tabindex="0"><table class="nhx-architecture-table"><caption>这些方案可以组合使用，不是互相替代的产品排行榜。</caption><thead><tr><th scope="col">方案 / 所在层</th><th scope="col">适用问题</th><th scope="col">主要代价与边界</th><th scope="col">可参考资料</th></tr></thead><tbody>
+      <tr><th scope="row">文档解析 / 资料准备</th><td>扫描件、版面、表格需要正确提取</td><td>需要原件抽查；解析不保证事实正确</td><td><a href="https://github.com/docling-project/docling">Docling ↗</a></td></tr>
+      <tr><th scope="row">全文上下文 / 提供资料</th><td>少量资料、单篇精读、快速建立基线</td><td>受上下文容量、成本和遗漏影响</td><td><a href="https://www.anthropic.com/engineering/contextual-retrieval">长上下文说明 ↗</a></td></tr>
+      <tr><th scope="row">文件与关键词 / 检索</th><td>术语、编号明确，目录组织清楚</td><td>改用口语或同义说法可能漏检</td><td><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/SKILL.md">本库的做法 ↗</a></td></tr>
+      <tr><th scope="row">混合 RAG / 检索与生成</th><td>精确术语和语义表达同时存在</td><td>关键词 + 向量 + 可选重排序，需要评测</td><td><a href="https://github.com/Azure-Samples/azure-search-openai-demo">Azure RAG 示例 ↗</a></td></tr>
+      <tr><th scope="row">上下文与层级检索 / 保留语境</th><td>切块后丢失主体、条件或例外</td><td>保留章节或取回父段落；新增背景需核对</td><td><a href="https://www.anthropic.com/engineering/contextual-retrieval">Contextual Retrieval ↗</a></td></tr>
+      <tr><th scope="row">结构化查询 / 精确计算</th><td>统计、筛选、字段比较和版本对照</td><td>前期需定义字段、清洗数据和核验口径</td><td><a href="https://learn.microsoft.com/en-us/azure/developer/ai/advanced-retrieval-augmented-generation">SQL 与专用索引 ↗</a></td></tr>
+      <tr><th scope="row">GraphRAG / 跨资料关联</th><td>实体关系追踪、全库主题归纳</td><td>实体关系抽取、索引和维护更复杂</td><td><a href="https://microsoft.github.io/graphrag/query/overview/">GraphRAG ↗</a></td></tr>
+    </tbody></table></div>
+    <p class="nhx-footnote">向量化帮助寻找语义相近的片段，不是把知识训练进模型。检索策略、资料质量与模型输出质量需要分别评估。参考资料核对日期：2026-09-06；具体框架的云服务、模型与费用条件需在实施时核实。</p>
+  </section>
+
+  <section id="value" class="research-section" aria-labelledby="value-title">
+    <div class="research-section-head"><div><div class="eyebrow">03 / VALUE TO OUR LAB</div><h2 id="value-title">它的价值，是示范如何组织可复用的专家经验</h2></div><p>最值得借鉴的是组织方法；回答准确性仍需要独立验证。</p></div>
+    <div class="nhx-value-grid"><article><span>01 / 知识资产</span><h3>资料有层次，也有入口</h3><p>长文、案例、速查与索引分开。我们可以把源码解读、复现记录和技术资料整理成可检索的研究档案。</p></article><article><span>02 / 方法资产</span><h3>不仅记结论，也记判断步骤</h3><p>把适用条件、比较顺序和例外写清楚。可迁移到选型、故障排查与方案评审，并保留原始依据。</p></article><article><span>03 / 产品复用</span><h3>同批资料支持不同使用方式</h3><p>供模型检索解释，也能转成数据支持查询界面。稳定且可验证的规则可以进一步写成程序。</p></article></div>
+    <div class="nhx-next-experiment"><div><span class="evidence-label">建议的下一步 · 尚未实施</span><h3>用一份真实资料，验证从原文到回答的完整过程</h3><p>保留原件与页码 → 按结构整理 → 建立关键词检索基线 → 比较混合检索 → 给出带来源的回答。</p></div><div><strong>验收先看这四件事</strong><ul><li>提取是否准确、完整</li><li>条件与例外是否保留</li><li>问题能否检索到正确依据</li><li>回答是否忠于依据并可追溯</li></ul></div></div>
+    <p class="nhx-footnote">这个库提供了可研究的样本，尚未提供完整可复现的资料生产服务。我们仍需补齐来源映射、统一数据定义、自动校验与效果评测。</p>
+  </section>
+
+  <section id="capabilities" class="research-section" aria-labelledby="cap-title">
+    <div class="research-section-head"><div><div class="eyebrow">04 / CAPABILITIES</div><h2 id="cap-title">六类能力，逐项看实现与价值</h2></div><p>展示上游文件定义的能力；未调用模型或验证诊疗效果。</p></div>
+    <div class="cap-toolbar"><div class="cap-filters" role="group" aria-label="按主题筛选"><button type="button" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="knowledge" aria-pressed="false">资料与学习</button><button type="button" data-filter="reasoning" aria-pressed="false">分析与表达</button><button type="button" data-filter="culture" aria-pressed="false">传统文化</button></div><label class="cap-search"><span>搜索能力</span><input id="cap-search" type="search" placeholder="搜索，例如：医案、条文" autocomplete="off"></label></div>
+    <p id="cap-count" class="result-count" role="status"></p>
+    <div class="cap-explorer"><div id="cap-list" class="cap-list" role="group" aria-label="能力列表"></div><article id="cap-detail" class="cap-detail" aria-label="所选能力详情"></article></div>
+    <noscript><p>交互浏览需要 JavaScript。六类能力包括经典查询、辨证讲解、方剂资料整理、医案检索、人物表达和传统文化问答。详细内容可查阅<a href="https://github.com/yydshly/0906_codex_project/tree/main/projects/001-nihaixia">研究文档</a>。</p></noscript>
+  </section>
+
+  <section id="workflow" class="research-section" aria-labelledby="flow-title">
+    <div class="research-section-head"><div><div class="eyebrow">DETAIL / UNDER THE HOOD</div><h2 id="flow-title">大模型 + 文件检索 + 回答规程</h2></div><p>点击步骤，沿着一次资料问答走一遍。</p></div>
+    <div class="workflow-shell"><div id="flow-steps" class="flow-steps" role="group" aria-label="查看问答流程步骤"></div><div id="flow-detail" class="flow-detail"></div></div>
+    <div class="principle-grid"><article><span>资料如何进入模型</span><h3>按需查找，再读取上下文</h3><p>入口索引将问题路由到 Markdown 文件。宿主搜索关键词、读取相关段落，再交给模型组织回答。</p></article><article><span>“蒸馏”指什么</span><h3>知识与方法的提炼</h3><p>将讲义整理成规则、表格和案例。本次目录检查未发现模型权重或训练代码，不能理解为训练出了新模型。</p></article><article><span>流程能保证什么</span><h3>文本约束仍需要验证</h3><p>分步分析和输出检查由模型遵循。它们不是自动执行的规则引擎，也不能替代正确率评测。</p></article></div>
+  </section>
+
+  <section id="findings" class="research-section" aria-labelledby="findings-title">
+    <div class="research-section-head"><div><div class="eyebrow">DETAIL / EVIDENCE & LIMITS</div><h2 id="findings-title">检查发现，比功能宣称更进一步</h2></div><p>固定版本的结构检查；未进行模型实测。</p></div>
+    <div class="finding-grid">
+      <article class="finding"><span class="evidence-label">结构检查</span><h3><strong>14</strong> 个知识模块</h3><p>主题分层便于导航；入口文件约 132 KB，规则与速查内容较多，上下文成本有待测量。</p><a href="https://github.com/jangviktor-web/nihaixia/tree/68ce4bf21351a35911d173224c1bc66db3e4e754/modules">查看模块目录 ↗</a></article>
+      <article class="finding"><span class="evidence-label">结构检查</span><h3><strong>1,257</strong> 个医案编号行</h3><p>其中 1 行为占位内容，另有续诊和缺失字段。编号数量不能直接作为独立有效病例数。</p><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/cases/00_merged_table.md">查看医案表 ↗</a></article>
+      <article class="finding"><span class="evidence-label caution">使用边界</span><h3>口吻像专家 ≠ 判断已验证</h3><p>表达规则强调确定性收尾，可能放大权威感。现有校验主要比较资料覆盖，不能证明临床正确率。</p><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/expression_style.md">查看表达规则 ↗</a></article>
+      <article class="finding"><span class="evidence-label caution">复用边界</span><h3>来源、分类与许可仍需核实</h3><p>入口记录了分类错标与非医案混入问题；固定版本根目录未见许可证文件，内容授权仍待核实。</p><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/SKILL.md">查看上游说明 ↗</a></article>
+    </div>
+  </section>
+
+  <section id="next" class="research-section" aria-labelledby="next-title">
+    <div class="research-section-head"><div><div class="eyebrow">DETAIL / NEXT STEPS</div><h2 id="next-title">后续建设的优先级</h2></div><p>以下为我们的扩展建议，尚未实现。</p></div>
+    <div class="roadmap"><article><span>优先 01</span><h3>来源可追溯</h3><p>每个结论保留出处与版本，区分原文、解释和推断。</p></article><article><span>优先 02</span><h3>数据可复用</h3><p>统一字段，清理占位与重复，区分患者和就诊记录。</p></article><article><span>优先 03</span><h3>效果可比较</h3><p>对比普通问答、仅检索、加入流程和人物风格的实际表现。</p></article><article><span>随后</span><h3>检索与入口优化</h3><p>增加别名检索、拆分入口，再测量成本与准确率的变化。</p></article></div>
+    <div class="research-takeaway"><div class="eyebrow">对我们的意义</div><h2>把项目研究，变成下一次工作的参考能力。</h2><p>源码解读是知识模块，复现记录是案例库，排查步骤是判断流程。我们可以借鉴这种组织方式，建立带来源、能检索、可验证的项目研究助手。</p><div class="takeaway-example"><span>未来可以回答</span>“我们研究过的项目里，哪些支持离线运行？请给出源码或实验依据。”</div></div>
+  </section>
+  <section class="research-sources" aria-labelledby="sources-title"><h2 id="sources-title">研究范围与来源</h2><p>研究日期：2026-09-06 · 固定版本：68ce4bf · 本页文字与交互为本仓库整理；未复制上游讲义正文，未安装技能，未验证医学内容。</p><div class="links"><a href="https://github.com/yydshly/0906_codex_project/tree/main/projects/001-nihaixia">完整研究记录 ↗</a><a href="https://github.com/jangviktor-web/nihaixia/blob/68ce4bf21351a35911d173224c1bc66db3e4e754/references/distilled/audit-notes.md">上游校验记录 ↗</a><a href="https://github.com/jangviktor-web/nihaixia/tree/68ce4bf21351a35911d173224c1bc66db3e4e754">固定版本来源 ↗</a></div></section>
+</main>
+<footer><span>001 / 倪海厦 Skill · GitHub Research Lab</span><a href="../../index.html">返回项目索引 ↑</a></footer>
+</body>
+</html>
