@@ -29,6 +29,7 @@
 | 005 | [栖居 · 原创人物生活交互实验室](projects/005-room-life/README.md) | 参考 Nova3D 结构化生成思路，独立自制角色、衣橱与八项生活交互；照片级人物、通用换装及养成待扩展。 | 研究中 | [源码](https://github.com/yydshly/0906_codex_project) | [演示](https://yydshly.github.io/0906_codex_project/demos/005-room-life/) |
 | 006 | [Prettymaps · 地图美学与能力展示](projects/006-prettymaps/README.md) | 以架构图梳理真实OSM数据、源库绘图能力与18张本地成品，说明大模型、空间分析和编辑如何扩展内容、旅行、策划与设计产品。 | 研究中 | [源码](https://github.com/marceloprates/prettymaps) | [演示](https://yydshly.github.io/0906_codex_project/demos/006-prettymaps/) |
 | 007 | [AI Agent Book · Agent 工程能力图谱](projects/007-ai-agent-book/README.md) | 按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。 | 研究中 | [源码](https://github.com/bojieli/ai-agent-book) | [演示](https://yydshly.github.io/0906_codex_project/demos/007-ai-agent-book/) |
+| 008 | [Claudish to English · AI 回答通俗化研究](projects/008-claudish-to-english/README.md) | 一张图梳理回答与文档改写、语言转换、风格配置、模型后端及运行控制，说明实现原理和使用边界。 | 研究中 | [源码](https://github.com/gvzdv/claudish-to-english) | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
@@ -75,6 +76,12 @@
 [![原创 AI Agent 工程能力图：目标经过上下文、模型决策和工具执行形成观察结果，再由验证与经验更新闭环](docs/assets/projects/007-ai-agent-book/agent-capability-map.svg)](projects/007-ai-agent-book/README.md)
 
 按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。
+
+### 008 · Claudish to English · AI 回答通俗化研究
+
+[![原创完整能力架构图：回答显示与 Markdown 文档两条钩子路径，连接语言与风格配置、模型后端、输出方式及运行控制；非产品截图。](docs/assets/projects/008-claudish-to-english/capability-architecture.svg)](projects/008-claudish-to-english/README.md)
+
+一张图梳理回答与文档改写、语言转换、风格配置、模型后端及运行控制，说明实现原理和使用边界。
 <!-- PROJECT_GALLERY:END -->
 
 ## 目录导航
