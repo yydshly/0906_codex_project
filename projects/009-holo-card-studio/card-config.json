@@ -1,0 +1,12 @@
+{
+  "title": "月下白鹿",
+  "subtitle": "林间来信 · 原创艺术卡",
+  "collection": "RESEARCH LAB / 009",
+  "description": "当月光落在鹿角，森林有了另一种深度。",
+  "tagline": "循光而来 · 向林而生",
+  "technique": "月境珍藏",
+  "edition": "009 / 001",
+  "assets": {"model":"./assets/card.glb","subject":"./assets/subject.png","background":"./assets/background.png","text":"./assets/text.png","lineart":"./assets/lineart.png"},
+  "parameters": {"subjectScale":1.25,"subjectDepth":0.4,"backgroundDepth":-0.25,"foil":0.65},
+  "safeArea": {"scale":1.08,"offset":[-0.08,-0.04]}
+}

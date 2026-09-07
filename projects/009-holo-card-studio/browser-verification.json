@@ -1,0 +1,136 @@
+{
+  "date": "2026-09-07T03:08:29.267Z",
+  "gl": {
+    "renderer": "WebKit WebGL",
+    "width": 810,
+    "height": 570,
+    "programs": [
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "",
+        "runnable": true
+      },
+      {
+        "name": "OutputShader",
+        "runnable": true
+      }
+    ]
+  },
+  "errors": [],
+  "failed": [],
+  "drag": {
+    "x": 0.14685574378796445,
+    "y": 0.19169916360022618
+  },
+  "back": 3.13685318883275,
+  "front": 0.01121850158177145,
+  "modes": {
+    "print": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "depth": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "foil": [
+      0,
+      1,
+      0,
+      0
+    ],
+    "line": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "star": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "all": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "exportedParameters": {
+    "subjectScale": 1.25,
+    "subjectDepth": 0.73,
+    "backgroundDepth": -0.25,
+    "foil": 1.1
+  },
+  "reset": {
+    "depth": 0.4,
+    "foil": 0.65,
+    "mode": "all"
+  },
+  "layer": true,
+  "about": true,
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "canvas": {
+      "x": 19,
+      "y": 285,
+      "width": 352,
+      "height": 480,
+      "top": 285,
+      "right": 371,
+      "bottom": 765,
+      "left": 19
+    }
+  },
+  "mobileFlip": 3.1306722580052826
+}

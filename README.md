@@ -30,6 +30,7 @@
 | 006 | [Prettymaps · 地图美学与能力展示](projects/006-prettymaps/README.md) | 以架构图梳理真实OSM数据、源库绘图能力与18张本地成品，说明大模型、空间分析和编辑如何扩展内容、旅行、策划与设计产品。 | 研究中 | [源码](https://github.com/marceloprates/prettymaps) | [演示](https://yydshly.github.io/0906_codex_project/demos/006-prettymaps/) |
 | 007 | [AI Agent Book · Agent 工程能力图谱](projects/007-ai-agent-book/README.md) | 按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。 | 研究中 | [源码](https://github.com/bojieli/ai-agent-book) | [演示](https://yydshly.github.io/0906_codex_project/demos/007-ai-agent-book/) |
 | 008 | [Claudish to English · AI 回答通俗化研究](projects/008-claudish-to-english/README.md) | 将 Claude Code 回答和指定 Markdown 文档改写为通俗表达、摘要或其他语言，适合快速阅读长回复、跨语言理解和制作文档入门版。 | 研究中 | [源码](https://github.com/gvzdv/claudish-to-english) | — |
+| 009 | [Holo Card Studio · 全息闪卡制作研究](projects/009-holo-card-studio/README.md) | 用原创白鹿闪卡理解三维卡片外壳、2.5D 分层画面与视角光效，实际跑通 Blender 工程和 Three.js 交互交付。 | 研究中 | [源码](https://github.com/EverettFish/holo-card-studio) | [演示](https://yydshly.github.io/0906_codex_project/demos/009-holo-card-studio/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
@@ -82,6 +83,12 @@
 [![原创完整能力架构图：回答显示与 Markdown 文档两条钩子路径，连接语言与风格配置、模型后端、输出方式及运行控制；非产品截图。](docs/assets/projects/008-claudish-to-english/capability-architecture.svg)](projects/008-claudish-to-english/README.md)
 
 将 Claude Code 回答和指定 Markdown 文档改写为通俗表达、摘要或其他语言，适合快速阅读长回复、跨语言理解和制作文档入门版。
+
+### 009 · Holo Card Studio · 全息闪卡制作研究
+
+[![本地真实演示截图：月下白鹿全息卡、六种效果对照、光泽与深度滑块；卡片几何由 Blender 实际导出。](docs/assets/projects/009-holo-card-studio/cover.png)](projects/009-holo-card-studio/README.md)
+
+用原创白鹿闪卡理解三维卡片外壳、2.5D 分层画面与视角光效，实际跑通 Blender 工程和 Three.js 交互交付。
 <!-- PROJECT_GALLERY:END -->
 
 ## 目录导航

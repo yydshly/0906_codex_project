@@ -1,0 +1,51 @@
+{
+  "effectPixelChanges": {
+    "depth": {
+      "changedPixels": 67372,
+      "absoluteChannelDifference": 4124246
+    },
+    "foil": {
+      "changedPixels": 93863,
+      "absoluteChannelDifference": 3284841
+    },
+    "line": {
+      "changedPixels": 205,
+      "absoluteChannelDifference": 6976
+    },
+    "star": {
+      "changedPixels": 671,
+      "absoluteChannelDifference": 47790
+    },
+    "all": {
+      "changedPixels": 101314,
+      "absoluteChannelDifference": 6128113
+    }
+  },
+  "localLinks": [
+    {
+      "url": "http://127.0.0.1:4179/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4179/demos/009-holo-card-studio/assets/card.blend",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4179/demos/009-holo-card-studio/assets/blender-render.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4179/demos/009-holo-card-studio/assets/card.glb",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4179/demos/009-holo-card-studio/LICENSE.txt",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4179/demos/009-holo-card-studio/THIRD-PARTY.txt",
+      "status": 200
+    }
+  ],
+  "indexEntry": 1
+}

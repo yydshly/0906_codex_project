@@ -1,0 +1,6 @@
+{
+  "name":"holo-card-research", "private":true, "type":"module",
+  "scripts":{"build":"esbuild web-src/app.js --bundle --minify --format=esm --outfile=../../docs/demos/009-holo-card-studio/app.js"},
+  "dependencies":{"three":"0.180.0"},
+  "devDependencies":{"esbuild":"0.25.9"}
+}

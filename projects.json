@@ -141,5 +141,23 @@
     "cover": "docs/assets/projects/008-claudish-to-english/capability-architecture.svg",
     "coverAlt": "原创完整能力架构图：回答显示与 Markdown 文档两条钩子路径，连接语言与风格配置、模型后端、输出方式及运行控制；非产品截图。",
     "demo": ""
+  },
+  {
+    "id": "009",
+    "slug": "holo-card-studio",
+    "order": 90,
+    "name": "Holo Card Studio · 全息闪卡制作研究",
+    "summary": "用原创白鹿闪卡理解三维卡片外壳、2.5D 分层画面与视角光效，实际跑通 Blender 工程和 Three.js 交互交付。",
+    "repository": "https://github.com/EverettFish/holo-card-studio",
+    "status": "研究中",
+    "tags": [
+      "AI 素材",
+      "Blender",
+      "Three.js",
+      "交互图形"
+    ],
+    "cover": "docs/assets/projects/009-holo-card-studio/cover.png",
+    "coverAlt": "本地真实演示截图：月下白鹿全息卡、六种效果对照、光泽与深度滑块；卡片几何由 Blender 实际导出。",
+    "demo": "demos/009-holo-card-studio/"
   }
 ]

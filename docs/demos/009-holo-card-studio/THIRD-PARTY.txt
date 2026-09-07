@@ -1,0 +1,21 @@
+Holo Card Studio research demo / 009
+
+1. Holo Card Studio
+Upstream: https://github.com/EverettFish/holo-card-studio
+Commit: 01acf39d2d01cac8a3e3879bff55750bcf1f107c
+License: MIT, Copyright (c) 2026 Holo Card Studio contributors
+The Blender build/export scripts were executed without edits. The browser core is adapted from assets/web-template/app.js.
+The full upstream license is in LICENSE.txt.
+
+2. Three.js 0.180.0
+https://github.com/mrdoob/three.js
+License: MIT. Full text in three-LICENSE.txt.
+Bundled into app.js with esbuild 0.25.9 (build tool, MIT).
+
+3. 本次创作与扩展
+subject.png、background.png：本次使用内置图像生成工具创作的虚构白鹿与月夜森林。
+lineart.png：以 subject.png 为编辑参考生成；不是上游示例资产。
+text.png：上游脚本使用本机 simkai.ttf 排版；未分发字体文件。
+card.blend、card.glb、blender-render.png：本机实际运行上游脚本所得，不是模拟截图。
+页面版式、效果对照、图层预览与配置导出为本地研究扩展。
+上游软件 MIT 许可不自动覆盖生成画作与参考素材；本研究仓库未指定统一许可证。
