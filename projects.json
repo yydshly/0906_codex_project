@@ -129,7 +129,7 @@
     "slug": "claudish-to-english",
     "order": 80,
     "name": "Claudish to English · AI 回答通俗化研究",
-    "summary": "一张图梳理回答与文档改写、语言转换、风格配置、模型后端及运行控制，说明实现原理和使用边界。",
+    "summary": "将 Claude Code 回答和指定 Markdown 文档改写为通俗表达、摘要或其他语言，适合快速阅读长回复、跨语言理解和制作文档入门版。",
     "repository": "https://github.com/gvzdv/claudish-to-english",
     "status": "研究中",
     "tags": [
