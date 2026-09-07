@@ -1,0 +1,13 @@
+{
+  "kind": "OSM-road-network planned illustration, not a recorded ride",
+  "sequence": [
+    "钟楼",
+    "鼓楼",
+    "含光门",
+    "永宁门",
+    "钟楼"
+  ],
+  "length_km": 4.84,
+  "points": 129,
+  "limitations": "Undirected road graph; turn restrictions, one-way cycling rules and current access are not validated; landmark snaps are not entrances."
+}

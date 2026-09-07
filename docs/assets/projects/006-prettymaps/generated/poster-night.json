@@ -1,0 +1,25 @@
+{
+  "options": {
+    "scene": "poster",
+    "theme": "night",
+    "title": "西湖边的日常",
+    "layers": [
+      "building",
+      "green",
+      "streets",
+      "water"
+    ]
+  },
+  "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+  "generated_at": "2026-09-07T09:01:54+0800",
+  "seconds": 2.95,
+  "image": "../../assets/projects/006-prettymaps/generated/poster-night.png",
+  "svg": "../../assets/projects/006-prettymaps/generated/poster-night.svg",
+  "counts": {
+    "building": 913,
+    "green": 19,
+    "streets": 2506,
+    "water": 7
+  },
+  "places": []
+}

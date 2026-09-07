@@ -1,0 +1,21 @@
+{
+  "options": {
+    "scene": "structure",
+    "theme": "ink",
+    "title": "看见城市的纹理",
+    "layers": [
+      "building",
+      "streets"
+    ]
+  },
+  "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+  "generated_at": "2026-09-07T09:02:00+0800",
+  "seconds": 3.0,
+  "image": "../../assets/projects/006-prettymaps/generated/structure-ink.png",
+  "svg": "../../assets/projects/006-prettymaps/generated/structure-ink.svg",
+  "counts": {
+    "building": 913,
+    "streets": 2506
+  },
+  "places": []
+}

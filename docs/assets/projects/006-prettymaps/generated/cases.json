@@ -1,0 +1,222 @@
+{
+  "data": {
+    "place": "杭州 · 西湖东北岸",
+    "center": [
+      30.253,
+      120.153
+    ],
+    "radius_m": 1200,
+    "shape": "square",
+    "source": "OpenStreetMap contributors",
+    "upstream_commit": "02f85870ced807b7d24ce1764764ff877f9edffd",
+    "fetched_at": "2026-09-07T09:00:42+0800",
+    "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "transport": "bounded GET adapter for OSMnx; original Overpass JSON",
+    "fetch_and_first_plot_seconds": 22.36,
+    "counts": {
+      "perimeter": 1,
+      "water": 7,
+      "green": 19,
+      "building": 913,
+      "streets": 2506
+    }
+  },
+  "cases": [
+    {
+      "options": {
+        "scene": "poster",
+        "theme": "warm",
+        "title": "西湖边的日常",
+        "layers": [
+          "building",
+          "green",
+          "streets",
+          "water"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:01:48+0800",
+      "seconds": 3.05,
+      "image": "../../assets/projects/006-prettymaps/generated/poster-warm.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/poster-warm.svg",
+      "counts": {
+        "building": 913,
+        "green": 19,
+        "streets": 2506,
+        "water": 7
+      },
+      "places": []
+    },
+    {
+      "options": {
+        "scene": "poster",
+        "theme": "ink",
+        "title": "西湖边的日常",
+        "layers": [
+          "building",
+          "green",
+          "streets",
+          "water"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:01:51+0800",
+      "seconds": 2.98,
+      "image": "../../assets/projects/006-prettymaps/generated/poster-ink.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/poster-ink.svg",
+      "counts": {
+        "building": 913,
+        "green": 19,
+        "streets": 2506,
+        "water": 7
+      },
+      "places": []
+    },
+    {
+      "options": {
+        "scene": "poster",
+        "theme": "night",
+        "title": "西湖边的日常",
+        "layers": [
+          "building",
+          "green",
+          "streets",
+          "water"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:01:54+0800",
+      "seconds": 2.95,
+      "image": "../../assets/projects/006-prettymaps/generated/poster-night.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/poster-night.svg",
+      "counts": {
+        "building": 913,
+        "green": 19,
+        "streets": 2506,
+        "water": 7
+      },
+      "places": []
+    },
+    {
+      "options": {
+        "scene": "guide",
+        "theme": "warm",
+        "title": "沿着湖岸，认识杭州",
+        "layers": [
+          "building",
+          "green",
+          "streets",
+          "water"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:01:57+0800",
+      "seconds": 3.1,
+      "image": "../../assets/projects/006-prettymaps/generated/guide-warm.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/guide-warm.svg",
+      "counts": {
+        "building": 913,
+        "green": 19,
+        "streets": 2506,
+        "water": 7
+      },
+      "places": [
+        {
+          "name": "六公园",
+          "lon": 120.15285613812226,
+          "lat": 30.261105153039168,
+          "osm_type": "relation",
+          "osm_id": 13131996,
+          "url": "https://www.openstreetmap.org/relation/13131996",
+          "position": "representative point inside the clipped feature, not an entrance"
+        },
+        {
+          "name": "三公园",
+          "lon": 120.15691248064562,
+          "lat": 30.255709478115413,
+          "osm_type": "relation",
+          "osm_id": 13131999,
+          "url": "https://www.openstreetmap.org/relation/13131999",
+          "position": "representative point inside the clipped feature, not an entrance"
+        },
+        {
+          "name": "一公园",
+          "lon": 120.15669781992386,
+          "lat": 30.252285831836513,
+          "osm_type": "relation",
+          "osm_id": 13132001,
+          "url": "https://www.openstreetmap.org/relation/13132001",
+          "position": "representative point inside the clipped feature, not an entrance"
+        },
+        {
+          "name": "涌金公园",
+          "lon": 120.15446889852488,
+          "lat": 30.246872231224188,
+          "osm_type": "relation",
+          "osm_id": 13132004,
+          "url": "https://www.openstreetmap.org/relation/13132004",
+          "position": "representative point inside the clipped feature, not an entrance"
+        }
+      ]
+    },
+    {
+      "options": {
+        "scene": "structure",
+        "theme": "ink",
+        "title": "看见城市的纹理",
+        "layers": [
+          "building",
+          "streets"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:02:00+0800",
+      "seconds": 3.0,
+      "image": "../../assets/projects/006-prettymaps/generated/structure-ink.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/structure-ink.svg",
+      "counts": {
+        "building": 913,
+        "streets": 2506
+      },
+      "places": []
+    },
+    {
+      "options": {
+        "scene": "structure",
+        "theme": "ink",
+        "title": "看见城市的纹理",
+        "layers": [
+          "streets"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:02:02+0800",
+      "seconds": 1.38,
+      "image": "../../assets/projects/006-prettymaps/generated/structure-ink-streets.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/structure-ink-streets.svg",
+      "counts": {
+        "streets": 2506
+      },
+      "places": []
+    },
+    {
+      "options": {
+        "scene": "structure",
+        "theme": "ink",
+        "title": "看见城市的纹理",
+        "layers": [
+          "building"
+        ]
+      },
+      "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+      "generated_at": "2026-09-07T09:02:03+0800",
+      "seconds": 1.63,
+      "image": "../../assets/projects/006-prettymaps/generated/structure-ink-building.png",
+      "svg": "../../assets/projects/006-prettymaps/generated/structure-ink-building.svg",
+      "counts": {
+        "building": 913
+      },
+      "places": []
+    }
+  ]
+}

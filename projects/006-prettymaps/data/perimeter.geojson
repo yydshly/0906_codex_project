@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "perimeter",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 120.140855221937016, 30.241912824593779 ], [ 120.165769072560281, 30.242454573917197 ], [ 120.165147500936044, 30.264086205812415 ], [ 120.140228204566753, 30.263543988707244 ], [ 120.140855221937016, 30.241912824593779 ] ] ] } }
+]
+}

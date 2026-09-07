@@ -1,0 +1,25 @@
+{
+  "place": "陕西 · 西安城内",
+  "center": [
+    34.26,
+    108.944
+  ],
+  "radius_m": 1800,
+  "shape": "square",
+  "counts": {
+    "building": 20270,
+    "green": 25,
+    "heritage": 23,
+    "perimeter": 1,
+    "streets": 1361,
+    "water": 16
+  },
+  "road_count_unit": "OSM ways, not unique streets or directed graph edges",
+  "source": "OpenStreetMap contributors",
+  "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "fetched_at": "2026-09-07T09:38:30+0800",
+  "osm_base_timestamp": "2026-09-07T01:37:14Z",
+  "upstream_commit": "02f85870ced807b7d24ce1764764ff877f9edffd",
+  "transport": "bounded GET; streets imported from OSM ways after original graph query failed",
+  "roads_import_seconds": 3.91
+}

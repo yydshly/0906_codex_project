@@ -1,0 +1,22 @@
+{
+  "place": "杭州 · 西湖东北岸",
+  "center": [
+    30.253,
+    120.153
+  ],
+  "radius_m": 1200,
+  "shape": "square",
+  "source": "OpenStreetMap contributors",
+  "upstream_commit": "02f85870ced807b7d24ce1764764ff877f9edffd",
+  "fetched_at": "2026-09-07T09:00:42+0800",
+  "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "transport": "bounded GET adapter for OSMnx; original Overpass JSON",
+  "fetch_and_first_plot_seconds": 22.36,
+  "counts": {
+    "perimeter": 1,
+    "water": 7,
+    "green": 19,
+    "building": 913,
+    "streets": 2506
+  }
+}

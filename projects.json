@@ -87,5 +87,23 @@
     "cover": "docs/assets/projects/005-room-life/wardrobe-default.jpg",
     "coverAlt": "栖居当前风格化人物真实截图：绿色外套与侧分发型，顶部提供打扮角色和完整体验；不是照片级人物效果",
     "demo": "demos/005-room-life/"
+  },
+  {
+    "id": "006",
+    "slug": "prettymaps",
+    "order": 60,
+    "name": "Prettymaps · 地图美学与能力展示",
+    "summary": "以架构图梳理真实OSM数据、源库绘图能力与18张本地成品，说明大模型、空间分析和编辑如何扩展内容、旅行、策划与设计产品。",
+    "repository": "https://github.com/marceloprates/prettymaps",
+    "status": "研究中",
+    "tags": [
+      "真实场景",
+      "地图生成",
+      "OpenStreetMap",
+      "地理可视化"
+    ],
+    "cover": "docs/assets/projects/006-prettymaps/architecture.svg",
+    "coverAlt": "原创研究架构图：OSM真实地理数据经prettymaps绘制，实测西湖与西安成品，再扩展分析、编辑与大模型入口支撑多类产品",
+    "demo": "demos/006-prettymaps/"
   }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "key": "base",
+    "title": "原始对照",
+    "look": "相同范围、相同数据，作为后面五张图的比较基准。",
+    "method": "保留水域、公园、道路、建筑；固定随机种子与图层顺序。",
+    "image": "ability-base.png",
+    "svg": "ability-base.svg",
+    "seconds": 2.26,
+    "generated_at": "2026-09-07T09:19:26+0800"
+  },
+  {
+    "key": "texture",
+    "title": "纹理填充",
+    "look": "观察湖面斜线与公园点纹，地理轮廓保持不变。",
+    "method": "使用原生 hatch 与 hatch_c，为图层添加不同填充纹理。",
+    "image": "ability-texture.png",
+    "svg": "ability-texture.svg",
+    "seconds": 2.8,
+    "generated_at": "2026-09-07T09:19:28+0800"
+  },
+  {
+    "key": "outline",
+    "title": "轮廓线稿",
+    "look": "去掉彩色填充，保留建筑与地物边界。",
+    "method": "使用原生 fill=False、ec 和 lw；这是 Matplotlib 线稿，不是绘图仪模式。",
+    "image": "ability-outline.png",
+    "svg": "ability-outline.svg",
+    "seconds": 3.44,
+    "generated_at": "2026-09-07T09:19:32+0800"
+  },
+  {
+    "key": "roads",
+    "title": "道路强调",
+    "look": "观察道路明显变粗，路网在画面中更突出。",
+    "method": "道路 buffer 参数由 2.2 m 改为 7 m，边框保持一致；这是艺术宽度，不是真实路宽。",
+    "image": "ability-roads.png",
+    "svg": "ability-roads.svg",
+    "seconds": 2.48,
+    "generated_at": "2026-09-07T09:19:34+0800"
+  },
+  {
+    "key": "circle",
+    "title": "圆形构图",
+    "look": "同一个中心裁成圆形，得到适合徽章或纪念画的构图。",
+    "method": "对真实 GeoDataFrame 做圆形裁剪后用 prettymaps 绘制；原生 plot 也提供 circle/radius。",
+    "image": "ability-circle.png",
+    "svg": "ability-circle.svg",
+    "seconds": 2.12,
+    "generated_at": "2026-09-07T09:19:36+0800"
+  },
+  {
+    "key": "rotate",
+    "title": "旋转构图",
+    "look": "将同一批地物整体旋转 25°，比较构图变化。",
+    "method": "实际调用 prettymaps.draw.transform_gdfs(rotation=25)，统一几何变换，画面按原窗口裁切。",
+    "image": "ability-rotate.png",
+    "svg": "ability-rotate.svg",
+    "seconds": 3.45,
+    "generated_at": "2026-09-07T09:19:40+0800"
+  }
+]

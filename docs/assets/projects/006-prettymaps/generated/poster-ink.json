@@ -1,0 +1,25 @@
+{
+  "options": {
+    "scene": "poster",
+    "theme": "ink",
+    "title": "西湖边的日常",
+    "layers": [
+      "building",
+      "green",
+      "streets",
+      "water"
+    ]
+  },
+  "engine": "prettymaps.draw.plot_gdf + Matplotlib layout",
+  "generated_at": "2026-09-07T09:01:51+0800",
+  "seconds": 2.98,
+  "image": "../../assets/projects/006-prettymaps/generated/poster-ink.png",
+  "svg": "../../assets/projects/006-prettymaps/generated/poster-ink.svg",
+  "counts": {
+    "building": 913,
+    "green": 19,
+    "streets": 2506,
+    "water": 7
+  },
+  "places": []
+}

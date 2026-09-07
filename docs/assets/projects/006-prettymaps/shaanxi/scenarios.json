@@ -1,0 +1,133 @@
+{
+  "place": "陕西 · 西安城内",
+  "manifest": {
+    "place": "陕西 · 西安城内",
+    "center": [
+      34.26,
+      108.944
+    ],
+    "radius_m": 1800,
+    "shape": "square",
+    "counts": {
+      "building": 20270,
+      "green": 25,
+      "heritage": 23,
+      "perimeter": 1,
+      "streets": 1361,
+      "water": 16
+    },
+    "road_count_unit": "OSM ways, not unique streets or directed graph edges",
+    "source": "OpenStreetMap contributors",
+    "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "fetched_at": "2026-09-07T09:38:30+0800",
+    "osm_base_timestamp": "2026-09-07T01:37:14Z",
+    "upstream_commit": "02f85870ced807b7d24ce1764764ff877f9edffd",
+    "transport": "bounded GET; streets imported from OSM ways after original graph query failed",
+    "roads_import_seconds": 3.91
+  },
+  "landmarks": [
+    {
+      "name": "钟楼",
+      "x": 310547.86418085464,
+      "y": 3793012.707112369,
+      "lon": 108.94234189999699,
+      "lat": 34.26101190017421,
+      "url": "https://www.openstreetmap.org/way/254488435"
+    },
+    {
+      "name": "鼓楼",
+      "x": 310227.24657732336,
+      "y": 3793102.36816809,
+      "lon": 108.93884190291803,
+      "lat": 34.261761490474754,
+      "url": "https://www.openstreetmap.org/way/254488437"
+    },
+    {
+      "name": "含光门",
+      "x": 309181.034017993,
+      "y": 3792199.22191266,
+      "lon": 108.927685,
+      "lat": 34.25343019999999,
+      "url": "https://www.openstreetmap.org/node/2535980892"
+    },
+    {
+      "name": "永宁门",
+      "x": 310527.915711886,
+      "y": 3792135.6828618627,
+      "lon": 108.9423179,
+      "lat": 34.25310389999999,
+      "url": "https://www.openstreetmap.org/node/6817037487"
+    }
+  ],
+  "route": {
+    "kind": "OSM-road-network planned illustration, not a recorded ride",
+    "sequence": [
+      "钟楼",
+      "鼓楼",
+      "含光门",
+      "永宁门",
+      "钟楼"
+    ],
+    "length_km": 4.84,
+    "points": 129,
+    "limitations": "Undirected road graph; turn restrictions, one-way cycling rules and current access are not validated; landmark snaps are not entrances."
+  },
+  "cases": [
+    {
+      "title": "城市 / 街区介绍",
+      "question": "第一次了解西安，钟楼、鼓楼和南城门分别在哪里？",
+      "value": "保留道路与地标，淡化建筑，让读者先建立位置关系。",
+      "use": "城市介绍页、街区导览卡、展览说明板。",
+      "key": "city",
+      "image": "city.png",
+      "svg": "city.svg",
+      "generated_at": "2026-09-07T09:42:41+0800",
+      "seconds": 7.22
+    },
+    {
+      "title": "旅行纪念作品",
+      "question": "旅行结束后，除了照片，还能怎样保留对一个地方的记忆？",
+      "value": "真实街区轮廓成为作品主体，地点与标题组成纪念卡。",
+      "use": "旅行手账、纪念海报、明信片；没有虚构到访日期或个人经历。",
+      "key": "travel",
+      "image": "travel.png",
+      "svg": "travel.svg",
+      "generated_at": "2026-09-07T09:42:49+0800",
+      "seconds": 7.56
+    },
+    {
+      "title": "骑行纪念版式",
+      "question": "怎样把设备导出的轨迹做成一张纪念图？",
+      "value": "用地图承托轨迹，用标题和里程形成作品的重点。",
+      "use": "本例以真实道路计算的策划线演示 GPX 读取与绘制；不是用户实骑，不是推荐路线。",
+      "key": "ride",
+      "image": "ride.png",
+      "svg": "ride.svg",
+      "generated_at": "2026-09-07T09:42:57+0800",
+      "seconds": 7.59
+    },
+    {
+      "title": "文章浅色配图",
+      "question": "文章谈论位置关系，读者怎样不用切到地图软件也能看懂？",
+      "value": "用低干扰底图与有限地标辅助正文；预留标题区域，并适配网站浅深色主题。",
+      "use": "城市专题文章、网站横幅、地点介绍页；地图是内容配图，不是导航控件。",
+      "key": "article",
+      "image": "article.png",
+      "svg": "article.svg",
+      "generated_at": "2026-09-07T09:43:04+0800",
+      "seconds": 7.51
+    },
+    {
+      "title": "网站深色横幅",
+      "question": "文章谈论位置关系，读者怎样不用切到地图软件也能看懂？",
+      "value": "用低干扰底图与有限地标辅助正文；预留标题区域，并适配网站浅深色主题。",
+      "use": "城市专题文章、网站横幅、地点介绍页；地图是内容配图，不是导航控件。",
+      "key": "web",
+      "image": "web.png",
+      "svg": "web.svg",
+      "generated_at": "2026-09-07T09:43:12+0800",
+      "seconds": 7.83
+    }
+  ],
+  "render_note": "prettymaps draws true geodata; page/typography/markers/route planning are project extensions; buildings under 60 square metres omitted for readability."
+}
