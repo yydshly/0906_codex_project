@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>005 · 栖居 · 原创人物生活交互实验室 · 栖居</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../records.css?v=da66ae682f13"></head><body><a class="skip" href="#record-content">跳到正文</a><header class="record-header"><a class="brand" href="../index.html">栖居 <span>ROOM LIFE LAB</span></a><nav aria-label="记录导航"><a href="../updates.html">优化记录</a><a href="../index.html">返回房间 ↗</a></nav></header><main><div class="record-intro"><span class="eyebrow">栖居 · 迭代档案</span><h1>005 · 栖居 · 原创人物生活交互实验室</h1><p>每轮的问题、修改、验证与待办，都在这里保留。</p></div><nav class="contents" aria-label="本页目录"><a href="#原库我们的扩展与当前边界">原库、我们的扩展与当前边界</a><a href="#图片引导先打扮再开始生活">图片引导：先打扮，再开始生活</a><a href="#最新目标">最新目标</a><a href="#人物版本与保存">人物版本与保存</a><a href="#打扮角色">打扮角色</a><a href="#项目档案">项目档案</a><a href="#真实画面">真实画面</a><a href="#当前能力">当前能力</a><a href="#本地运行">本地运行</a><a href="#实现分工">实现分工</a><a href="#验证与局限">验证与局限</a><a href="#来源与许可证">来源与许可证</a></nav><article id="record-content"><p>自行制作一个人物和一个房间，验证走动、拿取、搬运、放置、坐起和驾驶的连续行为。当前交付为可操作的浏览器原型，默认展示 2026-09-07 优化后的阿岚 V2，并提供原创角色衣橱。</p>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>005 · 栖居 · 原创人物生活交互实验室 · 栖居</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../records.css?v=da66ae682f13"></head><body><a class="skip" href="#record-content">跳到正文</a><header class="record-header"><a class="brand" href="../index.html">栖居 <span>ROOM LIFE LAB</span></a><nav aria-label="记录导航"><a href="../updates.html">优化记录</a><a href="../index.html">返回房间 ↗</a></nav></header><main><div class="record-intro"><span class="eyebrow">栖居 · 迭代档案</span><h1>005 · 栖居 · 原创人物生活交互实验室</h1><p>每轮的问题、修改、验证与待办，都在这里保留。</p></div><nav class="contents" aria-label="本页目录"><a href="#原库我们的扩展与当前边界">原库、我们的扩展与当前边界</a><a href="#图片引导先打扮再开始生活">图片引导：先打扮，再开始生活</a><a href="#最新目标">最新目标</a><a href="#人物版本与保存">人物版本与保存</a><a href="#打扮角色">打扮角色</a><a href="#项目档案">项目档案</a><a href="#历史对照画面早期-v2">历史对照画面（早期 V2）</a><a href="#当前能力">当前能力</a><a href="#本地运行">本地运行</a><a href="#实现分工">实现分工</a><a href="#验证与局限">验证与局限</a><a href="#来源与许可证">来源与许可证</a></nav><article id="record-content"><p>自行制作一个人物和一个房间，验证走动、拿取、搬运、放置、坐起和驾驶的连续行为。当前交付为可操作的浏览器原型，默认展示 2026-09-07 优化后的阿岚 V2，并提供原创角色衣橱。</p>
 <p><a href="../../../index.html">返回总索引</a> · <a href="../index.html">演示页面</a> · <a href="notes.html">研究与验证</a> · <a href="motion-audit.html">动作排查</a> · <a href="../updates.html">优化记录</a> · <a href="../updates.html">网页记录</a> · <a href="product-plan.html">产品化路线</a> · <a href="character-design.html">写实人物设计</a> · <a href="upstream-capabilities.html">原库能力</a> · <a href="handoff.html">遗留说明</a></p>
 <h2 id="原库我们的扩展与当前边界">原库、我们的扩展与当前边界</h2><div class="table-scroll" tabindex="0" role="region" aria-label="范围、能力说明"><table>
 <thead>
@@ -65,7 +65,7 @@
 </tr>
 <tr>
 <td>讨论参考</td>
-<td><a href="https://github.com/RareSense/Nova3D%EF%BC%9B%E4%BB%85%E4%B8%BA%E6%9C%80%E5%88%9D%E9%97%AE%E9%A2%98%E6%9D%A5%E6%BA%90%EF%BC%8C%E6%9C%AA%E5%A4%8D%E7%94%A8%E5%85%B6%E4%BB%A3%E7%A0%81%E6%88%96%E6%9C%8D%E5%8A%A1">https://github.com/RareSense/Nova3D；仅为最初问题来源，未复用其代码或服务</a></td>
+<td><a href="https://github.com/RareSense/Nova3D">Nova3D</a>；仅为最初问题来源，未复用其代码或服务</td>
 </tr>
 <tr>
 <td>参考研究版本</td>
@@ -88,7 +88,7 @@
 <td>静态页面，无后端、无 API 密钥、无运行时模型下载</td>
 </tr>
 </tbody></table>
-</div><h2 id="真实画面">真实画面</h2><p><img src="../../../assets/projects/005-room-life/character-v2.jpg" alt="V2 原创人物实机截图" loading="lazy" decoding="async"></p>
+</div><h2 id="历史对照画面早期-v2">历史对照画面（早期 V2）</h2><p><img src="../../../assets/projects/005-room-life/character-v2.jpg" alt="V2 原创人物实机截图" loading="lazy" decoding="async"></p>
 <p>人物、家具、杯子、小车均由本项目代码建立；左侧为生活区，右侧为有限范围驾驶区。</p>
 <p><img src="../../../assets/projects/005-room-life/comparison-v1.jpg" alt="同一镜头中的 V1 初版人物" loading="lazy" decoding="async"></p>
 <p>上图为同一镜头中切回初版后的真实画面。初版原始截图另存于 <code>docs/assets/projects/005-room-life/v1/</code>，未覆盖。两版人物、服装、面部和头发均由本项目制作。</p>
@@ -171,6 +171,6 @@ python -m http.server 8766 --bind 127.0.0.1 --directory docs
 </ul>
 <h2 id="验证与局限">验证与局限</h2><p>当前运行基线是 O12 原创部件衣橱与形象保存；O13 整理了写实目标和后续路线，本次补齐发布总览及遗留说明。各轮「优化了什么、为什么修改、如何验证、还差什么」统一维护在 <a href="../updates.html">优化记录</a>，历史测量和截图保留在详细实验记录中。</p>
 <p>三十五项自动化测试通过；新增存储异常、换装资源复用与六组搭配生活流程检查，包含新旧模型兼容、蒙皮有效性、不同帧率下的步行接触及支撑腿伸展、跑步双脚离地与后腿回收、前掌蹬地和鞋底防穿地、步行前后摆臂及手掌朝向、手脚协调、走跑切换过渡、持杯走跑、后脑发面覆盖与留档完整性；包含从第一帧开始的 84 组起步与过渡场景，以及累计 90 秒随机连续输入。步行分别检查左右腿「支撑伸展—屈膝回收—落地伸展」，并以鞋跟或前掌接触点验证脚掌滚动；24 组立即停步场景检查逐脚收步和固定脚的位置、方向，以及连续转弯的相位连续性。新增松键减速距离、短末段到达及靠墙制动检查，并验证减速后恢复站姿和放松手臂。真实浏览器中完整流程达到 <code>8 / 8</code>。松键、跑步切回步行和接近目的地会渐进减速，低速时缩小步幅与摆臂；「停止任务」仍立即响应。详见 <a href="motion-audit.html">动作排查</a> 和 <a href="notes.html">历史验证记录</a>。这个结果说明限定角色、物品和房间的行为闭环可运行，不代表通用人物生成或任意物品交互已经实现。</p>
-<p>当前是风格化原型。已改善平地直线行走的接触，但转弯、坐起和上下车还不是完整的接触动画。五指能弯曲，尚未针对每个指节求解接触；肩部蒙皮和衣物层叠也仍可打磨。神态按钮是眼眉、嘴角的简单预设变化，未建立完整面部表情系统。全身关节限制、布料、头发动态、精细上下车动作尚未完成。没有多角色避让、存档、对话、关系养成或实时物理抓握；车辆没有悬挂、轮胎摩擦或碰撞冲量。未做手机实机帧率和低端设备性能验收。</p>
+<p>当前是风格化原型。已改善平地直线行走的接触，但转弯、坐起和上下车还不是完整的接触动画。五指能弯曲，尚未针对每个指节求解接触；肩部蒙皮和衣物层叠也仍可打磨。神态按钮是眼眉、嘴角的简单预设变化，未建立完整面部表情系统。全身关节限制、布料、头发动态、精细上下车动作尚未完成。没有多角色避让、世界存档、多套角色档案、对话、关系养成或实时物理抓握；车辆没有悬挂、轮胎摩擦或碰撞冲量。未做手机实机帧率和低端设备性能验收。</p>
 <h2 id="来源与许可证">来源与许可证</h2><p>人物、房间、车辆、物品和程序化动作由本项目编写，没有使用下载的人物、贴图、动作包或动作捕捉片段。Three.js 是通用图形依赖，保留 <a href="../assets/three-LICENSE.txt">MIT 许可证</a>。Nova3D 是讨论参考，不是本项目上游代码。</p>
 </article></main><footer>记录随演示构建同步更新 · 历史截图对应当时版本 · <a href="#">回到顶部 ↑</a></footer></body></html>
