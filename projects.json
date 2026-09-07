@@ -105,5 +105,23 @@
     "cover": "docs/assets/projects/006-prettymaps/architecture.svg",
     "coverAlt": "原创研究架构图：OSM真实地理数据经prettymaps绘制，实测西湖与西安成品，再扩展分析、编辑与大模型入口支撑多类产品",
     "demo": "demos/006-prettymaps/"
+  },
+  {
+    "id": "007",
+    "slug": "ai-agent-book",
+    "order": 70,
+    "name": "AI Agent Book · Agent 工程能力图谱",
+    "summary": "按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。",
+    "repository": "https://github.com/bojieli/ai-agent-book",
+    "status": "研究中",
+    "tags": [
+      "AI Agent",
+      "上下文工程",
+      "工具调用",
+      "评估与进化"
+    ],
+    "cover": "docs/assets/projects/007-ai-agent-book/agent-capability-map.svg",
+    "coverAlt": "原创 AI Agent 工程能力图：目标经过上下文、模型决策和工具执行形成观察结果，再由验证与经验更新闭环",
+    "demo": "demos/007-ai-agent-book/"
   }
 ]

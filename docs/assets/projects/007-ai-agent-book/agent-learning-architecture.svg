@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent Book 全书架构与练习地图</title>
+  <desc id="desc">全图把十章内容映射到 Agent 运行时、上下文与知识、工具与交互、评估、后训练、持续进化和多 Agent 协作，并在底部列出十二项建议练习及验收方向。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111d20"/><stop offset="1" stop-color="#1a2d2f"/></linearGradient>
+    <linearGradient id="active" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9ff76"/><stop offset="1" stop-color="#a2d455"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8da5a0"/></marker>
+    <marker id="green-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#b7dc65"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#081113" flood-opacity=".32"/></filter>
+    <style>
+      text{font-family:Inter,"Microsoft YaHei",system-ui,sans-serif;fill:#edf4ee}.mono{font-family:Consolas,monospace;letter-spacing:1.6px}.muted{fill:#94aaa6}.ink{fill:#162224}.lime{fill:#cbed76}.tiny{font-size:14px}.small{font-size:17px}.body{font-size:19px}.label{font-size:22px;font-weight:650}.headline{font-size:48px;font-weight:700;letter-spacing:-1.5px}.card{fill:#1e3234;stroke:#40595a}.soft{fill:#263b3c;stroke:#476061}.paper{fill:#eef2e5}.papertext{fill:#203032}.line{fill:none;stroke:#8da5a0;stroke-width:2.5;marker-end:url(#arrow)}.feedback{fill:none;stroke:#b7dc65;stroke-width:2.5;stroke-dasharray:8 8;marker-end:url(#green-arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" rx="34" fill="url(#bg)"/>
+  <path d="M0 142H1600M0 878H1600" stroke="#3a5051"/>
+  <text x="62" y="58" class="mono tiny muted">RESEARCH 007 / COMPLETE LEARNING ARCHITECTURE</text>
+  <text x="62" y="112" class="headline">十章内容，组成一个可验证、可进化的 Agent 系统。</text>
+  <text x="1262" y="55" class="mono tiny muted">FIXED SOURCE</text><text x="1262" y="84" class="mono small">7572c78e</text><text x="1262" y="112" class="tiny muted">AI Agent Book</text>
+
+  <text x="62" y="178" class="mono tiny lime">A / RUNTIME · 一次任务怎样完成</text>
+  <rect x="62" y="202" width="1476" height="640" rx="24" fill="#142528" stroke="#3d5657"/>
+
+  <g filter="url(#shadow)">
+    <rect x="88" y="280" width="150" height="145" rx="16" class="soft"/>
+    <text x="110" y="312" class="mono tiny lime">INPUT</text><text x="110" y="350" class="label">目标</text><text x="110" y="382" class="tiny muted">问题 · 约束</text><text x="110" y="405" class="tiny muted">交付 · 风险</text>
+
+    <rect x="286" y="250" width="300" height="205" rx="18" class="card"/>
+    <text x="312" y="282" class="mono tiny lime">CH 02–03 / KNOW</text><text x="312" y="320" class="label">上下文与知识</text>
+    <rect x="312" y="346" width="118" height="76" rx="9" class="soft"/><text x="326" y="374" class="tiny">CH02</text><text x="326" y="402" class="small">Prompt · 历史</text>
+    <rect x="442" y="346" width="118" height="76" rx="9" class="soft"/><text x="456" y="374" class="tiny">CH03</text><text x="456" y="402" class="small">记忆 · RAG</text>
+
+    <circle cx="701" cy="352" r="102" fill="url(#active)"/>
+    <text x="701" y="318" text-anchor="middle" class="mono tiny ink">CH 01 / CORE</text><text x="701" y="366" text-anchor="middle" font-size="34" font-weight="750" class="ink">LLM 决策</text><text x="701" y="397" text-anchor="middle" class="tiny ink">理解 · 规划 · 选择</text>
+
+    <rect x="820" y="250" width="420" height="205" rx="18" class="card"/>
+    <text x="846" y="282" class="mono tiny lime">CH 04–06 / ACT</text><text x="846" y="320" class="label">工具与交互空间</text>
+    <rect x="846" y="346" width="114" height="76" rx="9" class="soft"/><text x="859" y="374" class="tiny">CH04</text><text x="859" y="402" class="small">MCP · API</text>
+    <rect x="972" y="346" width="114" height="76" rx="9" class="soft"/><text x="985" y="374" class="tiny">CH05</text><text x="985" y="402" class="small">代码 · 终端</text>
+    <rect x="1098" y="346" width="114" height="76" rx="9" class="soft"/><text x="1111" y="374" class="tiny">CH06</text><text x="1111" y="402" class="small">事件 · GUI</text>
+
+    <rect x="1288" y="280" width="222" height="145" rx="16" class="soft"/>
+    <text x="1312" y="312" class="mono tiny lime">ENVIRONMENT</text><text x="1312" y="350" class="label">观察与结果</text><text x="1312" y="382" class="tiny muted">事实 · 文件 · 状态</text><text x="1312" y="405" class="tiny muted">错误 · 外部变化</text>
+  </g>
+  <path d="M238 352H273M586 352H587" class="line"/><path d="M803 352H807M1240 352H1275" class="line"/>
+  <path d="M1399 438C1399 502 704 507 704 466" class="feedback"/><text x="1034" y="493" text-anchor="middle" class="tiny lime">观察回填 → 再决策 → 直到结束</text>
+
+  <rect x="286" y="526" width="954" height="108" rx="16" class="soft"/>
+  <text x="312" y="558" class="mono tiny lime">HARNESS / 程序控制运行，而不是把后果交给模型</text>
+  <g transform="translate(312 575)">
+    <rect width="130" height="38" rx="6" fill="#1a2b2d"/><text x="65" y="25" text-anchor="middle" class="tiny">上下文装配</text>
+    <rect x="142" width="130" height="38" rx="6" fill="#1a2b2d"/><text x="207" y="25" text-anchor="middle" class="tiny">模型适配器</text>
+    <rect x="284" width="130" height="38" rx="6" fill="#1a2b2d"/><text x="349" y="25" text-anchor="middle" class="tiny">工具注册表</text>
+    <rect x="426" width="130" height="38" rx="6" fill="#1a2b2d"/><text x="491" y="25" text-anchor="middle" class="tiny">状态与事件</text>
+    <rect x="568" width="130" height="38" rx="6" fill="#1a2b2d"/><text x="633" y="25" text-anchor="middle" class="tiny">权限与预算</text>
+    <rect x="710" width="188" height="38" rx="6" fill="#d9ff76"/><text x="804" y="25" text-anchor="middle" class="tiny ink" font-weight="700">错误恢复与终止</text>
+  </g>
+  <path d="M436 455V514M701 455V514M1030 455V514" stroke="#587270" stroke-width="2" stroke-dasharray="6 7"/>
+
+  <rect x="286" y="654" width="954" height="160" rx="16" fill="#edf1e4"/>
+  <text x="312" y="688" class="mono tiny papertext">CH 07 / VERIFY · 模型说“完成”之后，环境证据才开始判定</text>
+  <g transform="translate(312 710)">
+    <rect width="164" height="70" rx="8" fill="#dce5d3"/><text x="82" y="28" text-anchor="middle" class="tiny papertext">环境闭环</text><text x="82" y="52" text-anchor="middle" class="small papertext">reset · snapshot</text>
+    <rect x="178" width="164" height="70" rx="8" fill="#dce5d3"/><text x="260" y="28" text-anchor="middle" class="tiny papertext">过程约束</text><text x="260" y="52" text-anchor="middle" class="small papertext">越权 · 违规动作</text>
+    <rect x="356" width="164" height="70" rx="8" fill="#dce5d3"/><text x="438" y="28" text-anchor="middle" class="tiny papertext">结果验证</text><text x="438" y="52" text-anchor="middle" class="small papertext">Verifier · Rubric</text>
+    <rect x="534" width="164" height="70" rx="8" fill="#dce5d3"/><text x="616" y="28" text-anchor="middle" class="tiny papertext">效率指标</text><text x="616" y="52" text-anchor="middle" class="small papertext">成本 · 时延 · 接管</text>
+    <rect x="712" width="186" height="70" rx="8" fill="#cfe0b2"/><text x="805" y="28" text-anchor="middle" class="tiny papertext">证据记录</text><text x="805" y="52" text-anchor="middle" class="small papertext">轨迹 · manifest · 负结果</text>
+  </g>
+  <path d="M1316 425V730H1253" class="line"/>
+  <rect x="1288" y="654" width="222" height="160" rx="16" class="soft"/><text x="1312" y="687" class="mono tiny lime">DELIVER</text><text x="1312" y="726" class="label">可验证交付</text><text x="1312" y="759" class="tiny muted">答案 · 引用 · 补丁</text><text x="1312" y="783" class="tiny muted">状态变化 · 评估报告</text>
+
+  <text x="62" y="900" class="mono tiny lime">B / LEARN &amp; SCALE · 系统怎样获得新能力</text>
+  <g transform="translate(62 922)">
+    <rect width="440" height="104" rx="16" class="card"/><text x="24" y="30" class="mono tiny lime">CH 08 / MODEL</text><text x="24" y="62" class="label">后训练</text><text x="172" y="62" class="small muted">SFT · RL · Prompt / CoT 蒸馏</text><text x="24" y="88" class="tiny muted">把稳定能力写入模型参数；保留训练与留出集证据</text>
+    <rect x="468" width="440" height="104" rx="16" class="card"/><text x="492" y="30" class="mono tiny lime">CH 09 / SYSTEM</text><text x="492" y="62" class="label">持续进化</text><text x="648" y="62" class="small muted">轨迹 → 规则 / Skill / 程序</text><text x="492" y="88" class="tiny muted">可信失败、最小更新、回归、灰度、回滚</text>
+    <rect x="936" width="540" height="104" rx="16" class="card"/><text x="960" y="30" class="mono tiny lime">CH 10 / SOCIETY</text><text x="960" y="62" class="label">多 Agent 协作</text><text x="1145" y="62" class="small muted">分工 · 隔离 · 消息 · 并行 · 审核</text><text x="960" y="88" class="tiny muted">用质量、总时间、总成本和重复劳动决定是否采用</text>
+  </g>
+  <path d="M502 974H517M970 974H985" class="line"/>
+
+  <text x="62" y="1060" class="mono tiny lime">C / PRACTICE · 十二项技能必须形成产物，并通过标准</text>
+  <g transform="translate(62 1080)">
+    <text x="0" y="22" class="tiny lime">必修 6</text><text x="75" y="22" class="tiny">① ReAct 循环　② 上下文工程　③ 检索与记忆　④ 工具与 MCP　⑤ Agent 评估　⑥ 证据可复现</text>
+    <text x="0" y="52" class="tiny lime">进阶 4</text><text x="75" y="52" class="tiny">⑦ Coding Harness　⑧ 异步事件　⑨ 轨迹学习与回滚　⑩ 多 Agent 编排</text>
+    <text x="0" y="82" class="tiny lime">专项 2</text><text x="75" y="82" class="tiny">⑪ SFT / RL / 蒸馏　⑫ 多模态与具身交互</text>
+    <rect x="1115" y="0" width="361" height="86" rx="12" fill="#d9ff76"/><text x="1138" y="29" class="tiny ink">统一完成定义</text><text x="1138" y="56" class="small ink" font-weight="700">能解释 · 能运行 · 能评估 · 能迁移</text>
+  </g>
+  <text x="62" y="1181" class="tiny muted">原创研究图 · 依据固定提交公开文档与关键源码重新组织 · 学习总入口内含逐周练习与验收</text>
+</svg>

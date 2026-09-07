@@ -28,6 +28,7 @@
 | 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
 | 005 | [栖居 · 原创人物生活交互实验室](projects/005-room-life/README.md) | 参考 Nova3D 结构化生成思路，独立自制角色、衣橱与八项生活交互；照片级人物、通用换装及养成待扩展。 | 研究中 | [源码](https://github.com/yydshly/0906_codex_project) | [演示](https://yydshly.github.io/0906_codex_project/demos/005-room-life/) |
 | 006 | [Prettymaps · 地图美学与能力展示](projects/006-prettymaps/README.md) | 以架构图梳理真实OSM数据、源库绘图能力与18张本地成品，说明大模型、空间分析和编辑如何扩展内容、旅行、策划与设计产品。 | 研究中 | [源码](https://github.com/marceloprates/prettymaps) | [演示](https://yydshly.github.io/0906_codex_project/demos/006-prettymaps/) |
+| 007 | [AI Agent Book · Agent 工程能力图谱](projects/007-ai-agent-book/README.md) | 按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。 | 研究中 | [源码](https://github.com/bojieli/ai-agent-book) | [演示](https://yydshly.github.io/0906_codex_project/demos/007-ai-agent-book/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
@@ -68,6 +69,12 @@
 [![原创研究架构图：OSM真实地理数据经prettymaps绘制，实测西湖与西安成品，再扩展分析、编辑与大模型入口支撑多类产品](docs/assets/projects/006-prettymaps/architecture.svg)](projects/006-prettymaps/README.md)
 
 以架构图梳理真实OSM数据、源库绘图能力与18张本地成品，说明大模型、空间分析和编辑如何扩展内容、旅行、策划与设计产品。
+
+### 007 · AI Agent Book · Agent 工程能力图谱
+
+[![原创 AI Agent 工程能力图：目标经过上下文、模型决策和工具执行形成观察结果，再由验证与经验更新闭环](docs/assets/projects/007-ai-agent-book/agent-capability-map.svg)](projects/007-ai-agent-book/README.md)
+
+按十章汇总上下文、工具、评估、进化与协作能力，配套 12 项技能练习和三条系统学习路线。
 <!-- PROJECT_GALLERY:END -->
 
 ## 目录导航
