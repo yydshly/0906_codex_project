@@ -1,0 +1,91 @@
+import * as THREE from 'three';
+import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+import {clamp,SEAT,CUP_DEST} from './simulation.js';
+
+// All geometry and animation in this file is original procedural work.
+// No downloaded humanoid, texture, motion capture, or animation clip is used.
+export class OriginalCharacter {
+  constructor(){
+    this.root=new THREE.Group();this.root.name='Alan_Original';this.bones={};this.boneList=[];
+    this.skin=new THREE.MeshStandardMaterial({color:'#ddb292',roughness:.82});
+    this.shirt=new THREE.MeshStandardMaterial({color:'#769d8b',roughness:.93});
+    this.trousers=new THREE.MeshStandardMaterial({color:'#cbb590',roughness:1});
+    this.hair=new THREE.MeshStandardMaterial({color:'#66483b',roughness:.87});
+    this.cream=new THREE.MeshStandardMaterial({color:'#f2e6ce',roughness:.85});
+    this.dark=new THREE.MeshStandardMaterial({color:'#343e36',roughness:.65});
+    const hips=this.bone('hips',this.root,0,.94,0),spine=this.bone('spine',hips,0,.15,0),chest=this.bone('chest',spine,0,.23,0),head=this.bone('head',chest,0,.31,0);
+    for(const side of ['r','l']){const sign=side==='r'?-1:1;const arm=this.bone('upperarm'+side,chest,sign*.29,.01,0);const fore=this.bone('lowerarm'+side,arm,0,-.33,0);this.bone('hand'+side,fore,0,-.32,0);const thigh=this.bone('upperleg'+side,hips,sign*.14,-.02,0);const shin=this.bone('lowerleg'+side,thigh,0,-.39,0);this.bone('foot'+side,shin,0,-.38,0);}
+    this.root.updateMatrixWorld(true);this.skeleton=new THREE.Skeleton(this.boneList);
+    this.lathe([[.18,-.07],[.23,-.045],[.255,.04],[.265,.22],[.29,.36],[.245,.45],[.1,.48]],this.shirt,hips,1,.69);
+    this.box(.39,.17,.28,this.trousers,hips,0,-.03,0,.07);
+    this.cylinder(.073,.089,.18,this.skin,chest,0,.19,0);
+    // Shirt construction: collar, zipper, patch pocket, cuffs.
+    for(const sign of [-1,1]){const collar=this.box(.115,.15,.035,this.cream,chest,sign*.065,.075,.175,.02);collar.rotation.z=sign*.38;}
+    this.box(.015,.35,.02,this.cream,hips,0,.2,.183,.004);
+    this.box(.085,.085,.017,this.cream,hips,.145,.26,.177,.012);
+    this.box(.1,.015,.023,this.shirt,hips,.145,.30,.194,.003);
+    const button=this.sphere(.013,this.dark,hips,0,.025,.185);button.scale.z=.4;
+    for(const side of ['r','l']){
+      this.limb('upperarm'+side,'lowerarm'+side,.33,.32,[.095,.092,.074,.075,.061],this.shirt);
+      this.limb('upperleg'+side,'lowerleg'+side,.39,.38,[.115,.113,.09,.08,.073],this.trousers);
+      const hand=this.bones['hand'+side];this.box(.115,.15,.075,this.skin,hand,0,-.055,.005,.033);const thumb=this.sphere(.034,this.skin,hand,side==='r'?.055:-.055,-.05,.032);thumb.scale.set(.85,1.5,.9);
+      this.box(.139,.085,.12,this.cream,this.bones['lowerarm'+side],0,-.295,0,.018);
+      const foot=this.bones['foot'+side];this.box(.18,.14,.31,this.cream,foot,0,-.035,.07,.053);this.box(.185,.035,.315,this.dark,foot,0,-.09,.073,.013);for(let i=0;i<3;i++)this.box(.095,.012,.018,this.shirt,foot,0,.04,.08+i*.037,.005);
+    }
+    const face=this.sphere(.245,this.skin,head,0,.05,.01);face.scale.set(1,1.14,.88);
+    this.sphere(.054,this.skin,head,0,.005,.226).scale.set(.65,.7,1.0);
+    for(const sign of [-1,1]){this.sphere(.061,this.skin,head,sign*.23,.03,0).scale.set(.55,.95,.65);}
+    // Hair cap and hand-shaped locks, created from ellipsoids.
+    const cap=new THREE.Mesh(new THREE.SphereGeometry(.26,32,20,0,Math.PI*2,0,Math.PI*.64),this.hair);cap.position.set(0,.097,-.012);cap.scale.set(1,1.05,.88);head.add(cap);
+    for(let i=0;i<6;i++){const lock=this.sphere(.105,this.hair,head,-.20+i*.068,.21-(i===0?.035:0),.135);lock.scale.set(.76,1.38,.68);lock.rotation.z=-.48+i*.1;}
+    for(const sign of [-1,1]){const side=this.sphere(.09,this.hair,head,sign*.215,.07,-.012);side.scale.set(.6,1.6,1);}
+    this.eyeGroups=[];
+    for(const sign of [-1,1]){
+      const eye=new THREE.Group();eye.position.set(sign*.087,.063,.211);head.add(eye);this.eyeGroups.push(eye);
+      this.sphere(.038,this.cream,eye,0,0,0).scale.set(.91,1.0,.30);this.sphere(.019,this.dark,eye,0,-.002,.011).scale.set(.80,1.1,.38);this.sphere(.006,this.cream,eye,-.005,.006,.019);
+      const brow=this.box(.072,.013,.018,this.hair,head,sign*.087,.122,.204,.006);brow.rotation.z=sign*.08;
+      const cheek=this.sphere(.033,new THREE.MeshStandardMaterial({color:'#d79783',roughness:1}),head,sign*.145,-.006,.187);cheek.scale.set(1,.5,.15);
+    }
+    const smileCurve=new THREE.QuadraticBezierCurve3(new THREE.Vector3(-.048,-.075,.21),new THREE.Vector3(0,-.102,.23),new THREE.Vector3(.048,-.075,.21));
+    this.smile=new THREE.Mesh(new THREE.TubeGeometry(smileCurve,14,.007,6,false),this.hair);head.add(this.smile);
+    this.root.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}});this.phase=0;
+  }
+  bone(name,parent,x,y,z){const b=new THREE.Bone();b.name=name;b.position.set(x,y,z);parent.add(b);this.bones[name]=b;this.boneList.push(b);return b;}
+  sphere(radius,mat,parent,x,y,z){const m=new THREE.Mesh(new THREE.SphereGeometry(radius,24,16),mat);m.position.set(x,y,z);parent.add(m);return m;}
+  box(w,h,d,mat,parent,x,y,z,r=.025){const m=new THREE.Mesh(new RoundedBoxGeometry(w,h,d,3,Math.min(r,w/3,h/3,d/3)),mat);m.position.set(x,y,z);parent.add(m);return m;}
+  cylinder(a,b,h,mat,parent,x,y,z){const m=new THREE.Mesh(new THREE.CylinderGeometry(a,b,h,24),mat);m.position.set(x,y,z);parent.add(m);return m;}
+  lathe(profile,mat,parent,sx=1,sz=1){const g=new THREE.LatheGeometry(profile.map(([r,y])=>new THREE.Vector2(r,y)),32);const m=new THREE.Mesh(g,mat);m.scale.set(sx,1,sz);parent.add(m);return m;}
+  limb(upperName,lowerName,lenA,lenB,radii,mat){
+    const upper=this.bones[upperName],lower=this.bones[lowerName],origin=upper.getWorldPosition(new THREE.Vector3()),positions=[],normals=[],indices=[],weights=[],skin=[],rings=24,segments=16,length=lenA+lenB;
+    for(let ring=0;ring<=rings;ring++){const t=ring/rings,s=t*length,ri=t*(radii.length-1),a=Math.floor(ri),b=Math.min(a+1,radii.length-1),radius=THREE.MathUtils.lerp(radii[a],radii[b],ri-a);let f=clamp((s-lenA+.075)/.15,0,1);f=f*f*(3-2*f);for(let j=0;j<=segments;j++){const angle=j/segments*Math.PI*2;positions.push(origin.x+Math.cos(angle)*radius,origin.y-s,origin.z+Math.sin(angle)*radius*.9);normals.push(Math.cos(angle),0,Math.sin(angle));skin.push(this.boneList.indexOf(upper),this.boneList.indexOf(lower),0,0);weights.push(1-f,f,0,0);if(ring<rings&&j<segments){const k=ring*(segments+1)+j;indices.push(k,k+1,k+segments+1,k+1,k+segments+2,k+segments+1);}}}
+    const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));g.setAttribute('skinIndex',new THREE.Uint16BufferAttribute(skin,4));g.setAttribute('skinWeight',new THREE.Float32BufferAttribute(weights,4));g.setIndex(indices);g.computeVertexNormals();const m=new THREE.SkinnedMesh(g,mat);m.name=upperName+'_skin';this.root.add(m);m.bind(this.skeleton);m.frustumCulled=false;
+  }
+  reach(side,target,weight=1){
+    const eff=this.bones['hand'+side],chain=['lowerarm','upperarm'].map(s=>this.bones[s+side]);
+    for(let k=0;k<7;k++)for(const bone of chain){this.root.updateMatrixWorld(true);const bp=bone.getWorldPosition(new THREE.Vector3()),ep=eff.getWorldPosition(new THREE.Vector3());const from=ep.sub(bp).normalize(),to=target.clone().sub(bp).normalize();const rot=new THREE.Quaternion().setFromUnitVectors(from,to);rot.slerp(new THREE.Quaternion(),1-weight);const pq=bone.parent.getWorldQuaternion(new THREE.Quaternion());bone.quaternion.premultiply(pq.clone().invert().multiply(rot).multiply(pq));}this.root.updateMatrixWorld(true);
+  }
+  update(world,dt,cup){
+    const c=world.character,a=world.action,mode=c.mode,b=this.bones;this.root.position.set(c.x,0,c.z);this.root.rotation.y=c.yaw;
+    for(const bone of this.boneList)bone.rotation.set(0,0,0);
+    let sit=0;const p=a?clamp(a.elapsed/a.duration,0,1):0,ease=p*p*(3-2*p),inCar=['enter','driving','brake','exit'].includes(mode);
+    if(['seated','rest','driving','brake'].includes(mode))sit=1;
+    if(['sit','enter'].includes(mode))sit=ease;
+    if(['stand','exit'].includes(mode))sit=1-ease;
+    b.hips.position.y=THREE.MathUtils.lerp(.94,inCar?.96:SEAT.y+.11,sit);
+    const moving=mode==='walking',amp=moving?clamp(c.speed/2,0,1):0;this.phase+=dt*(c.speed>2?10:7);const swing=Math.sin(this.phase)*amp;
+    b.hips.position.y+=moving?Math.abs(Math.sin(this.phase))*amp*.032:Math.sin(world.time*1.8)*.003;
+    b.spine.rotation.x=mode==='pickup'||mode==='place'?Math.sin(p*Math.PI)*.10:0;
+    b.chest.rotation.y=moving?Math.sin(this.phase)*amp*.055:0;
+    for(const side of ['r','l']){const s=side==='r'?1:-1;b['upperleg'+side].rotation.x=-sit*1.3+s*swing*.56;b['lowerleg'+side].rotation.x=sit*1.3+Math.max(0,-s*swing)*.75;b['foot'+side].rotation.x=-Math.max(0,-s*swing)*.3;b['upperarm'+side].rotation.x=-s*swing*.4-sit*.22;b['upperarm'+side].rotation.z=s*.10;b['lowerarm'+side].rotation.x=-.08-sit*.55;}
+    b.head.rotation.y=Math.sin(world.time*.55)*.035;b.head.rotation.x=sit?.03:0;
+    const blink=(world.time%4.4);const eyeScale=blink<.15?Math.max(.08,Math.abs(blink-.075)/.075):1;for(const e of this.eyeGroups)e.scale.y=eyeScale;
+    this.root.updateMatrixWorld(true);
+    const forward=(x,y,z)=>new THREE.Vector3(x,y,z).applyAxisAngle(new THREE.Vector3(0,1,0),c.yaw).add(new THREE.Vector3(c.x,0,c.z));
+    if(world.holding){this.reach('r',forward(-.30,1.05,.34));const hand=b.handr.getWorldPosition(new THREE.Vector3());cup.position.copy(hand).add(forward(-.124,-.11,0).sub(new THREE.Vector3(c.x,0,c.z)));cup.rotation.set(0,c.yaw,0);}
+    else{cup.position.set(world.cup.x,world.cup.y,world.cup.z);cup.rotation.set(0,0,0);}
+    if(['pickup','place'].includes(mode)&&a){const target=mode==='pickup'?world.cup:CUP_DEST;const reachTarget=new THREE.Vector3(target.x+.124,target.y+.1,target.z);const weight=p<.55?Math.sin(clamp(p/.55,0,1)*Math.PI*.5):Math.max(0,1-(p-.62)/.38);this.reach('r',reachTarget,weight);if(world.holding){const hand=b.handr.getWorldPosition(new THREE.Vector3());cup.position.copy(hand).add(new THREE.Vector3(-.124,-.1,0));cup.rotation.set(0,0,0);}}
+    if(sit>0&&!inCar){this.reach('r',forward(-.38,.76,.27),sit);this.reach('l',forward(.38,.76,.27),sit);}
+    if(['driving','brake'].includes(mode)){this.reach('r',forward(-.19,1.05,.28));this.reach('l',forward(.19,1.05,.28));}
+  }
+  setOutfit(color){this.shirt.color.set(color);}
+}

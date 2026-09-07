@@ -1,0 +1,71 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>Nova3D 原库能力与本项目关系 · 栖居</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../records.css?v=da66ae682f13"></head><body><a class="skip" href="#record-content">跳到正文</a><header class="record-header"><a class="brand" href="../index.html">栖居 <span>ROOM LIFE LAB</span></a><nav aria-label="记录导航"><a href="../updates.html">优化记录</a><a href="../index.html">返回房间 ↗</a></nav></header><main><div class="record-intro"><span class="eyebrow">栖居 · 迭代档案</span><h1>Nova3D 原库能力与本项目关系</h1><p>每轮的问题、修改、验证与待办，都在这里保留。</p></div><nav class="contents" aria-label="本页目录"><a href="#原库解决什么问题">原库解决什么问题</a><a href="#公开仓库包含什么">公开仓库包含什么</a><a href="#我们的扩展与边界">我们的扩展与边界</a></nav><article id="record-content"><p>核对日期：2026-09-07。固定研究版本：<a href="https://github.com/RareSense/Nova3D/tree/2299e02d57e513966afaa8cfcc510e8c01110dd7">2299e02d57e513966afaa8cfcc510e8c01110dd7</a>。以下为官方文档披露的能力与公开目录范围；本项目未登录其托管服务做生成效果或计费验证。</p>
+<h2 id="原库解决什么问题">原库解决什么问题</h2><p>Nova3D 的定位是把文字或参考图片转为可编辑的结构化三维资产。官方描述的流程是：模型编写 Blender Python，执行、检查和修复后，输出有命名部件、层级、关节枢轴和材质的 GLB。重点是保留资产的结构与可编辑性。</p>
+<p>这是生成系统与工具集成的能力，不是单一大模型本身的能力，也不能据此保证任意输入都产生照片级人物。<a href="https://github.com/RareSense/Nova3D/blob/2299e02d57e513966afaa8cfcc510e8c01110dd7/README.md">官方总说明</a></p>
+<h2 id="公开仓库包含什么">公开仓库包含什么</h2><div class="table-scroll" tabindex="0" role="region" aria-label="部分、官方描述的能力、依赖与限制"><table>
+<thead>
+<tr>
+<th>部分</th>
+<th>官方描述的能力</th>
+<th>依赖与限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Web 客户端</td>
+<td>Flutter/Dart 界面，参考图片输入、模型历史缓存、内置 Three.js 编辑视口及材质和变换编辑</td>
+<td>连接托管服务；单独启动前端不等于本地拥有生成后端</td>
+</tr>
+<tr>
+<td>MCP 集成</td>
+<td>将生成流程提供给兼容的 Agent 调用，返回浏览器查看入口</td>
+<td>需要完成账户接入及生成条件检查；不是 IDE 内嵌三维视口</td>
+</tr>
+<tr>
+<td>Blender 插件</td>
+<td>在 Blender 发起文字或图片引导生成，导入分部件模型并保留生成 Python、GLB、UV 等输出</td>
+<td>仍依赖托管服务；按所选模式使用服务额度或模型供应商账户</td>
+</tr>
+<tr>
+<td>生成后端</td>
+<td>官方描述包含代码构造、执行、修复与验证流程</td>
+<td>当前闭源；该仓库不提供完整可自托管后端</td>
+</tr>
+</tbody></table>
+</div><p>来源：<a href="https://github.com/RareSense/Nova3D/blob/2299e02d57e513966afaa8cfcc510e8c01110dd7/app/README.md">Web 客户端</a>、<a href="https://github.com/RareSense/Nova3D/blob/2299e02d57e513966afaa8cfcc510e8c01110dd7/mcp/README.md">MCP</a>、<a href="https://github.com/RareSense/Nova3D/blob/2299e02d57e513966afaa8cfcc510e8c01110dd7/blender-plugin/README.md">Blender 插件</a>。</p>
+<h2 id="我们的扩展与边界">我们的扩展与边界</h2><p>“栖居”从这次调研出发，扩展研究问题到“角色进入房间后如何持续活动”。这是独立原创实验，不是 Nova3D 的 Fork、插件或生成服务复现。没有复用上游代码，也没有导入上游生成人物；当前运行无需 Nova3D 账户、API 密钥或生成服务。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="对比、Nova3D、栖居 005"><table>
+<thead>
+<tr>
+<th>对比</th>
+<th>Nova3D</th>
+<th>栖居 005</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主要目标</td>
+<td>生成与编辑结构化三维资产</td>
+<td>验证角色、衣橱与生活交互</td>
+</tr>
+<tr>
+<td>内容来源</td>
+<td>官方描述为模型编写构造代码</td>
+<td>本项目手写程序化人物、场景及动作</td>
+</tr>
+<tr>
+<td>模型服务</td>
+<td>使用托管生成流程</td>
+<td>当前未接入</td>
+</tr>
+<tr>
+<td>生活行为</td>
+<td>不能从资产生成能力推断已有养成玩法</td>
+<td>已有走动、拿放、坐起、驾驶及状态规则</td>
+</tr>
+<tr>
+<td>写实人物</td>
+<td>官方展示不能代替我们自己的验收</td>
+<td>当前仍为风格化原型，写实人物是后续目标</td>
+</tr>
+</tbody></table>
+</div><p>上游客户端与集成使用 MIT；闭源服务不因客户端开源而变成 MIT。本项目没有复制上游代码，MIT 也不自动覆盖我们的原创内容。本仓库尚未声明原创内容的统一开源许可证；Three.js、esbuild、marked 的许可单独保留。</p>
+<p><a href="README.html">返回能力总览</a> · <a href="handoff.html">遗留事项与验收</a></p>
+</article></main><footer>记录随演示构建同步更新 · 历史截图对应当时版本 · <a href="#">回到顶部 ↑</a></footer></body></html>

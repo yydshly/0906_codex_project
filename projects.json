@@ -69,5 +69,23 @@
     "cover": "docs/assets/projects/004-multica/architecture-guide.png",
     "coverAlt": "Multica 整体架构引导图：平台、执行机、工具与模型，以及并发和任务推进控制；原创研究图示，非产品截图",
     "demo": "demos/004-multica/"
+  },
+  {
+    "id": "005",
+    "slug": "room-life",
+    "order": 50,
+    "name": "栖居 · 原创人物生活交互实验室",
+    "summary": "参考 Nova3D 结构化生成思路，独立自制角色、衣橱与八项生活交互；照片级人物、通用换装及养成待扩展。",
+    "repository": "https://github.com/yydshly/0906_codex_project",
+    "status": "研究中",
+    "tags": [
+      "原创人物",
+      "三维交互",
+      "生活模拟",
+      "程序化动画"
+    ],
+    "cover": "docs/assets/projects/005-room-life/wardrobe-default.jpg",
+    "coverAlt": "栖居当前风格化人物真实截图：绿色外套与侧分发型，顶部提供打扮角色和完整体验；不是照片级人物效果",
+    "demo": "demos/005-room-life/"
   }
 ]

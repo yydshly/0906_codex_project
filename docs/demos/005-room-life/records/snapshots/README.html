@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>人物形象留档 · 栖居</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../../records.css?v=da66ae682f13"></head><body><a class="skip" href="#record-content">跳到正文</a><header class="record-header"><a class="brand" href="../../index.html">栖居 <span>ROOM LIFE LAB</span></a><nav aria-label="记录导航"><a href="../../updates.html">优化记录</a><a href="../../index.html">返回房间 ↗</a></nav></header><main><div class="record-intro"><span class="eyebrow">栖居 · 迭代档案</span><h1>人物形象留档</h1><p>每轮的问题、修改、验证与待办，都在这里保留。</p></div><nav class="contents" aria-label="本页目录"><a href="#v1--2026-09-07-优化前">V1 · 2026-09-07 优化前</a><a href="#恢复方法">恢复方法</a><a href="#v2--衣橱改造前参考">V2 · 衣橱改造前参考</a></nav><article id="record-content"><h2 id="v1--2026-09-07-优化前">V1 · 2026-09-07 优化前</h2><p><code>v1-20260907/</code> 保存用户提出“保存当前形象，然后开始优化”时的完整源码、测试、依赖锁定文件和原始文档。文件未经修改，SHA-256 记录在 <code>v1-20260907/manifest.json</code>。</p>
+<ul>
+<li>原始人物实现：<code>v1-20260907/src/character.js</code>。</li>
+<li>完整可运行留档：仓库 <code>docs/demos/005-room-life/versions/v1/</code>。启动根目录静态服务器后访问 <code>/demos/005-room-life/versions/v1/</code>。</li>
+<li>原始截图：仓库 <code>docs/assets/projects/005-room-life/v1/</code>。</li>
+<li>当前页面的“初版”按钮使用 <code>src/character-v1.js</code>，与留档人物源码逐字节一致。它在当前交互环境中展示旧形象；上述完整留档页面则保留原始界面、镜头和行为。</li>
+</ul>
+<h2 id="恢复方法">恢复方法</h2><p>恢复整套首版时，将留档中的 <code>src/</code>、<code>tests/</code>、<code>package.json</code>、<code>package-lock.json</code> 和 <code>build.mjs</code> 复制回本项目对应位置，再运行 <code>npm ci</code>、<code>npm test</code>、<code>npm run build</code>。操作前保存当前源码。只需要观察旧形象时，使用页面内切换按钮即可，不必恢复文件。</p>
+<p>原始快照中的文档和构建脚本保留当时的相对路径，因此应在恢复到项目根目录后使用；无需在快照目录内安装依赖。后续构建不覆盖 <code>versions/v1/</code>。</p>
+<h2 id="v2--衣橱改造前参考">V2 · 衣橱改造前参考</h2><p><a href="../files/snapshots/v2-before-wardrobe/character.js.txt">v2-before-wardrobe/character.js</a> 保存 O12 开始前的人物源码；<a href="../../../../assets/projects/005-room-life/before-wardrobe-v2.jpg">同镜头实机截图</a> 用于外观对照。这是单个源文件的参考备份，不是独立可运行的整套版本，不应直接覆盖当前人物文件后运行新衣橱界面。完整可运行旧版本仍使用上方 V1 留档。</p>
+</article></main><footer>记录随演示构建同步更新 · 历史截图对应当时版本 · <a href="#">回到顶部 ↑</a></footer></body></html>

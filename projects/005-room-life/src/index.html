@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>栖居 · 人物生活实验室</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="../../index.html"><span class="brand-icon">栖</span><span>栖居<span class="brand-en">ROOM LIFE LAB</span></span></a><div class="top-meta"><span class="live-dot"></span>人物生活实验室<span class="divider">/</span><span>研究 005</span></div><div class="topbar-actions"><a class="text-button" href="./updates.html" target="_blank" rel="noopener">优化记录 ↗</a><button id="aboutOpen" class="text-button">关于实验 ↗</button></div></header>
+<main>
+<section class="intro"><div><span class="eyebrow">ONE ROOM. MANY POSSIBILITIES.</span><h1>一个房间，开始生活<span>。</span></h1><p>选一款发型，搭配今天的衣服，再走进房间开始生活。</p></div><div class="intro-actions"><button id="wardrobeOpen" class="dress-button">✦ 打扮角色</button><button id="tour" class="primary" disabled><span>▷</span> 完整体验 <small>8 项动作</small></button></div></section>
+<div class="workspace">
+<div class="scene-column">
+<section class="stage" aria-label="三维生活房间"><canvas id="scene" aria-label="点击地面移动角色，拖动旋转视角" tabindex="0"></canvas><div class="stage-label"><span class="live-dot"></span><b>ROOM 01</b><span>午后 · 生活实验室</span></div><div class="camera-tools"><button id="home" title="房间全景" aria-label="房间全景">⌂</button><button id="close" title="跟随人物" aria-label="跟随人物">◎</button><button id="labels" title="切换场景标签" aria-label="切换场景标签">Aa</button></div>
+<div class="portrait-toolbar" aria-label="画面内人物观察"><button data-view="front" title="正面观察">正面</button><button data-view="side" title="侧面观察">侧面</button><button data-view="back" title="背面观察">背面</button><span></span><button data-avatar="v1" aria-pressed="false">初版</button><button data-avatar="v2" aria-pressed="true">新版</button></div>
+<div class="pace-toolbar" aria-label="移动方式"><span>移动</span><button data-pace="walk" aria-pressed="true" title="以步行速度前往目的地">步行</button><button data-pace="run" aria-pressed="false" title="以跑步速度前往目的地">跑步</button></div>
+<div id="loading" class="loading"><span class="spinner"></span><strong>阿岚正在走进房间</strong><span>正在构建原创人物与房间…</span></div>
+<div class="stage-bottom"><div><kbd>W A S D</kbd> / 方向键 <span id="inputHint">移动</span><span class="control-separator">·</span><kbd>Shift</kbd> 跑步</div><span>点击地面前往 · 拖动旋转 · 滚轮缩放</span></div>
+<div id="drivePanel" class="drive-panel" hidden><span>电动小车</span><strong><span id="speed">0.0</span><small> km/h</small></strong><span>↑ 前进　↓ 倒车　← → 转向</span><button data-command="exit">停车下车</button></div>
+<div class="touch-controls" aria-label="触控方向"><button data-key="ArrowUp" aria-label="向前">↑</button><div><button data-key="ArrowLeft" aria-label="向左">←</button><button data-key="ArrowDown" aria-label="向后">↓</button><button data-key="ArrowRight" aria-label="向右">→</button></div></div>
+</section>
+<div class="speech"><span class="speech-icon">✦</span><span id="message" role="status" aria-live="polite">正在准备房间…</span></div>
+</div>
+<aside class="panel"><div class="resident"><div class="avatar-icon">A</div><div><h2>阿岚 <span>你的房间伙伴</span></h2><p id="state">正在准备</p></div><span class="resident-dot"></span></div><section class="appearance" aria-label="人物形象对比"><div class="appearance-title"><b>人物形象</b><a href="./versions/v1/" target="_blank" rel="noopener">初版完整留档 ↗</a></div><div class="appearance-switch"><button data-avatar="v2" aria-pressed="true">自定义形象 V2</button><button data-avatar="v1" aria-pressed="false">初版形象 V1</button></div><p id="appearanceNote">原创发型与衣橱，搭配属于你的阿岚。</p><div class="portrait-views"><span>观察</span><button data-view="front">正面</button><button data-view="side">侧面</button><button data-view="back">背面</button></div><div class="portrait-views"><span>神态</span><button data-expression="natural" aria-pressed="true">自然</button><button data-expression="happy" aria-pressed="false">微笑</button><button data-expression="calm" aria-pressed="false">放松</button></div></section><section class="wardrobe" aria-label="角色衣橱"><div class="wardrobe-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h3>今天的阿岚</h3></div><button id="wardrobePreview">查看形象 ↗</button></div><p class="wardrobe-intro">从脸型到穿搭，自由组合。选择后立即试穿。</p><div id="wardrobeOptions"></div><div class="wardrobe-actions"><button id="appearanceSave">保存形象</button><button id="appearanceRestore">恢复已保存</button><button id="appearanceDefault">默认搭配</button></div><p id="appearanceStatus" role="status" aria-live="polite">默认搭配 · 尚未保存</p><small>保存在当前浏览器；重新开始房间会保留搭配。</small></section><div class="energy"><div><span>体力</span><b id="energy">72%</b></div><div class="energy-track"><span id="energyBar"></span></div><small>坐下休息时缓慢恢复</small></div>
+<div class="panel-heading"><h3>今天，试着做这些</h3><span id="progress">0 / 8</span></div>
+<div class="tasks">
+<button data-command="move" data-check="move" disabled><span class="task-number">01</span><span><b>在房间里走走</b><small>点选目的地，绕开家具</small></span><i>↗</i></button>
+<button data-command="pickup" data-check="pickup" disabled><span class="task-number">02</span><span><b>拿起桌上的杯子</b><small>走近、伸手、握住</small></span><i>↗</i></button>
+<button data-command="place" data-check="place" disabled><span class="task-number">03</span><span><b>放到圆形边桌</b><small>带着走，再轻轻放下</small></span><i>↗</i></button>
+<button data-command="sit" data-check="sit" disabled><span class="task-number">04</span><span><b>坐下来休息</b><small>对齐座位，放松一下</small></span><i>↗</i></button>
+<button data-command="stand" data-check="stand" disabled><span class="task-number">05</span><span><b>起身继续活动</b><small>站起来，让出座位</small></span><i>↗</i></button>
+<button data-command="enter" data-check="enter" disabled><span class="task-number">06</span><span><b>坐进电动小车</b><small>走到车旁，进入驾驶位</small></span><i>↗</i></button>
+<button data-command="drive" data-check="drive" disabled><span class="task-number">07</span><span><b>开一小段路</b><small>自主驾驶或短程体验</small></span><i>↗</i></button>
+<button data-command="exit" data-check="exit" disabled><span class="task-number">08</span><span><b>停车，再下车</b><small>停稳后回到房间</small></span><i>↗</i></button>
+</div><div class="panel-actions"><button id="stop" disabled>Ⅱ 停止任务</button><button id="reset" disabled>↺ 重新开始</button></div>
+
+</aside>
+</div>
+<footer class="footnote"><span>风格化人物 · 原创骨骼与程序化动作 · 可操作的房间原型</span><span>点击任务即可体验，随时可以重新开始。</span></footer>
+</main>
+<dialog id="about"><button id="aboutClose" class="dialog-close" aria-label="关闭关于实验">×</button><span class="eyebrow">ABOUT THIS EXPERIMENT</span><h2>从一个角色，到一种生活。</h2><p>这是一个独立的原创子项目。人物造型、衣物、房间、小车、骨骼与动作均由本项目代码制作，验证运动、持物、座位和载具之间的连续行为。</p><p>人物采用原创曲面、骨骼蒙皮、程序化步态和四肢 IK，没有使用下载的人物、贴图或动作资产。Three.js 提供通用三维渲染工具。当前未接入大模型，也未实现自由捏脸、真实车辆动力学或完整养成玩法。</p><p>小车使用有限场地内的简化驾驶模型；拿取与坐姿只适配本房间的物品和座位。新版调整了人物轮廓、衣服蒙皮、侧分发型与手指关节，并加入落脚接触和视线跟随。初版形象与完整演示均已留档；精细接触及上下车动作仍可继续打磨。</p><a href="https://github.com/yydshly/0906_codex_project/tree/main/projects/005-room-life">独立子项目 · 原创人物与场景 ↗</a><a href="https://github.com/RareSense/Nova3D">设计参考 · Nova3D ↗</a></dialog>
+<script type="module" src="./app.js"></script></body></html>

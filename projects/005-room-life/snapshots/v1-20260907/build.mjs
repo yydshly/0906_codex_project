@@ -1,0 +1,11 @@
+import { build } from 'esbuild';
+import { copyFile, mkdir } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const here = path.dirname(fileURLToPath(import.meta.url));
+const out = path.resolve(here, '../../docs/demos/005-room-life');
+await mkdir(path.join(out,'assets'), {recursive:true});
+await build({entryPoints:[path.join(here,'src/main.js')],bundle:true,format:'esm',minify:true,outfile:path.join(out,'app.js'),legalComments:'eof'});
+for(const file of ['index.html','style.css']) await copyFile(path.join(here,'src',file),path.join(out,file));
+await copyFile(path.join(here,'node_modules/three/LICENSE'),path.join(out,'assets/three-LICENSE.txt'));
+console.log('Built room-life-lab');

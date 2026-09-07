@@ -12,3 +12,8 @@
 # Preserve research build bytes for the recorded SHA-256 manifests.
 docs/demos/002-jelly-baby/original/** -text
 docs/demos/002-jelly-baby/companion/** -text
+
+# Room Life frozen sources and V1 demo keep their original byte hashes.
+projects/005-room-life/snapshots/** -text
+projects/005-room-life/src/character-v1.js -text
+docs/demos/005-room-life/versions/v1/** -text

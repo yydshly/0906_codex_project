@@ -8,6 +8,15 @@
 
 [在线研究站](https://yydshly.github.io/0906_codex_project/) · [研究约定与新增指南](CONTRIBUTING.md) · [Web 展示与部署](guides/deployment.md) · [项目登记表](projects.json)
 
+## 005 · 栖居交付摘要
+
+- **原库能力**：[Nova3D](https://github.com/RareSense/Nova3D) 提供结构化三维生成的客户端与集成；生成后端为托管闭源服务。
+- **我们的扩展**：独立原创房间生活实验，研究角色从资产到可交互生活的应用；未复用或接入 Nova3D 生成服务。
+- **已实现**：八项生活交互、走跑与接触约束、有限衣橱与本地形象保存、V1 留档对比。
+- **遗留待扩展**：摄影级写实人物、精细接触与通用换装、设备性能验收、世界存档及长期养成。
+
+[能力总览与真实图片引导](projects/005-room-life/README.md) · [原库能力与边界](projects/005-room-life/upstream-capabilities.md) · [遗留交接清单](projects/005-room-life/handoff.md) · [在线体验](https://yydshly.github.io/0906_codex_project/demos/005-room-life/)
+
 ## 有序项目索引
 
 <!-- PROJECT_INDEX:START -->
@@ -17,6 +26,7 @@
 | 002 | [Jelly-Baby · 浏览器软体交互研究](projects/002-jelly-baby/README.md) | 整理软体物理与实时光学能力，复现原版，完成三维伙伴青团、首页导览及真实拉伸驱动的弹性课堂。 | 研究中 | [源码](https://github.com/scottstts/Jelly-Baby) | [演示](https://yydshly.github.io/0906_codex_project/demos/002-jelly-baby/) |
 | 003 | [FreePEP 教材下载器](projects/003-freepep/README.md) | 一图查看 780 条人教社教材目录的类别、学科与年级覆盖，支持筛选与批量下载为 PDF。 | 已归档 | [源码](https://github.com/siknet/FreePEP) | — |
 | 004 | [Multica · 多 Agent 协作与执行控制研究](projects/004-multica/README.md) | 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。 | 已完成 | [源码](https://github.com/multica-ai/multica) | [演示](https://yydshly.github.io/0906_codex_project/demos/004-multica/) |
+| 005 | [栖居 · 原创人物生活交互实验室](projects/005-room-life/README.md) | 参考 Nova3D 结构化生成思路，独立自制角色、衣橱与八项生活交互；照片级人物、通用换装及养成待扩展。 | 研究中 | [源码](https://github.com/yydshly/0906_codex_project) | [演示](https://yydshly.github.io/0906_codex_project/demos/005-room-life/) |
 <!-- PROJECT_INDEX:END -->
 
 ## 图片速览
@@ -45,6 +55,12 @@
 [![Multica 整体架构引导图：平台、执行机、工具与模型，以及并发和任务推进控制；原创研究图示，非产品截图](docs/assets/projects/004-multica/architecture-guide.png)](projects/004-multica/README.md)
 
 从 Codex、Claude Code 接入到并发调度与负责人反馈，整理整体架构、源码证据与可交互的教学演示。
+
+### 005 · 栖居 · 原创人物生活交互实验室
+
+[![栖居当前风格化人物真实截图：绿色外套与侧分发型，顶部提供打扮角色和完整体验；不是照片级人物效果](docs/assets/projects/005-room-life/wardrobe-default.jpg)](projects/005-room-life/README.md)
+
+参考 Nova3D 结构化生成思路，独立自制角色、衣橱与八项生活交互；照片级人物、通用换装及养成待扩展。
 <!-- PROJECT_GALLERY:END -->
 
 ## 目录导航

@@ -21,3 +21,9 @@ jobs:
         run: npm run check
       - name: Validate Multica teaching simulation
         run: node projects/004-multica/tests/simulation.test.mjs
+      - name: Install Room Life dependencies
+        run: npm ci --prefix projects/005-room-life
+      - name: Validate Room Life character and interaction
+        run: npm test --prefix projects/005-room-life
+      - name: Build Room Life demo and validate record links
+        run: npm run build --prefix projects/005-room-life

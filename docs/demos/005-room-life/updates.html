@@ -1,0 +1,177 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f2eb"><title>人物与动作优化记录 · 栖居</title><link rel="icon" href="data:,"><link rel="stylesheet" href="records.css?v=da66ae682f13"></head><body><a class="skip" href="#record-content">跳到正文</a><header class="record-header"><a class="brand" href="index.html">栖居 <span>ROOM LIFE LAB</span></a><nav aria-label="记录导航"><a href="updates.html">优化记录</a><a href="index.html">返回房间 ↗</a></nav></header><main><div class="record-intro"><span class="eyebrow">栖居 · 迭代档案</span><h1>人物与动作优化记录</h1><p>每轮的问题、修改、验证与待办，都在这里保留。</p></div><nav class="contents" aria-label="本页目录"><a href="#历轮优化索引">历轮优化索引</a><a href="#o13--写实目标与路线整理">O13 · 写实目标与路线整理</a><a href="#o12--人物形象与衣橱">O12 · 人物形象与衣橱</a><a href="#o11--网页记录入口">O11 · 网页记录入口</a><a href="#下一步优先优化">下一步优先优化</a><a href="#o10--身体配合详细记录">O10 · 身体配合详细记录</a><a href="#后续记录约定">后续记录约定</a></nav><article id="record-content"><p>记录日期：2026-09-07。对象：005 房间生活实验的 V2 工作区。</p>
+<p>本文汇总已经实施的优化；O01–O13 是记录编号，不是发布版本或 Git 标签。各轮历史状态按记录时间保留；本次源码、构建和文档随仓库提交发布，详见 <a href="records/handoff.html">交付与遗留说明</a>。初版 V1 的完整演示、源码与截图继续冻结保存。</p>
+<p><a href="records/README.html">项目入口</a> · <a href="records/upstream-capabilities.html">原库能力与关系</a> · <a href="records/handoff.html">交付与遗留说明</a> · <a href="records/notes.html">详细实验记录</a> · <a href="records/motion-audit.html">起步下跪专项排查</a> · <a href="records/snapshots/README.html">V1 留档说明</a></p>
+<h2 id="历轮优化索引">历轮优化索引</h2><div class="history-grid"><details class="history-card" open><summary><strong>O13 · 写实目标与路线整理（本轮）</strong></summary><dl><dt>原来的问题</dt><dd>现有形象达不到用户的摄影级真人预期</dd><dt>已实施的修改</dt><dd>整理阶段优化、形象设计方法、制作路线与验收标准，并同步到网页</dd><dt>证据与边界</dt><dd>文档与计划更新；未制作照片级模型或修改人物运行</dd></dl></details><details class="history-card"><summary>O12 · 人物形象与衣橱</summary><dl><dt>原来的问题</dt><dd>产品主线需要先建立可定制的人物，而不只是继续调整动作</dd><dt>已实施的修改</dt><dd>调整默认脸部、连续肩袖与腰部；新增发型、衣物部件、脸型和配色选择，支持保存与恢复</dd><dt>证据与边界</dt><dd>下文详述；有限原创部件，未实现自由捏脸与通用换装</dd></dl></details><details class="history-card"><summary>O11 · 网页记录入口</summary><dl><dt>原来的问题</dt><dd>优化记录仅在项目文件中，演示网页不便查看</dd><dt>已实施的修改</dt><dd>增加网页入口、可展开历史卡片、目录、文档与证据链接，并随构建同步</dd><dt>证据与边界</dt><dd>下文详述；人物动作未改变</dd></dl></details><details class="history-card"><summary>O10 · 身体配合</summary><dl><dt>原来的问题</dt><dd>已有腿部和摆臂节奏，但加减速、转弯时躯干响应不足</dd><dt>已实施的修改</dt><dd>增加前后倾斜、弯内侧倾、肩胯转动差、头部补偿和持杯减幅；动作后复位</dd><dt>证据与边界</dt><dd>下文详述；当前 <strong>32 项测试通过</strong></dd></dl></details><details class="history-card"><summary>O09 · 减速到达</summary><dl><dt>原来的问题</dt><dd>松键、走跑切换和到达时速度突变</dd><dt>已实施的修改</dt><dd>有限距离减速、整条路径末段预判、低速缩步和减小摆臂；停止任务仍立即响应</dd><dt>证据与边界</dt><dd><a href="records/notes.html">详细参数及验证</a>；无遮挡步行/跑步松键前移约 0.15/0.52 m，非完整惯性物理</dd></dl></details><details class="history-card"><summary>O08 · 收步与转向</summary><dl><dt>原来的问题</dt><dd>双脚同时滑回站姿，转弯反复重启步态</dd><dt>已实施的修改</dt><dd>逐脚抬起收步、固定另一只脚；限制旋转速度并保留周期；提示移出画面，构建增加资源内容版本</dd><dt>证据与边界</dt><dd><a href="../../assets/projects/005-room-life/stopping-footwork-v2.jpg">收步后实机图</a>、<a href="records/files/src/rest-footwork.js.txt">收步实现</a>；急转仍保留脚位纠正</dd></dl></details><details class="history-card"><summary>O07 · 伸屈周期</summary><dl><dt>原来的问题</dt><dd>稳定走路仍有双膝持续弯曲感</dd><dt>已实施的修改</dt><dd>明确支撑伸展、屈膝回收、落地伸展；脚跟和前掌滚动接触</dd><dt>证据与边界</dt><dd><a href="../../assets/projects/005-room-life/walking-extension-v2.jpg">侧面图</a>；当轮同场景支撑中期平均屈膝约 19.8° → 9.4°，详见 notes</dd></dl></details><details class="history-card"><summary>O06 · 起步下跪</summary><dl><dt>原来的问题</dt><dd>首步跨大步、短停反向后深蹲</dd><dt>已实施的修改</dt><dd>清除过期落点、首步过渡、渐进加速、不可达脚位保护；修复顶墙运动状态与实际地面高度</dd><dt>证据与边界</dt><dd><a href="records/motion-audit.html">专项排查及数值</a>；20 fps 复现曾降到约 0.508 m 骨盆局部高度</dd></dl></details><details class="history-card"><summary>O05 · 步行前后摆臂</summary><dl><dt>原来的问题</dt><dd>手臂偏向身前，像端着手</dd><dt>已实施的修改</dt><dd>调整上臂摆动中心、减小步行屈肘角度、手掌朝内</dd><dt>证据与边界</dt><dd><a href="../../assets/projects/005-room-life/walking-arm-swing-v2.jpg">侧面图</a>；手臂仍无通用避障</dd></dl></details><details class="history-card"><summary>O04 · 独立跑步</summary><dl><dt>原来的问题</dt><dd>跑步看起来像快走</dd><dt>已实施的修改</dt><dd>分离跑步周期，加入腾空、后腿折叠回收、抬跟蹬地与重心曲线</dd><dt>证据与边界</dt><dd><a href="../../assets/projects/005-room-life/running-cycle-v2-a.jpg">跑步周期图</a>、<a href="records/files/src/running-gait.js.txt">实现</a>；非真实动力学求解</dd></dl></details><details class="history-card"><summary>O03 · 走跑手臂</summary><dl><dt>原来的问题</dt><dd>步行与跑步共用小幅摆臂</dd><dt>已实施的修改</dt><dd>手脚反向协调、跑步屈肘、持杯手稳定；增加走跑选择</dd><dt>证据与边界</dt><dd><a href="../../assets/projects/005-room-life/running-arms-v2.jpg">摆臂实机图</a>；该图的腿部仍是当时旧周期</dd></dl></details><details class="history-card"><summary>O02 · 固定半蹲</summary><dl><dt>原来的问题</dt><dd>行走和跑步持续压低骨盆</dd><dt>已实施的修改</dt><dd>移除固定下压，按双腿可达范围决定骨盆高度，补齐落脚周期边界</dd><dt>证据与边界</dt><dd><a href="records/notes.html">历史验证</a>；这一轮改善不等于后续所有起步和步态问题均已解决</dd></dl></details><details class="history-card"><summary>O01 · 形象与留档</summary><dl><dt>原来的问题</dt><dd>需要保存原始形象，并提升人物细节</dd><dt>已实施的修改</dt><dd>冻结 V1；V2 调整脸型、头发、身体比例、衣物蒙皮、五指与简单神态；增加正侧背观察</dd><dt>证据与边界</dt><dd><a href="records/notes.html">形象及历史记录</a>、<a href="records/snapshots/README.html">冻结文件</a>；仍是风格化原创模型</dd></dl></details></div><h2 id="o13--写实目标与路线整理">O13 · 写实目标与路线整理</h2><p>目标升级为接近真人摄影观感、可换装且可参与房间生活的实时数字人。当前人物继续作为功能原型保留，暂停扩充其卡通外观部件。</p>
+<ul>
+<li><a href="records/product-plan.html">后续优化清单与产品路线</a>：列出阶段交付、前置条件、动作待办、性能与存档风险。</li>
+<li><a href="records/character-design.html">人物形象设计方案</a>：整理人设、三种候选美术方向、多视角参考、原创制作流程、工具与运行方案，以及头肩样板验收。</li>
+<li>首个建议交付为一名角色的设计包和实时头肩样板，外观认可后再扩展全身、衣物及房间动作。</li>
+<li>本轮为研究整理，没有生成参考图、制作写实人物或迁移引擎。文档中的计划不代表已有能力。</li>
+</ul>
+<h2 id="o12--人物形象与衣橱">O12 · 人物形象与衣橱</h2><p>本轮将角色形象与定制提升为产品主线：先做可选择、可保存的角色，再进入房间生活。所有新部件继续由本项目制作，没有导入第三方人物、衣服或发型。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="部分、已完成、使用方式"><table>
+<thead>
+<tr>
+<th>部分</th>
+<th>已完成</th>
+<th>使用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认人物</td>
+<td>收窄下颌、微调耳部和眼白；头发改用受光材质；肩袖改连续曲面；收窄裤腰连接，减少静止时穿出衣摆</td>
+<td>默认清秀脸型、侧分短发和绿色翻领外套</td>
+</tr>
+<tr>
+<td>发型</td>
+<td>侧分短发、清爽短发、齐耳短发；栗棕、墨黑、赤茶发色</td>
+<td>发型与发色分别切换</td>
+</tr>
+<tr>
+<td>面部</td>
+<td>清秀、柔和两种有限轮廓预设；暖杏、蜜棕、深棕肤色</td>
+<td>五官与头发跟随脸型缩放，面部与四肢肤色同步</td>
+</tr>
+<tr>
+<td>上装</td>
+<td>翻领外套、圆领针织；针织替换外套前襟、领片和口袋，增加圆领和连续衣摆收边</td>
+<td>共用骨架和袖部，保持动作连续</td>
+</tr>
+<tr>
+<td>裤装与鞋</td>
+<td>锥形长裤、直筒长裤；休闲鞋、短靴</td>
+<td>裤装轮廓与鞋面独立切换，鞋底接触高度保持</td>
+</tr>
+<tr>
+<td>穿搭配色</td>
+<td>鼠尾草、陶土、深海三组协调配色</td>
+<td>同步上装、裤装和鞋子饰片；短靴鞋面保留棕色</td>
+</tr>
+<tr>
+<td>保存与恢复</td>
+<td>试穿、保存形象、恢复已保存、默认搭配</td>
+<td>保存在当前浏览器，刷新恢复；默认搭配须点击保存才覆盖之前的搭配</td>
+</tr>
+</tbody></table>
+</div><p>页面顶部点击「打扮角色」进入衣橱，点击「查看形象」回到人物近景。正、侧、背观察与房间操作继续保留。初版 V1 下衣橱禁用，切回 V2 恢复当前搭配；重新开始房间不清除形象。</p>
+<p><img src="../../assets/projects/005-room-life/wardrobe-default.jpg" alt="本轮默认形象" loading="lazy" decoding="async"></p>
+<p><img src="../../assets/projects/005-room-life/wardrobe-bob-knit.jpg" alt="齐耳短发、针织上装、直筒裤和短靴" loading="lazy" decoding="async"></p>
+<p><img src="../../assets/projects/005-room-life/wardrobe-crop-knit.jpg" alt="清爽短发与深海针织配色" loading="lazy" decoding="async"></p>
+<p><img src="../../assets/projects/005-room-life/wardrobe-controls.jpg" alt="角色衣橱的部件、配色及保存操作" loading="lazy" decoding="async"></p>
+<h3 id="验证与边界">验证与边界</h3><ul>
+<li>35 项测试通过。新增六组搭配覆盖所有部件选项的完整生活流程，60 次持物中换装不改变骨架、物品或动作状态，且不新增模型资源；保存、无存储、损坏内容、未知版本与写入失败均有检查。</li>
+<li>背面实机复查发现清爽短发顶部有细小头皮缺口，已扩大覆盖并复查。后脑检查扩展为三种发型 × 两种脸型 × 七个高度，且只计入实际可见的部件，避免隐藏发型干扰验收。</li>
+<li>真实浏览器验证了换发型、服装和配色、保存后刷新恢复、默认搭配与恢复已保存；自定义搭配切到跑步后完整体验达到 8 / 8，杯子归边桌、座位与车辆占用释放。</li>
+<li>这是有限部件的原创衣橱首版。两种脸型基于同一套五官与头部轮廓变化；尚无自由捏脸、身高体型编辑、服装上传、多套命名存档或跨设备同步。</li>
+<li>衣物没有真实布料模拟，发型也没有逐发丝或动态系统；极端姿态的穿插、肘膝变形、五指接触及手机性能仍需继续验收。通过功能测试不等于精细人物品质已经完成。</li>
+</ul>
+<p>实现见 <a href="records/files/src/appearance.js.txt">形象配置与存储</a>、<a href="records/files/src/character.js.txt">人物与部件</a>、<a href="records/files/tests/appearance.test.mjs.txt">换装检查</a>。<a href="../../assets/projects/005-room-life/before-wardrobe-v2.jpg">改造前截图</a> 与 <a href="records/files/snapshots/v2-before-wardrobe/character.js.txt">改造前人物源码</a> 保留用于对照；V1 完整留档继续冻结。</p>
+<h2 id="o11--网页记录入口">O11 · 网页记录入口</h2><p>优化记录现已接入演示网页。页面顶部点击「优化记录」会在新标签页打开，保留当前房间状态。</p>
+<ul>
+<li>历史优化按最新优先显示为可展开卡片，本轮内容、验证和后续方向可通过目录跳转。</li>
+<li>页面由本文及链接文档在构建时生成，避免同时手工维护网页和 Markdown。</li>
+<li>详细实验记录、专项排查、项目说明和留档说明生成本地网页；引用的截图与源码证据映射为可访问链接。</li>
+<li>构建检查本地链接和锚点是否存在。记录页使用独立样式及内容版本，支持窄窗口阅读；表格可横向滚动。</li>
+<li>本轮只改进记录的访问和维护，没有改变人物动作；人物动作测试基线仍为 32 项。</li>
+</ul>
+<h2 id="下一步优先优化">下一步优先优化</h2><p>最新优先级以照片级写实目标为准：</p>
+<ol>
+<li>确定人物身份、美术方向和统一多视角参考。</li>
+<li>验证制作流程与运行环境，完成可旋转、眨眼、转头的实时头肩样板。</li>
+<li>完成全身与第一套服装，再验证房间内走路、坐起和拿杯子。</li>
+<li>适配换装、完整八项动作、性能及存档。</li>
+<li>扩展养成、内容和自然语言交互。</li>
+</ol>
+<p>详见 <a href="records/product-plan.html">阶段优化清单</a> 与 <a href="records/character-design.html">形象设计方法</a>。这些均为后续工作；不能用单张概念图或当前功能测试替代照片级三维人物验收。</p>
+<h2 id="o10--身体配合详细记录">O10 · 身体配合详细记录</h2><p>此前胸部已有跟随摆臂的小幅转动、跑步已有固定前倾，但没有根据速度变化和转向速度产生相应的躯干反应。此次新增 <a href="records/files/src/body-motion.js.txt">body-motion.js</a>，将这些小幅姿态变化叠加到现有动作上。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="优化项、修改内容、预期可见效果"><table>
+<thead>
+<tr>
+<th>优化项</th>
+<th>修改内容</th>
+<th>预期可见效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加速身体反应</td>
+<td>根据速度增加量加入小幅前倾及骨盆前移</td>
+<td>起步时上身参与发力，不只是脚动起来</td>
+</tr>
+<tr>
+<td>制动身体反应</td>
+<td>减速时产生短暂的后向姿态偏移，随后平滑回正</td>
+<td>身体从前进状态逐渐稳定下来</td>
+</tr>
+<tr>
+<td>转弯侧倾</td>
+<td>根据速度与转向速度调整躯干侧倾、骨盆横向偏移</td>
+<td>转弯时身体向弯内侧倾斜，减小直立旋转的机械感</td>
+</tr>
+<tr>
+<td>肩胯协调</td>
+<td>胯部小幅滞后，肩部向转向方向增加转角</td>
+<td>上身和下身不再完全同步拧转</td>
+</tr>
+<tr>
+<td>头部配合</td>
+<td>视线随转向小幅偏移，头部反向补偿部分躯干侧倾</td>
+<td>头部有转向响应，又不会完全跟着身体歪斜</td>
+</tr>
+<tr>
+<td>持杯适配</td>
+<td>身体附加反应减至空手时的 45%，抓握约束继续优先</td>
+<td>持物运动相对克制，杯子保持直立并贴合手腕</td>
+</tr>
+<tr>
+<td>复位与动作优先级</td>
+<td>停止后附加反应消退；重置清空历史速度，拿放、坐起和驾驶交由各自动作姿态接管</td>
+<td>不把上一段转弯或制动的倾斜残留到下一动作</td>
+</tr>
+</tbody></table>
+</div><h3 id="幅度控制">幅度控制</h3><p>以下是当前制作参数上限，不是实测人体指标；平滑处理后的实际幅度取决于操作过程。</p>
+<ul>
+<li>额外前倾不超过约 3.7°，额外后向偏移不超过约 4.9°；跑步自身的前倾另有原有曲线。</li>
+<li>躯干额外侧倾不超过约 6.3°，骨盆横向偏移不超过 1.6 cm。</li>
+<li>骨盆前后偏移约束在后移 1.1 cm 至前移 0.9 cm 内，避免重新引入大幅屈膝或失去接地。</li>
+<li>输入突变先限幅再平滑；左右转向采用对应的相反方向。</li>
+</ul>
+<p>这是程序化的视觉姿态调整，<strong>没有模拟真实质量、重心平衡、鞋底摩擦或肌肉力量</strong>。</p>
+<h3 id="验证结果">验证结果</h3><ul>
+<li><strong>32 项自动化测试通过</strong>，静态构建及仓库项目校验通过。</li>
+<li>新增 <a href="records/files/tests/body-motion.test.mjs.txt">身体配合测试</a>：20 / 30 / 60 fps 下验证加减速反应的方向、范围、连续性和复位；验证左右转弯的侧倾及肩胯差异；验证持杯减幅、杯把贴合和交互姿态优先。</li>
+<li>原有防下跪、支撑腿伸展、跑步腾空、摆臂、脚部接触、减速收步、生活任务及 V1 留档完整性检查继续通过。</li>
+<li>浏览器已检查转向、跑步和切回步行的姿态，保存以下真实截图。截图用于外观记录，不能单独证明完整动作连续性。</li>
+<li>确认页面加载本轮脚本内容版本 <code>34b129a8b3ca</code> 后，完整体验切到跑步并完成 <strong>8 / 8</strong>；杯子归边桌、座位和车辆占用释放，浏览器 error / warn 为空。该内容版本用于识别本轮构建，不是 Git 提交号。</li>
+</ul>
+<p><img src="../../assets/projects/005-room-life/body-turn-v2.jpg" alt="转向过程的正面实机画面" loading="lazy" decoding="async"></p>
+<p><img src="../../assets/projects/005-room-life/body-braking-v2.jpg" alt="跑步切回步行过程的侧面实机画面" loading="lazy" decoding="async"></p>
+<h3 id="本轮未解决的问题">本轮未解决的问题</h3><div class="table-scroll" tabindex="0" role="region" aria-label="问题、当前状态"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>急转脚底微滑</td>
+<td>极端输入仍可能触发脚位纠正，未建立完整的物理支撑与转身动画</td>
+</tr>
+<tr>
+<td>坐起、上下车接触</td>
+<td>仍是预设过渡，没有全身通用环境碰撞求解</td>
+</tr>
+<tr>
+<td>肩部形体与衣服变形</td>
+<td>本轮调整骨骼姿态，没有重做肩颈造型、蒙皮或布料</td>
+</tr>
+<tr>
+<td>通用抓握</td>
+<td>继续适配当前杯子和方向盘，没有逐指接触或任意物品抓握</td>
+</tr>
+<tr>
+<td>精细角色品质</td>
+<td>头发动态、面部表情、衣物物理和手机性能验收仍需后续工作</td>
+</tr>
+</tbody></table>
+</div><h2 id="后续记录约定">后续记录约定</h2><p>每轮保留「原问题 → 修改 → 验证 → 局限」四项。历史截图和测量标明当时状态，不把旧截图当作最新效果，不把测试数量当作自然度评级。若后续再次暴露同类问题，应记录遗漏场景并补充验证，而不是覆盖旧结论。</p>
+</article></main><footer>记录随演示构建同步更新 · 历史截图对应当时版本 · <a href="#">回到顶部 ↑</a></footer></body></html>
